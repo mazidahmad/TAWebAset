@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])){
+        header("location:login.php");
+    } else {
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +54,7 @@
               <p>Icons</p>
             </a>
           </li>
-          <li>
+          <li class="active ">
             <a href="./map.html">
               <i class="now-ui-icons location_map-big"></i>
               <p>Maps</p>
@@ -78,7 +84,7 @@
               <p>Typography</p>
             </a>
           </li>
-          <li class="active  active-pro " class="active-pro">
+          <li class="active-pro">
             <a href="./upgrade.html">
               <i class="now-ui-icons arrows-1_cloud-download-93"></i>
               <p>Upgrade to PRO</p>
@@ -99,7 +105,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Upgrade to PRO</a>
+            <a class="navbar-brand" href="#pablo">Maps</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -156,73 +162,13 @@
       </div>
       <div class="content">
         <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <div class="card card-upgrade">
-              <div class="card-header text-center">
-                <h4 class="card-title">Now UI Dashboard PRO</h3>
-                  <p class="card-category">Are you looking for more components? Please check our Premium Version of Now UI Dashboard PRO.</p>
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header ">
+                Google Maps
               </div>
-              <div class="card-body">
-                <div class="table-responsive table-upgrade">
-                  <table class="table">
-                    <thead>
-                      <th></th>
-                      <th class="text-center">Free</th>
-                      <th class="text-center">PRO</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Components</td>
-                        <td class="text-center">16</td>
-                        <td class="text-center">160</td>
-                      </tr>
-                      <tr>
-                        <td>Plugins</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center">13</td>
-                      </tr>
-                      <tr>
-                        <td>Example Pages</td>
-                        <td class="text-center">7</td>
-                        <td class="text-center">27</td>
-                      </tr>
-                      <tr>
-                        <td>Login, Register, Pricing, Lock Pages</td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i></td>
-                      </tr>
-                      <tr>
-                        <td>DataTables, VectorMap, SweetAlert, Wizard, jQueryValidation, FullCalendar etc...</td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Mini Sidebar</td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Premium Support</td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_simple-remove text-danger"></i></td>
-                        <td class="text-center"><i class="now-ui-icons ui-1_check text-success"></i></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td class="text-center">Free</td>
-                        <td class="text-center">Just $49</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center"></td>
-                        <td class="text-center">
-                          <a href="#" class="btn btn-round btn-default disabled">Current Version</a>
-                        </td>
-                        <td class="text-center">
-                          <a target="_blank" href="https://www.creative-tim.com/product/now-ui-dashboard-pro?ref=nud-free-upgrade-live" class="btn btn-round btn-primary">Upgrade to PRO</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="card-body ">
+                <div id="map" class="map"></div>
               </div>
             </div>
           </div>
@@ -276,6 +222,13 @@
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initGoogleMaps();
+    });
+  </script>
 </body>
 
 </html>
+<?php } ?>
