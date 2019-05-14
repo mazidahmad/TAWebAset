@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])){
-        header("location:login.php");
-    } else {
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +9,8 @@
   <title>
     Now UI Dashboard by Creative Tim
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />  
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -107,121 +102,171 @@
               <div class="card-body">
               <p>Provinsi : </p>
               <p>Kabupaten/Kota : </p>  
-                <div class="table-responsive">
-                  <table class="table">
+                <div class="table table-responsive">
+                  <table id="table_id" class="display">
                     <thead class=" text-primary">
-                      <th>
-                        Name
-                      </th>
-                      <th>
-                        Country
-                      </th>
-                      <th>
-                        City
-                      </th>
-                      <th class="text-right">
-                        Salary
-                      </th>
+                      <tr>
+                        <th rowspan="3">
+                          No
+                        </th>
+                        <th rowspan="3">
+                          Nama Barang
+                        </th>
+                        <th colspan="2">
+                          Nomor
+                        </th>
+                        <th rowspan="3">
+                          Luas(M2)
+                        </th>
+                        <th rowspan="3">
+                          Tahun Pengadaan
+                        </th>
+                        <th rowspan="3">
+                          Letak/Alamat
+                        </th>
+                        <th colspan="3" class="text-center">
+                          Status Tanah
+                        </th>
+                        <th rowspan="3">
+                          Penggunaan
+                        </th>
+                        <th rowspan="3">
+                          Asal Usul
+                        </th>
+                        <th rowspan="3">
+                          Harga
+                        </th>
+                        <th rowspan="3">
+                          Keterangan
+                        </th>
+                      </tr>
+                      <tr>
+                        <th rowspan="2">
+                          Kode Barang
+                        </th>
+                        <th rowspan="2">
+                          Register
+                        </th>
+                        <th rowspan="2">
+                          Hak
+                        </th>
+                        <th colspan="2" class="text-center">
+                          Sertifikat
+                        </th>
+                      </tr>
+                      <tr>   
+                        <th>
+                          Tanggal
+                        </th>
+                        <th>
+                          Nomor
+                        </th>                       
+                      </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>
-                          Dakota Rice
+                          1
                         </td>
                         <td>
-                          Niger
+                          Nama Barang
+                        </td>
+                        <td class="text-center">
+                          01.01.11.01.11
+                        </td>
+                        <td class="text-center">
+                          1
+                        </td>
+                        <td class="text-center">
+                          2.400,00
+                        </td>
+                        <td class="text-center">
+                          2012
                         </td>
                         <td>
-                          Oud-Turnhout
+                          "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
+                          Kel. Solokan Jeruk
+                          Kec. Solokan Jeruk
+                          Kabupaten Bandung"
                         </td>
-                        <td class="text-right">
-                          $36,738
+                        <td class="text-center">
+                          Guna Bangunan
                         </td>
+                        <td class="text-center">
+                          5 Mei 2012
+                        </td>
+                        <td class="text-center">
+                          3
+                        </td>
+                        <td class="text-center">
+                          Posyandu
+                        </td>
+                        <td>
+                          "Pembelian
+                          /Inventaris"
+                        </td>
+                        <td class="text-center">
+                          826.761.850,00
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                      </tr>
+                      
+                      <!-- <tr>
+                        1
                       </tr>
                       <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
+                        Tanah Bangunan Rumah Lain-lain
                       </tr>
                       <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
+                        <tr></tr>
+                        <tr>
+                          <td>01.01.11.01.11</td>
+                          <td>1</td>
+                        </tr>
                       </tr>
                       <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
+                        2.400,00
                       </tr>
                       <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-right">
-                          $63,542
-                        </td>
+                        2012
                       </tr>
                       <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $78,615
-                        </td>
+                        "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
+                        Kel. Solokan Jeruk
+                        Kec. Solokan Jeruk
+                        Kabupaten Bandung"
                       </tr>
                       <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $98,615
-                        </td>
+                        <tr></tr>
+                        <tr>
+                          <td>Guna Bangunan</td>
+                          <td>
+                            <tr></tr>
+                            <tr>
+                              <td>5 Mei 2012</td>
+                              <td>3</td>
+                            </tr>
+                          </td>
+                        </tr>
                       </tr>
+                      <tr>
+                        Posyandu
+                      </tr>
+                      <tr>
+                        "Pembelian
+                        /Inventaris"
+                      </tr>
+                      <tr>
+                        826.761.850,00
+                      </tr>
+                      <tr>
+                        -
+                      </tr>
+                      <tr class="text-right">
+                        Salary
+                      </tr> -->
                     </tbody>
                   </table>
                 </div>
@@ -285,7 +330,13 @@
 
     });
   </script>
+  <script>
+    $(document).ready( function () {
+      $('#table_id').DataTable();
+    } );
+  </script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  
 </body>
 
 </html>
-<?php } ?>
