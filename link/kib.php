@@ -97,14 +97,38 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Kartu Inventaris Barang</h4>
+                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang</strong></h4>
               </div>
-              <div class="card-body">
-              <p>Provinsi : </p>
-              <p>Kabupaten/Kota : </p>  
+              <div class="card-body">                
+                <div class="row">
+                  <div class="col-md-2">
+                    <p>PROVINSI         </p>
+                    <p>KABUPATEN / KOTA </p>  
+                    <p>BIDANG           </p>
+                    <p>ASISTEM / OPD    </p>
+                    <p>BIRO / UPTD / B  </p>
+                    <p>No. Kode Lokasi  </p>
+                  </div>
+                  <div class="col-md-1">
+                    <p>:</p>
+                    <p>:</p>  
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                  </div>
+                  <div class="col-md-3">
+                    <p>JAWA BARAT </p>
+                    <p>- </p>  
+                    <p>BIDANG KIMPRASWIL/KE-PU-AN		</p>
+                    <p>Dinas Perumahan dan Pemukiman</p>
+                    <p>Sekretariat Dinas</p>
+                    <p>11.10.00.05.02.00		</p>
+                  </div>
+                </div>              
                 <div class="table table-responsive">
                   <table id="table_id" class="display">
-                    <thead class=" text-primary">
+                    <thead class="text-primary">
                       <tr>
                         <th rowspan="3">
                           No
