@@ -212,61 +212,56 @@
                           -
                         </td>
                       </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>
+                          Tanah Bangunan Gudang
+                        </td>
+                        <td class="text-center">
+                          01.01.11.02.03
+                        </td>
+                        <td class="text-center">
+                          1
+                        </td>
+                        <td class="text-center">
+                          1.997,60
+                        </td>
+                        <td class="text-center">
+                          2005
+                        </td>
+                        <td>
+                          "Congeang Kulon
+                          Kel. Congeang kulon
+                          Kec. Congeang
+                          Kabupaten Sumedang"
+                        </td>
+                        <td class="text-center">
+                          Pakai
+                        </td>
+                        <td class="text-center">
+                          8 Agustus 2005
+                        </td>
+                        <td class="text-center">
+                          25
+                        </td>
+                        <td class="text-center">
+                          Gudang
+                        </td>
+                        <td>
+                          "Pembelian
+                          /Inventaris"
+                        </td>
+                        <td class="text-center">
+                          38.368.900,00
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                      </tr>
                       
-                      <!-- <tr>
-                        1
-                      </tr>
-                      <tr>
-                        Tanah Bangunan Rumah Lain-lain
-                      </tr>
-                      <tr>
-                        <tr></tr>
-                        <tr>
-                          <td>01.01.11.01.11</td>
-                          <td>1</td>
-                        </tr>
-                      </tr>
-                      <tr>
-                        2.400,00
-                      </tr>
-                      <tr>
-                        2012
-                      </tr>
-                      <tr>
-                        "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
-                        Kel. Solokan Jeruk
-                        Kec. Solokan Jeruk
-                        Kabupaten Bandung"
-                      </tr>
-                      <tr>
-                        <tr></tr>
-                        <tr>
-                          <td>Guna Bangunan</td>
-                          <td>
-                            <tr></tr>
-                            <tr>
-                              <td>5 Mei 2012</td>
-                              <td>3</td>
-                            </tr>
-                          </td>
-                        </tr>
-                      </tr>
-                      <tr>
-                        Posyandu
-                      </tr>
-                      <tr>
-                        "Pembelian
-                        /Inventaris"
-                      </tr>
-                      <tr>
-                        826.761.850,00
-                      </tr>
-                      <tr>
-                        -
-                      </tr>
-                      <tr class="text-right">
-                        Salary
-                      </tr> -->
+                      
                     </tbody>
                   </table>
                 </div>
