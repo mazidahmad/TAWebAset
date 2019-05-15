@@ -26,13 +26,31 @@
             </a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
               <li>
-                  <a href="#">Page 1</a>
+                  <a href="#"><h5>Kartu Inventaris Barang</h5></a>
               </li>
               <li>
-                  <a href="#">Page 2</a>
+                  <a href="#"><h5>Kartu Inventaris Ruangan</h5></a>
               </li>
               <li>
-                  <a href="#">Page 3</a>
+                  <a href="#"><h5>Buku Inventaris Barang</h5></a>
+              </li>
+              <li>
+                  <a href="#"><h5>Rekap Buku Inventaris Barang</h5></a>
+              </li>
+              <li>
+                  <a href="#"><h5>Laporan Mutasi Barang</h5></a>
+              </li>
+              <li>
+                  <a href="#"><h5>Daftar Mutasi Barang</h5></a>
+              </li>
+              <li>
+                  <a href="#"><h5>Rekapitulasi Mutasi Barang</h5></a>
+              </li>
+              <li>
+                  <a href="#"><h5>Daftar Usulan Barang Yang Dihapuskan</h5></a>
+              </li>
+              <li>
+                  <a href="#"><h5>Daftar Barang Milik Daerah Yang Digunausahakan</h5></a>
               </li>
             </ul>
           </li>
@@ -43,13 +61,13 @@
             </a>
             <ul class="collapse list-unstyled" id="pageSubmenu2">
               <li>
-                  <a href="#">Page 1</a>
+                  <a href="#"><h5>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</h5></a>
               </li>
               <li>
-                  <a href="#">Page 2</a>
+                  <a href="#"><h5>Jadwal Pemeliharaan</h5></a>
               </li>
               <li>
-                  <a href="#">Page 3</a>
+                  <a href="#"><h5>Kartu Pemeliharaan Barang</h5></a>
               </li>
             </ul>
           </li>

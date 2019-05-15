@@ -65,7 +65,7 @@
       </nav>
       <!-- End Navbar -->
       <div class="panel-header panel-header-lg">
-        <canvas id="bigDashboardChart"></canvas>
+        <img src="../assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%">
       </div>
       <div class="content">
         <div class="row">
