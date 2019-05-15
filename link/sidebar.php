@@ -3,11 +3,11 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          CT
+        <a class="simple-text logo-mini">
+          SD
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        <a class="simple-text logo-normal">
+          SIPAT DISPERKIM
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
