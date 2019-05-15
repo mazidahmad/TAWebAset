@@ -97,11 +97,11 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang</strong></h4>
+                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) F <br>Konstruksi Dalam Pengerjaan</strong></h4>
               </div>
               <div class="card-body">                
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-sm-2">
                     <p>PROVINSI         </p>
                     <p>KABUPATEN / KOTA </p>  
                     <p>BIDANG           </p>
@@ -109,7 +109,7 @@
                     <p>BIRO / UPTD / B  </p>
                     <p>No. Kode Lokasi  </p>
                   </div>
-                  <div class="col-md-1">
+                  <div class="col-sm-1">
                     <p>:</p>
                     <p>:</p>  
                     <p>:</p>
@@ -117,7 +117,7 @@
                     <p>:</p>
                     <p>:</p>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-sm-3">
                     <p>JAWA BARAT </p>
                     <p>- </p>  
                     <p>BIDANG KIMPRASWIL/KE-PU-AN		</p>
@@ -130,61 +130,59 @@
                   <table id="table_id" class="display">
                     <thead class="text-primary">
                       <tr>
-                        <th rowspan="3">
+                        <th rowspan="2" class="text-center">
                           No
                         </th>
-                        <th rowspan="3">
+                        <th rowspan="2" class="text-center">
                           Nama Barang
                         </th>
-                        <th colspan="2">
-                          Nomor
+                        <th rowspan="2" class="text-center">
+                          Bangunan (P,SP,D)
                         </th>
-                        <th rowspan="3">
-                          Luas(M2)
+                        <th colspan="2" class="text-center">
+                          Kontruksi Bangunan
                         </th>
-                        <th rowspan="3">
-                          Tahun Pengadaan
+                        <th rowspan="2" class="text-center">
+                          Luas (M2)
                         </th>
-                        <th rowspan="3">
+                        <th rowspan="2" class="text-center">
                           Letak/Alamat
                         </th>
-                        <th colspan="3" class="text-center">
+                        <th colspan="2" class="text-center">
+                          Dokumen
+                        </th>
+                        <th rowspan="2" class="text-center">
+                          Tanggal Mulai
+                        </th>
+                        <th rowspan="2" class="text-center">
                           Status Tanah
                         </th>
-                        <th rowspan="3">
-                          Penggunaan
+                        <th rowspan="2" class="text-center">
+                          Kode Tanah
                         </th>
-                        <th rowspan="3">
-                          Asal Usul
+                        <th rowspan="2" class="text-center">
+                          Asal Usul Pembiayaan
                         </th>
-                        <th rowspan="3">
-                          Harga
+                        <th rowspan="2" class="text-center">
+                          Nilai Kontrak
                         </th>
-                        <th rowspan="3">
+                        <th rowspan="2" class="text-center">
                           Keterangan
                         </th>
                       </tr>
                       <tr>
-                        <th rowspan="2">
-                          Kode Barang
+                        <th>
+                          Bertindak/Tidak
                         </th>
-                        <th rowspan="2">
-                          Register
+                        <th>
+                          Beton/Tidak
                         </th>
-                        <th rowspan="2">
-                          Hak
-                        </th>
-                        <th colspan="2" class="text-center">
-                          Sertifikat
-                        </th>
-                      </tr>
-                      <tr>   
                         <th>
                           Tanggal
                         </th>
-                        <th>
+                        <th class="text-center">
                           Nomor
-                        </th>                       
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -193,99 +191,48 @@
                           1
                         </td>
                         <td>
-                          Nama Barang
-                        </td>
-                        <td class="text-center">
-                          01.01.11.01.11
-                        </td>
-                        <td class="text-center">
-                          1
-                        </td>
-                        <td class="text-center">
-                          2.400,00
-                        </td>
-                        <td class="text-center">
-                          2012
-                        </td>
-                        <td>
-                          "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
-                          Kel. Solokan Jeruk
-                          Kec. Solokan Jeruk
-                          Kabupaten Bandung"
-                        </td>
-                        <td class="text-center">
-                          Guna Bangunan
-                        </td>
-                        <td class="text-center">
-                          5 Mei 2012
-                        </td>
-                        <td class="text-center">
-                          3
-                        </td>
-                        <td class="text-center">
-                          Posyandu
-                        </td>
-                        <td>
-                          "Pembelian
-                          /Inventaris"
-                        </td>
-                        <td class="text-center">
-                          826.761.850,00
+                          Konstruksi dalam pengerjaan
                         </td>
                         <td class="text-center">
                           -
                         </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          Tanah Bangunan Gudang
-                        </td>
                         <td class="text-center">
-                          01.01.11.02.03
-                        </td>
-                        <td class="text-center">
-                          1
-                        </td>
-                        <td class="text-center">
-                          1.997,60
-                        </td>
-                        <td class="text-center">
-                          2005
-                        </td>
-                        <td>
-                          "Congeang Kulon
-                          Kel. Congeang kulon
-                          Kec. Congeang
-                          Kabupaten Sumedang"
-                        </td>
-                        <td class="text-center">
-                          Pakai
-                        </td>
-                        <td class="text-center">
-                          8 Agustus 2005
-                        </td>
-                        <td class="text-center">
-                          25
-                        </td>
-                        <td class="text-center">
-                          Gudang
-                        </td>
-                        <td>
-                          "Pembelian
-                          /Inventaris"
-                        </td>
-                        <td class="text-center">
-                          38.368.900,00
+                          -
                         </td>
                         <td class="text-center">
                           -
                         </td>
-                      </tr>
-                      
-                      
+                        <td class="text-center">
+                          2000
+                        </td>
+                        <td>
+                          - Kabupaten Garut
+                        </td>
+                        <td class="text-center">
+                          31-12-2016
+                        </td>
+                        <td class="text-center">
+                          602.3/23/SP/REHAB/RSUD PAMEUNGPEUK/X/2016/24-10-2016
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                        <td class="text-center">
+                         Pembelian/Inventaris/-
+                        </td>
+                        <td class="text-center">
+                          10.814.505.515,00
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                      </tr>                                           
                     </tbody>
                   </table>
                 </div>
