@@ -30,7 +30,7 @@
                   </div>
                 </div>              
                 <div class="table table-responsive">
-                  <table id="table_id" class="display">
+                  <table id="table_id" class="table-filtered display">
                     <thead class="text-primary">
                       <tr>
                         <th rowspan="2">
