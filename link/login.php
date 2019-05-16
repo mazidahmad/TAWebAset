@@ -13,7 +13,7 @@
             session_start();
             $_SESSION['username'] = $username;
             $_SESSION['status'] = "login";
-            header("location:../");
+            header("location:kib-a.php");
         }else{
             echo '<h1>GAGAL LOGIN</h1>';
         }

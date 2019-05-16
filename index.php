@@ -3,7 +3,7 @@
     if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])){
         header("Location:link/login.php");
     }else{
-        header("Location:link/kiba.php");
+        header("Location:link/kib-a.php");
     }
 ?>
 <!DOCTYPE html>
