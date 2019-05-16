@@ -1,6 +1,7 @@
 <?php
+    session_name('ta_webasset');
     session_start();
-    if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])){
+    if(!isset($_SESSION["username"])){
         header("Location:link/login.php");
     }else{
         header("Location:link/kib-a.php");

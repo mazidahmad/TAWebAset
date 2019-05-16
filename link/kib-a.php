@@ -46,7 +46,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="link/logout-action.php">
+                <a class="nav-link" href="logout-action.php">
                   <i class="now-ui-icons media-1_button-power"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Logout</span>
