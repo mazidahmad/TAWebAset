@@ -1,11 +1,9 @@
 <?php
     session_start();
     if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])){
-        header("location:login.php");
-    } 
-
-    if(!isset($_GET['page'])){
-      header("location: ?page=home");
+        header("Location:link/login.php");
+    }else{
+        header("Location:link/kiba.php");
     }
 ?>
 <!DOCTYPE html>
