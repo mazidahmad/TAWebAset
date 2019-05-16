@@ -2,9 +2,11 @@
     session_name('ta_webasset');
     session_start();
     if(!isset($_SESSION["username"])){
-        header("Location:link/login.php");
-    }else{
-        header("Location:link/kib-a.php");
+      header("Location:link/login.php");
+    }
+
+    if(!isset($_GET['page'])){
+      header('location:index.php?page=home');
     }
 ?>
 <!DOCTYPE html>

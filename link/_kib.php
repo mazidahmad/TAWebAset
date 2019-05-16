@@ -6,199 +6,49 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) A <br>Tanah</strong></h4>
+                <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a id="kib-a-tab" class="nav-link active" data-toggle="tab" href="#kib-a" role="tab" aria-controls="kib-a" aria-selected="true">KIB A</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="kib-b-tab" class="nav-link" data-toggle="tab" href="#kib-b" role="tab" aria-controls="kib-b" aria-selected="false">KIB B</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="kib-c-tab" class="nav-link" data-toggle="tab" href="#kib-c" role="tab" aria-controls="kib-c" aria-selected="false">KIB C</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="kib-d-tab" class="nav-link" data-toggle="tab" href="#kib-d" role="tab" aria-controls="kib-d" aria-selected="false">KIB D</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="kib-e-tab" class="nav-link" data-toggle="tab" href="#kib-e" role="tab" aria-controls="kib-e" aria-selected="false">KIB E</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="kib-f-tab" class="nav-link" data-toggle="tab" href="#kib-f" role="tab" aria-controls="kib-f" aria-selected="false">KIB F</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="kib-a" role="tabpanel" aria-labelledby="kib-a-tab">
+                <?php include('link/_kib-a.php'); ?>
               </div>
-              <div class="card-body">                
-                <div class="row">
-                  <div class="col-sm-2">
-                    <p>PROVINSI         </p>
-                    <p>KABUPATEN / KOTA </p>  
-                    <p>BIDANG           </p>
-                    <p>ASISTEM / OPD    </p>
-                    <p>BIRO / UPTD / B  </p>
-                    <p>No. Kode Lokasi  </p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>:</p>
-                    <p>:</p>  
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p>JAWA BARAT </p>
-                    <p>- </p>  
-                    <p>BIDANG KIMPRASWIL/KE-PU-AN		</p>
-                    <p>Dinas Perumahan dan Pemukiman</p>
-                    <p>Sekretariat Dinas</p>
-                    <p>11.10.00.05.02.00		</p>
-                  </div>
-                </div>              
-                <div class="table table-responsive">
-                  <table id="table_id" class="display table-filtered">
-                    <thead class="text-primary">
-                      <tr>
-                        <th rowspan="3">
-                          No
-                        </th>
-                        <th rowspan="3">
-                          Nama Barang
-                        </th>
-                        <th colspan="2">
-                          Nomor
-                        </th>
-                        <th rowspan="3">
-                          Luas(M2)
-                        </th>
-                        <th rowspan="3">
-                          Tahun Pengadaan
-                        </th>
-                        <th rowspan="3">
-                          Letak/Alamat
-                        </th>
-                        <th colspan="3" class="text-center">
-                          Status Tanah
-                        </th>
-                        <th rowspan="3">
-                          Penggunaan
-                        </th>
-                        <th rowspan="3">
-                          Asal Usul
-                        </th>
-                        <th rowspan="3">
-                          Harga
-                        </th>
-                        <th rowspan="3">
-                          Keterangan
-                        </th>
-                      </tr>
-                      <tr>
-                        <th rowspan="2">
-                          Kode Barang
-                        </th>
-                        <th rowspan="2">
-                          Register
-                        </th>
-                        <th rowspan="2">
-                          Hak
-                        </th>
-                        <th colspan="2" class="text-center">
-                          Sertifikat
-                        </th>
-                      </tr>
-                      <tr>   
-                        <th>
-                          Tanggal
-                        </th>
-                        <th>
-                          Nomor
-                        </th>                       
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          Nama Barang
-                        </td>
-                        <td class="text-center">
-                          01.01.11.01.11
-                        </td>
-                        <td class="text-center">
-                          1
-                        </td>
-                        <td class="text-center">
-                          2.400,00
-                        </td>
-                        <td class="text-center">
-                          2012
-                        </td>
-                        <td>
-                          "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
-                          Kel. Solokan Jeruk
-                          Kec. Solokan Jeruk
-                          Kabupaten Bandung"
-                        </td>
-                        <td class="text-center">
-                          Guna Bangunan
-                        </td>
-                        <td class="text-center">
-                          5 Mei 2012
-                        </td>
-                        <td class="text-center">
-                          3
-                        </td>
-                        <td class="text-center">
-                          Posyandu
-                        </td>
-                        <td>
-                          "Pembelian
-                          /Inventaris"
-                        </td>
-                        <td class="text-center">
-                          826.761.850,00
-                        </td>
-                        <td class="text-center">
-                          -
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          Tanah Bangunan Gudang
-                        </td>
-                        <td class="text-center">
-                          01.01.11.02.03
-                        </td>
-                        <td class="text-center">
-                          1
-                        </td>
-                        <td class="text-center">
-                          1.997,60
-                        </td>
-                        <td class="text-center">
-                          2005
-                        </td>
-                        <td>
-                          "Congeang Kulon
-                          Kel. Congeang kulon
-                          Kec. Congeang
-                          Kabupaten Sumedang"
-                        </td>
-                        <td class="text-center">
-                          Pakai
-                        </td>
-                        <td class="text-center">
-                          8 Agustus 2005
-                        </td>
-                        <td class="text-center">
-                          25
-                        </td>
-                        <td class="text-center">
-                          Gudang
-                        </td>
-                        <td>
-                          "Pembelian
-                          /Inventaris"
-                        </td>
-                        <td class="text-center">
-                          38.368.900,00
-                        </td>
-                        <td class="text-center">
-                          -
-                        </td>
-                      </tr>
-                      
-                      
-                    </tbody>
-                  </table>
-                </div>
+              <div class="tab-pane fade" id="kib-b" role="tabpanel" aria-labelledby="kib-b-tab">
+                <?php include('link/_kib-b.php'); ?>
+              </div>
+              <div class="tab-pane fade" id="kib-c" role="tabpanel" aria-labelledby="kib-c-tab">
+                <?php include('link/_kib-c.php'); ?>
+              </div>
+              <div class="tab-pane fade" id="kib-d" role="tabpanel" aria-labelledby="kib-d-tab">
+                <?php include('link/_kib-d.php'); ?>
+              </div>
+              <div class="tab-pane fade" id="kib-e" role="tabpanel" aria-labelledby="kib-e-tab">
+                <?php include('link/_kib-e.php'); ?>
+              </div>
+              <div class="tab-pane fade" id="kib-f" role="tabpanel" aria-labelledby="kib-f-tab">
+                <?php include('link/_kib-f.php'); ?>
               </div>
             </div>
           </div>
