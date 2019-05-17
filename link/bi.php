@@ -97,7 +97,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Ruangan</strong></h4>
+                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang</strong></h4>
               </div>
               <div class="card-body">                
                 <div class="row">
@@ -130,38 +130,29 @@
                   <table id="table_id" class="display">
                     <thead class="text-primary">
                       <tr>
-                        <th rowspan="2">
-                          No
+                        <th colspan="3">
+                          Nomor
                         </th>
-                        <th rowspan="2">
-                          Nama Barang
-                        </th>
-                        <th rowspan="2">
-                          Merk/Model
-                        </th>
-                        <th rowspan="2">
-                          No. Seri Pabrik
-                        </th>
-                        <th rowspan="2">
-                          Ukuran
+                        <th colspan="3">
+                          Spesifikasi Barang
                         </th>
                         <th rowspan="2">
                           Bahan
                         </th>
+                        <th rowspan="2">
+                          Asal/Cara Perolehan Barang
+                        </th>
+                        <th rowspan="2">
+                          Tahun Perolehan
+                        </th>
+                        <th rowspan="2">
+                          Ukuran Barang/Kontruksi (P,SP,D)
+                        </th>
                         <th rowspan="2" class="text-center">
-                          Tahun Pembuatan/Pembelian
+                          Keadaan Barang (B,KB,RB)
                         </th>
-                        <th rowspan="2">
-                          Nomor Kode Barang
-                        </th>
-                        <th rowspan="2">
-                          Jumlah Barang/Register
-                        </th>
-                        <th rowspan="2">
-                          Harga Beli/Perolehan
-                        </th>
-                        <th colspan="3">
-                          Keadaan Barang
+                        <th colspan="2">
+                          Jumlah
                         </th>
                         <th rowspan="2">
                           Keterangan
@@ -169,13 +160,28 @@
                       </tr>
                       <tr>
                         <th>
-                          Baik
+                          No.
                         </th>
                         <th>
-                          Kurang Baik
+                          Kode Barang
                         </th>
                         <th>
-                          Rusak Berat
+                          Register
+                        </th>
+                        <th>
+                          No.
+                        </th>
+                        <th>
+                          Nama Barang
+                        </th>
+                        <th>
+                          Merk / Tipe
+                        </th>
+                        <th>
+                          No. Sertifikat / No. Pabrik / No. Chasis / No. Mesin / No. Polisi
+                        </th>
+                        <th>
+                          Barang
                         </th>
                       </tr>
                     </thead>
@@ -185,10 +191,13 @@
                           1
                         </td>
                         <td>
-                            Kursi Lipat/Meubelair
+                          01.01.11.01.11
                         </td>
                         <td>
-                          Chitose
+                          0001
+                        </td>
+                        <td>
+                          Tanah Bangunan Rumah Lain-lain/Tanah Bangunan Perumahan/Gedung Tempat Tinggal
                         </td>
                         <td>
                           -
@@ -197,32 +206,29 @@
                           -
                         </td>
                         <td>
-                          Besi
-                        </td>
-                        <td class="text-center">
-                          2014
+                          -
                         </td>
                         <td>
-                            02.06.02.01.34
+                          Pembelian/Inventaris
                         </td>
                         <td class="text-center">
-                          10
+                          2012
                         </td>
-                        <td class="text-center">
-                          250.000,00
+                        <td>
+                            -
                         </td>
                         <td class="text-center">
                           Baik
                         </td>
-                        <td class="text-center">
-                          -
+                        <td class="text-right">
+                          1 Bidang
                         </td>
-                        <td>
-                          -
+                        <td class="text-right">
+                          826.761.850,00 
                         </td>
                         <td class="text-center">
-                            masuk persediaan BP3JB /30-12-2014 /
-                            <br>SKPD: 01. Sekretariat Dinas - 001. Sekretariat Dinas
+                          Pematangan lahan untuk Rusunawa Solokan Jeruk /14-12-2012 /2013
+                          <br>SKPD: 01. Sekretariat Dinas - 001. Sekretariat Dinas
                         </td>
                       </tr>
                     </tbody>

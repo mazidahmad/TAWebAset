@@ -97,7 +97,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Ruangan</strong></h4>
+                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) A <br>Tanah</strong></h4>
               </div>
               <div class="card-body">                
                 <div class="row">
@@ -130,53 +130,61 @@
                   <table id="table_id" class="display">
                     <thead class="text-primary">
                       <tr>
-                        <th rowspan="2">
+                        <th rowspan="3">
                           No
                         </th>
-                        <th rowspan="2">
+                        <th rowspan="3">
                           Nama Barang
                         </th>
-                        <th rowspan="2">
-                          Merk/Model
+                        <th colspan="2">
+                          Nomor
                         </th>
-                        <th rowspan="2">
-                          No. Seri Pabrik
+                        <th rowspan="3">
+                          Luas(M2)
                         </th>
-                        <th rowspan="2">
-                          Ukuran
+                        <th rowspan="3">
+                          Tahun Pengadaan
                         </th>
-                        <th rowspan="2">
-                          Bahan
+                        <th rowspan="3">
+                          Letak/Alamat
                         </th>
-                        <th rowspan="2" class="text-center">
-                          Tahun Pembuatan/Pembelian
+                        <th colspan="3" class="text-center">
+                          Status Tanah
                         </th>
-                        <th rowspan="2">
-                          Nomor Kode Barang
+                        <th rowspan="3">
+                          Penggunaan
                         </th>
-                        <th rowspan="2">
-                          Jumlah Barang/Register
+                        <th rowspan="3">
+                          Asal Usul
                         </th>
-                        <th rowspan="2">
-                          Harga Beli/Perolehan
+                        <th rowspan="3">
+                          Harga
                         </th>
-                        <th colspan="3">
-                          Keadaan Barang
-                        </th>
-                        <th rowspan="2">
+                        <th rowspan="3">
                           Keterangan
                         </th>
                       </tr>
                       <tr>
+                        <th rowspan="2">
+                          Kode Barang
+                        </th>
+                        <th rowspan="2">
+                          Register
+                        </th>
+                        <th rowspan="2">
+                          Hak
+                        </th>
+                        <th colspan="2" class="text-center">
+                          Sertifikat
+                        </th>
+                      </tr>
+                      <tr>   
                         <th>
-                          Baik
+                          Tanggal
                         </th>
                         <th>
-                          Kurang Baik
-                        </th>
-                        <th>
-                          Rusak Berat
-                        </th>
+                          Nomor
+                        </th>                       
                       </tr>
                     </thead>
                     <tbody>
@@ -185,46 +193,99 @@
                           1
                         </td>
                         <td>
-                            Kursi Lipat/Meubelair
+                          Nama Barang
+                        </td>
+                        <td class="text-center">
+                          01.01.11.01.11
+                        </td>
+                        <td class="text-center">
+                          1
+                        </td>
+                        <td class="text-center">
+                          2.400,00
+                        </td>
+                        <td class="text-center">
+                          2012
                         </td>
                         <td>
-                          Chitose
+                          "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
+                          Kel. Solokan Jeruk
+                          Kec. Solokan Jeruk
+                          Kabupaten Bandung"
+                        </td>
+                        <td class="text-center">
+                          Guna Bangunan
+                        </td>
+                        <td class="text-center">
+                          5 Mei 2012
+                        </td>
+                        <td class="text-center">
+                          3
+                        </td>
+                        <td class="text-center">
+                          Posyandu
                         </td>
                         <td>
+                          "Pembelian
+                          /Inventaris"
+                        </td>
+                        <td class="text-center">
+                          826.761.850,00
+                        </td>
+                        <td class="text-center">
                           -
-                        </td>
-                        <td>
-                          -
-                        </td>
-                        <td>
-                          Besi
-                        </td>
-                        <td class="text-center">
-                          2014
-                        </td>
-                        <td>
-                            02.06.02.01.34
-                        </td>
-                        <td class="text-center">
-                          10
-                        </td>
-                        <td class="text-center">
-                          250.000,00
-                        </td>
-                        <td class="text-center">
-                          Baik
-                        </td>
-                        <td class="text-center">
-                          -
-                        </td>
-                        <td>
-                          -
-                        </td>
-                        <td class="text-center">
-                            masuk persediaan BP3JB /30-12-2014 /
-                            <br>SKPD: 01. Sekretariat Dinas - 001. Sekretariat Dinas
                         </td>
                       </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>
+                          Tanah Bangunan Gudang
+                        </td>
+                        <td class="text-center">
+                          01.01.11.02.03
+                        </td>
+                        <td class="text-center">
+                          1
+                        </td>
+                        <td class="text-center">
+                          1.997,60
+                        </td>
+                        <td class="text-center">
+                          2005
+                        </td>
+                        <td>
+                          "Congeang Kulon
+                          Kel. Congeang kulon
+                          Kec. Congeang
+                          Kabupaten Sumedang"
+                        </td>
+                        <td class="text-center">
+                          Pakai
+                        </td>
+                        <td class="text-center">
+                          8 Agustus 2005
+                        </td>
+                        <td class="text-center">
+                          25
+                        </td>
+                        <td class="text-center">
+                          Gudang
+                        </td>
+                        <td>
+                          "Pembelian
+                          /Inventaris"
+                        </td>
+                        <td class="text-center">
+                          38.368.900,00
+                        </td>
+                        <td class="text-center">
+                          -
+                        </td>
+                      </tr>
+                      
+                      
                     </tbody>
                   </table>
                 </div>

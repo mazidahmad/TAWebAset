@@ -1,13 +1,9 @@
 <?php
     session_name('ta_webasset');
     session_start();
-    if(!isset($_SESSION["username"])){
-      header("Location:link/login.php");
-    }
-
-    if(!isset($_GET['page'])){
-      header('location:index.php?page=home');
-    }
+    if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])){
+        header("location:link/login.php");
+    } else {
 ?>
 <!DOCTYPE html>
 <html lang="en">
