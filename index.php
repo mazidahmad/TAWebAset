@@ -79,8 +79,9 @@
       <!-- End Navbar -->
       <?php
         switch($_GET['page']){
-          case "home" : include('link/_dashboard.php');  break;
-          case "kib"  : include('link/_kib.php');        break;
+          case "home" : include('link/_dashboard.php'); break;
+          case "kib"  : include('link/_kib.php'); break;
+          case "edit-data"  : include('link/_input-kib-a.php'); break;
         }
       ?>
       <footer class="footer">
@@ -122,7 +123,11 @@
   <script src="assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  
+  <script>
+    $(document).ready( function () {
+      $('#table_id').DataTable();
+    } );
+  </script>
 </body>
 
 </html>
