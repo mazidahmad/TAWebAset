@@ -22,6 +22,14 @@
             <a href="./icons.html" class="d-flex align-items-center">
               <i class="now-ui-icons education_atom"></i>
               <h5 class="font-weight-bold mb-0">Kartu Inventaris Barang</h5>
+              <ul class="nav">
+                <li><a href="kib-a.php">KIB A</a></li>
+                <li><a href="kib-b.php">KIB B</a></li>
+                <li><a href="kib-c.php">KIB C</a></li>
+                <li><a href="kib-d.php">KIB D</a></li>
+                <li><a href="kib-e.php">KIB E</a></li>
+                <li><a href="kib-f.php">KIB F</a></li>
+              </ul>
             </a>
           </li>
           <li>

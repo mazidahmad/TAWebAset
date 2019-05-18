@@ -4,19 +4,20 @@
     
     if(isset($_SESSION["username"]) || isset($_SESSION["password"])){
         header("location:../index.php");
-    } 
-    if(isset($_POST['Login'])){
-        $username = $_POST['username'];
-        $password = md5($_POST['password']);
+    }else{
+      if(isset($_POST['Login'])){
+          $username = $_POST['username'];
+          $password = md5($_POST['password']);
 
-        if($username == "admin" && $password == md5("admin")){
-            session_start();
-            $_SESSION['username'] = $username;
-            $_SESSION['status'] = "login";
-            header("location:../");
-        }else{
-            echo '<h1>GAGAL LOGIN</h1>';
-        }
+          if($username == "admin" && $password == md5("admin")){
+              session_start();
+              $_SESSION['username'] = $username;
+              $_SESSION['status'] = "login";
+              header("location:kib-a.php");
+          }else{
+              echo '<h1>GAGAL LOGIN</h1>';
+          }
+      }
     }
 ?>
 

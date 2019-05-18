@@ -66,124 +66,88 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) A <br>Tanah</strong></h4>
+                <p class="card-title text-center"><strong>Input Kartu Inventaris Barang (KIB) A <br>Tanah</strong></p>
               </div>
               <div class="card-body">                
                 <div class="row">
-                  <div class="col-sm-2">
-                    <p>PROVINSI         </p>
-                    <p>KABUPATEN / KOTA </p>  
-                    <p>BIDANG           </p>
-                    <p>ASISTEM / OPD    </p>
-                    <p>BIRO / UPTD / B  </p>
-                    <p>No. Kode Lokasi  </p>
-                  </div>
-                  <div class="col-sm-1">
-                    <p>:</p>
-                    <p>:</p>  
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p>JAWA BARAT </p>
-                    <p>- </p>  
-                    <p>BIDANG KIMPRASWIL/KE-PU-AN		</p>
-                    <p>Dinas Perumahan dan Pemukiman</p>
-                    <p>Sekretariat Dinas</p>
-                    <p>11.10.00.05.02.00		</p>
-                  </div>
-                </div>              
-                <div class="table table-responsive">
-                  <table id="table_id" class="display">
-                    <thead class="text-primary">
-                      <tr>
-                        <th rowspan="3">
-                          No
-                        </th>
-                        <th rowspan="3">
-                          Nama Barang
-                        </th>
-                        <th colspan="2">
-                          Nomor
-                        </th>
-                        <th rowspan="3">
-                          Luas(M2)
-                        </th>
-                        <th rowspan="3">
-                          Tahun Pengadaan
-                        </th>
-                        <th rowspan="3">
-                          Letak/Alamat
-                        </th>
-                        <th colspan="3" class="text-center">
-                          Status Tanah
-                        </th>
-                        <th rowspan="3">
-                          Penggunaan
-                        </th>
-                        <th rowspan="3">
-                          Asal Usul
-                        </th>
-                        <th rowspan="3">
-                          Harga
-                        </th>
-                        <th rowspan="3">
-                          Keterangan
-                        </th>
-                      </tr>
-                      <tr>
-                        <th rowspan="2">
-                          Kode Barang
-                        </th>
-                        <th rowspan="2">
-                          Register
-                        </th>
-                        <th rowspan="2">
-                          Hak
-                        </th>
-                        <th colspan="2" class="text-center">
-                          Sertifikat
-                        </th>
-                      </tr>
-                      <tr>   
-                        <th>
-                          Tanggal
-                        </th>
-                        <th>
-                          Nomor
-                        </th>                       
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php   
-                        include "connect.php";
-                        
-                        $result = mysqli_query($connect,"SELECT * from kib_a");
-
-                        $i = 1;    
-                        while($data = mysqli_fetch_array($result)){ ?>
-                                        <tr>
-                                        <td class="text-center"><?php echo $i;?></td>
-                                        <td class="text-center"><?php echo $data['NAMA_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['KODE_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['REGISTER'];?></td>
-                                        <td class="text-center"><?php echo $data['LUAS'];?></td>
-                                        <td class="text-center"><?php echo $data['TAHUN_PENGADAAN'];?></td>
-                                        <td class="text-center"><?php echo $data['ALAMAT'];?></td>
-                                        <td class="text-center"><?php echo $data['HAK'];?></td>
-                                        <td class="text-center"><?php echo $data['SERTIFIKAT_TANGGAL'];?></td>
-                                        <td class="text-center"><?php echo $data['SERTIFIKAT_NOMOR'];?></td>
-                                        <td class="text-center"><?php echo $data['PENGGUNAAN'];?></td>
-                                        <td class="text-center"><?php echo $data['ASAL_USUL'];?></td>
-                                        <td class="text-center"><?php echo $data['HARGA'];?></td>
-                                        <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
-                                        </tr>  
-                      <?php $i++;
-                      } ?>                        
-                    </tbody>
-                  </table>
+                    <div class="col-md-12">
+                    <form method="post" action="input-action.php" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Kodefikasi Barang :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="kode">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Tanggal Sertifikat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="tanggal">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Nomor Register :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="noregis">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Nomor Sertifikat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="noserti">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Nama Barang :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="nama">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Penggunaan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="pengguna">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Luas (M2) :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="luas">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Asal Usul :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="asal">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Tahun Pengadaan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="tahun">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Harga :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="harga">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Letak / Alamat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="alamat">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Keterangan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="ket">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Hak :</label>
+                                <select id="inputState" class="form-control" name="hak">
+                                    <option selected>Pilih:</option>
+                                    <option>Guna Bangunan</option>
+                                    <option>Pakai</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6 align-middle">
+                                    <button type="submit" value="simpan" class="btn btn-primary">Simpan</button>
+                                    <button value="kembali" class="btn btn-secondary"><a href="kib-a.php"></a></button>                                
+                            </div>
+                        </div>
+                    </form>
+                    </div>                    
                 </div>
               </div>
             </div>
