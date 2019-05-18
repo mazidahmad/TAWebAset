@@ -1,7 +1,9 @@
-<div class="card">
-  <button type="button" class="btn btn-outline-primary ml-2"> <a href="link/input-kib-a.php">Input Data</a> </button>
-                  <div class="card-header">
-                    <p class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) A <br>Tanah</strong></p>
+<div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=edit-data">Input Data</a> </button>
+                <div class="card-header">
+                  <p class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) A <br>Tanah</strong></p>
                   </div>
                   <div class="card-body" style="font-size:8pt;">                
                     <div class="row">
@@ -37,167 +39,71 @@
                         <td> 11.10.00.05.02.00</td>
                       </tr>
                       </table>
-                    </div>              
-                    <div class="table table-responsive">
-                      <table id="table_id" class="display table-filtered">
-                        <thead class="text-primary">
-                          <tr>
-                            <th rowspan="3">
-                              No
-                            </th>
-                            <th rowspan="3">
-                              Nama Barang
-                            </th>
-                            <th colspan="2">
-                              Nomor
-                            </th>
-                            <th rowspan="3">
-                              Luas(M2)
-                            </th>
-                            <th rowspan="3">
-                              Tahun Pengadaan
-                            </th>
-                            <th rowspan="3">
-                              Letak/Alamat
-                            </th>
-                            <th colspan="3" class="text-center">
-                              Status Tanah
-                            </th>
-                            <th rowspan="3">
-                              Penggunaan
-                            </th>
-                            <th rowspan="3">
-                              Asal Usul
-                            </th>
-                            <th rowspan="3">
-                              Harga
-                            </th>
-                            <th rowspan="3">
-                              Keterangan
-                            </th>
-                          </tr>
-                          <tr>
-                            <th rowspan="2">
-                              Kode Barang
-                            </th>
-                            <th rowspan="2">
-                              Register
-                            </th>
-                            <th rowspan="2">
-                              Hak
-                            </th>
-                            <th colspan="2" class="text-center">
-                              Sertifikat
-                            </th>
-                          </tr>
-                          <tr>   
-                            <th>
-                              Tanggal
-                            </th>
-                            <th>
-                              Nomor
-                            </th>                       
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              1
-                            </td>
-                            <td>
-                              Nama Barang
-                            </td>
-                            <td class="text-center">
-                              01.01.11.01.11
-                            </td>
-                            <td class="text-center">
-                              1
-                            </td>
-                            <td class="text-center">
-                              2.400,00
-                            </td>
-                            <td class="text-center">
-                              2012
-                            </td>
-                            <td>
-                              "Jl. Raya Rancaekek Majalaya Kampung Solokan Garut 
-                              Kel. Solokan Jeruk
-                              Kec. Solokan Jeruk
-                              Kabupaten Bandung"
-                            </td>
-                            <td class="text-center">
-                              Guna Bangunan
-                            </td>
-                            <td class="text-center">
-                              5 Mei 2012
-                            </td>
-                            <td class="text-center">
-                              3
-                            </td>
-                            <td class="text-center">
-                              Posyandu
-                            </td>
-                            <td>
-                              "Pembelian
-                              /Inventaris"
-                            </td>
-                            <td class="text-center">
-                              826.761.850,00
-                            </td>
-                            <td class="text-center">
-                              -
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              2
-                            </td>
-                            <td>
-                              Tanah Bangunan Gudang
-                            </td>
-                            <td class="text-center">
-                              01.01.11.02.03
-                            </td>
-                            <td class="text-center">
-                              1
-                            </td>
-                            <td class="text-center">
-                              1.997,60
-                            </td>
-                            <td class="text-center">
-                              2005
-                            </td>
-                            <td>
-                              "Congeang Kulon
-                              Kel. Congeang kulon
-                              Kec. Congeang
-                              Kabupaten Sumedang"
-                            </td>
-                            <td class="text-center">
-                              Pakai
-                            </td>
-                            <td class="text-center">
-                              8 Agustus 2005
-                            </td>
-                            <td class="text-center">
-                              25
-                            </td>
-                            <td class="text-center">
-                              Gudang
-                            </td>
-                            <td>
-                              "Pembelian
-                              /Inventaris"
-                            </td>
-                            <td class="text-center">
-                              38.368.900,00
-                            </td>
-                            <td class="text-center">
-                              -
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                </div>                   
+                <div class="table table-responsive">
+                  <table id="table_id" class="display">
+                    <thead class="text-primary">
+                      <tr>
+                        <th rowspan="3">No</th>
+                        <th rowspan="3">Nama Barang</th>
+                        <th colspan="2">Nomor</th>
+                        <th rowspan="3">Luas(M2)</th>
+                        <th rowspan="3">Tahun Pengadaan</th>
+                        <th rowspan="3">Letak/Alamat</th>
+                        <th colspan="3" class="text-center">Status Tanah</th>
+                        <th rowspan="3">Penggunaan</th>
+                        <th rowspan="3">Asal Usul</th>
+                        <th rowspan="3">Harga</th>
+                        <th rowspan="3">Keterangan</th>
+                        <th rowspan="3"></th>
+                      </tr>
+                      <tr>
+                        <th rowspan="2">Kode Barang</th>
+                        <th rowspan="2">Register</th>
+                        <th rowspan="2">Hak</th>
+                        <th colspan="2" class="text-center">Sertifikat</th>
+                      </tr>
+                      <tr>   
+                        <th>Tanggal</th>
+                        <th>Nomor</th>                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php   
+                        include "connect.php";
+                        
+                        $result = mysqli_query($connect,"SELECT * from kib_a");
+
+                        $i = 1;    
+                        while($data = mysqli_fetch_array($result)){ ?>
+                                        <tr>
+                                        <td class="text-center"><?php echo $i;?></td>
+                                        <td class="text-center"><?php echo $data['NAMA_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['KODE_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['REGISTER'];?></td>
+                                        <td class="text-center"><?php echo $data['LUAS'];?></td>
+                                        <td class="text-center"><?php echo $data['TAHUN_PENGADAAN'];?></td>
+                                        <td class="text-center"><?php echo $data['ALAMAT'];?></td>
+                                        <td class="text-center"><?php echo $data['HAK'];?></td>
+                                        <td class="text-center"><?php echo $data['SERTIFIKAT_TANGGAL'];?></td>
+                                        <td class="text-center"><?php echo $data['SERTIFIKAT_NOMOR'];?></td>
+                                        <td class="text-center"><?php echo $data['PENGGUNAAN'];?></td>
+                                        <td class="text-center"><?php echo $data['ASAL_USUL'];?></td>
+                                        <td class="text-center"><?php echo $data['HARGA'];?></td>
+                                        <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
+                                        <td>
+                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=edit-data&kode=<?php echo $data['KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/delete-data.php?kode=<?php echo $data['KODE_BARANG'];?>">Delete</a> </button>
+                                        </td>                                        
+                                        </tr>  
+                                        
+                      <?php $i++;
+                      } ?>                        
+                    </tbody>
+                  </table>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
