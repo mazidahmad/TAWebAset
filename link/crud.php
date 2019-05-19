@@ -309,7 +309,7 @@
 						}
 					}
 
-				function insert_lmb($connect){
+					function insert_lmb($connect){
 						if (isset($_POST['insert_lmb'])){
 
 							$kode_barang            = $_POST['kode_barang'];
@@ -368,6 +368,66 @@
 						}
 					}
 
+					
+				function insert_dmb($connect){
+					if (isset($_POST['insert_dmb'])){
+
+						$kode_barang            = $_POST['kode_barang'];
+						$register				= $_POST['register'];
+						$nama_barang			= $_POST['nama_barang'];
+						$merk	           		= $_POST['merk'];
+						$no_sertif         		= $_POST['no_sertif'];
+						$bahan	           		= $_POST['bahan'];
+						$asal_barang       		= $_POST['asal_barang'];
+						$tahun_perolehan	    = $_POST['tahun_perolehan'];
+						$ukuran_barang	        = $_POST['ukuran_barang'];
+						$satuan	           		= $_POST['satuan'];
+						
+						$kondisi                = $_POST['kondisi'];
+						$jumlah_barang_awal		= $_POST['jumlah_barang_awal'];
+						$jumlah_harga_awal		= $_POST['jumlah_harga_awal'];
+						$jumlah_barang_berkurang= $_POST['jumlah_barang_berkurang'];
+						$jumlah_harga_berkurang	= $_POST['jumlah_harga_berkurang'];
+						$jumlah_barang_bertambah= $_POST['jumlah_barang_bertambah'];
+						$jumlah_harga_bertambah	= $_POST['jumlah_harga_bertambah'];
+						$jumlah_barang_akhir	= $_POST['jumlah_barang_akhir'];
+						$jumlah_harga_akhir		= $_POST['jumlah_harga_akhir'];
+						$ket	           		= $_POST['ket'];
+						
+						echo "<pre>"; var_dump($_POST); echo "</pre>";
+
+						if(!empty($kode_barang) && !empty($register) && !empty($nama_barang) && !empty($merk) && !empty($no_sertif)
+						&& !empty($bahan) && !empty($asal_barang) && !empty($tahun_perolehan) && !empty($ukuran_barang)){
+							echo "in \n";
+							
+							$query = "INSERT INTO MUTASI_BARANG (NOMOR_KODE_BARANG, NOMOR_REGISTER, "
+								."NAMA_BARANG, MERK_TIPE, NO_SERTIFIKAT, BAHAN, ASAL, TAHUN_PEROLEHAN, "
+								."UKURAN_BARANG, SATUAN, KONDISI, JUMLAH_BARANG, JUMLAH_HARGA, "
+								."JUMLAH_BARANG_BERKURANG, JUMLAH_HARGA_BERKURANG, JUMLAH_BARANG_BERTAMBAH, "
+								."JUMLAH_HARGA_BERTAMBAH, JUMLAH_BARANG_AKHIR, JUMLAH_HARGA_AKHIR, KETERANGAN, "
+								."JENIS_MUTASI) VALUES ('$kode_barang', '$register', '$nama_barang', '$merk', "
+								."'$no_sertif', '$bahan', '$asal_barang', '$tahun_perolehan', '$ukuran_barang', "
+								."'$satuan', '$kondisi', $jumlah_barang_awal, $jumlah_harga_awal, "
+								."$jumlah_barang_berkurang, $jumlah_harga_berkurang, $jumlah_barang_bertambah, "
+								."$jumlah_harga_bertambah, $jumlah_barang_akhir, $jumlah_harga_akhir, '$ket', 'DMB')";
+							
+							echo $query;
+							$sql = mysqli_query($connect, $query);
+							
+							if($sql && isset($_GET['process'])){
+									if($_GET['process'] == 'insert_dmb'){
+										header("location:../index.php?page=mb");
+									}
+							}
+							else{ echo "unsaved \n";}
+							
+						} else {
+								$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+							echo $pesan;
+						}
+					}
+				}
+
 				if (isset($_GET['process'])){
 					switch($_GET['process']){
 							case "insert_kib_a":
@@ -408,6 +468,16 @@
 									break;
 							case "delete_lmb":
 									delete_lmb($connect);
+									break;
+
+							case "insert_dmb":
+									insert_dmb($connect);
+									break;
+							case "update_dmb":
+									update_dmb($connect);
+									break;
+							case "delete_dmb":
+									delete_dmb($connect);
 									break;
 
 							default:

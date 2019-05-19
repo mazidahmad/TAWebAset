@@ -30,7 +30,7 @@
                   </div>
                 </div>              
                 <div class="table table-responsive">
-                  <table id="table" class="table-filtered display">
+                  <table id="table-lmb" class="table-filtered display">
                     <thead class="text-primary ">
                       <tr>
                         <th colspan="3" class="text-center">
@@ -66,6 +66,7 @@
                         <th rowspan="3">
                             Keterangan
                         </th>
+                        <th rowspan="3"></th>
                       </tr>
                       <tr>
                         <th rowspan="2">
@@ -124,147 +125,40 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <?php
+                      $result = mysqli_query($connect,"SELECT * from MUTASI_BARANG where JENIS_MUTASI = 'LMB'");
+
+                      $i = 1;    
+                      while($data = mysqli_fetch_array($result)){ ?>
+                      <tr>
+                        <td><?=$i;?></td>
+                        <td><?=$data['NOMOR_KODE_BARANG']; ?></td>
+                        <td><?=$data['NOMOR_REGISTER']; ?></td>
+                        <td><?=$data['NAMA_BARANG']; ?></td>
+                        <td><?=$data['MERK_TIPE']; ?></td>
+                        <td><?=$data['NO_SERTIFIKAT']; ?></td>
+                        <td><?=$data['BAHAN']; ?></td>
+                        <td><?=$data['ASAL']; ?></td>
+                        <td><?=$data['TAHUN_PEROLEHAN']; ?></td>
+                        <td><?=$data['UKURAN_BARANG']; ?></td>
+                        <td><?=$data['SATUAN']; ?></td>
+                        <td><?=$data['KONDISI']; ?></td>
+                        <td><?=$data['JUMLAH_BARANG']; ?></td>
+                        <td><?=$data['JUMLAH_HARGA']; ?></td>
+                        <td><?=$data['JUMLAH_BARANG_BERKURANG']; ?></td>
+                        <td><?=$data['JUMLAH_HARGA_BERKURANG']; ?></td>
+                        <td><?=$data['JUMLAH_BARANG_BERTAMBAH']; ?></td>
+                        <td><?=$data['JUMLAH_HARGA_BERTAMBAH']; ?></td>
+                        <td><?=$data['JUMLAH_BARANG_AKHIR']; ?></td>
+                        <td><?=$data['JUMLAH_HARGA_AKHIR']; ?></td>
+                        <td><?=$data['KETERANGAN']; ?></td>
+                        <td>
+                            <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=edit-lmb&kode=<?php echo $data['NOMOR_KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                            <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_lmb&kode=<?php echo $data['NOMOR_KODE_BARANG'];?>">Delete</a> </button>
+                          </td>   
                       </tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                      </tr>
+                      <?php $i++; } ?>
                     </tbody>
-                    <!-- <tbody>
-                      <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          02.02.08.06.01
-                        </td>
-                        <td class="text-center">
-                          Mesin Bor Batu
-                        </td>
-                        <td class="text-center">
-                          1
-                        </td>
-                        <td class="text-center">
-                          ISUZU ELF TRUCK
-                        </td>
-                        <td class="text-center">
-                          4,57
-                        </td>
-                        <td>
-                          BESI
-                        </td>
-                        <td class="text-center">
-                          2010
-                        </td>
-                        <td class="text-center">
-                          ISUZU
-                        </td>
-                        <td class="text-center">
-                          MHCNK71LYAJ020035
-                        </td>
-                        <td class="text-center">
-                          B020035
-                        </td>
-                        <td>
-                          D 8565 C
-                        </td>
-                        <td class="text-center">
-                          H-08139654
-                        </td>
-                        <td class="text-center">
-                          "Pembelian
-                          /Inventaris/
-                          "
-                        </td>
-                        <td class="text-center">
-                            674.965.800,00
-                        </td>
-                        <td class="text-center">
-                            -
-                        </td>
-                        <td>
-                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="#" title="Edit" style="text-decoration:none;">Edit</a></button>
-                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="#">Delete</a> </button>
-                        </td>  
-                      </tr>
-                      <tr>
-                      <td>
-                          1
-                        </td>
-                        <td>
-                          "02.03.01.01.01
-                          464196"
-                        </td>
-                        <td class="text-center">
-                          Sedan
-                        </td>
-                        <td class="text-center">
-                          1
-                        </td>
-                        <td class="text-center">
-                          HONDA CITY
-                        </td>
-                        <td class="text-center">
-                          -
-                        </td>
-                        <td>
-                          BESI
-                        </td>
-                        <td class="text-center">
-                          2010
-                        </td>
-                        <td class="text-center">
-                          HONDA
-                        </td>
-                        <td class="text-center">
-                          MRHGM26604P020433
-                        </td>
-                        <td class="text-center">
-                          L15472803348
-                        </td>
-                        <td>
-                          D 1516 F
-                        </td>
-                        <td class="text-center">
-                          H-02161953
-                        </td>
-                        <td class="text-center">
-                          "Pembelian
-                          /Inventaris/
-                          "
-                        </td>
-                        <td class="text-center">
-                          262.500.000,00
-                        </td>
-                        <td class="text-center">
-                            -
-                        </td>
-                        <td>
-                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="#" title="Edit" style="text-decoration:none;">Edit</a></button>
-                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="#">Delete</a> </button>
-                        </td>  
-                      </tr>
-                      
-                      
-                    </tbody> -->
                   </table>
                 </div>
               </div>
