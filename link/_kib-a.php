@@ -1,7 +1,7 @@
 <div class="content">
         <div class="row">
           <div class="col-md-12">
-            <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=edit-data">Input Data</a> </button>
+            <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=insert-kib-a">Input Data</a> </button>
                 <div class="card-header">
                   <p class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) A <br>Tanah</strong></p>
                   </div>
@@ -92,8 +92,8 @@
                                         <td class="text-center"><?php echo $data['HARGA'];?></td>
                                         <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
                                         <td>
-                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=edit-data&kode=<?php echo $data['KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/delete-data.php?kode=<?php echo $data['KODE_BARANG'];?>">Delete</a> </button>
+                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=edit-kib-a&kode=<?php echo $data['KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_kib_a&kode=<?php echo $data['KODE_BARANG'];?>">Delete</a> </button>
                                         </td>                                        
                                         </tr>  
                                         
