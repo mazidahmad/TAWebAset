@@ -33,22 +33,22 @@
           <div class="col-md-12">
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="kib-a" role="tabpanel" aria-labelledby="kib-a-tab">
-                <?php include('link/_kib-a.php'); ?>
+                <?php include('link/kib/_kib-a.php'); ?>
               </div>
               <div class="tab-pane fade" id="kib-b" role="tabpanel" aria-labelledby="kib-b-tab">
-                <?php include('link/_kib-b.php'); ?>
+                <?php include('link/kib/_kib-b.php'); ?>
               </div>
               <div class="tab-pane fade" id="kib-c" role="tabpanel" aria-labelledby="kib-c-tab">
-                <?php include('link/_kib-c.php'); ?>
+                <?php include('link/kib/_kib-c.php'); ?>
               </div>
               <div class="tab-pane fade" id="kib-d" role="tabpanel" aria-labelledby="kib-d-tab">
-                <?php include('link/_kib-d.php'); ?>
+                <?php include('link/kib/_kib-d.php'); ?>
               </div>
               <div class="tab-pane fade" id="kib-e" role="tabpanel" aria-labelledby="kib-e-tab">
-                <?php include('link/_kib-e.php'); ?>
+                <?php include('link/kib/_kib-e.php'); ?>
               </div>
               <div class="tab-pane fade" id="kib-f" role="tabpanel" aria-labelledby="kib-f-tab">
-                <?php include('link/_kib-f.php'); ?>
+                <?php include('link/kib/_kib-f.php'); ?>
               </div>
             </div>
           </div>

@@ -81,8 +81,8 @@
         switch($_GET['page']){
           case "home" : include('link/_dashboard.php'); break;
           
-          case "kib"  : include('link/_kib.php'); break;
-          case "insert-kib-a"   : include('link/_kib-a-input.php'); break;
+          case "kib"  : include('link/kib/_kib.php'); break;
+          case "insert-kib-a"   : include('link/kib/_kib-a-input.php'); break;
           case "edit-kib-a"     : include('link/_kib-a-edit.php'); break;
           case "delete-kib-a"   : include('link/crud.php?process=delete_kib_a'); break;
           
