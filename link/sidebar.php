@@ -5,9 +5,7 @@
     $sub_kir = "";
     $sub_bib = "";
     $sub_rbib = "";
-    $sub_lmb = "";
-    $sub_dmb = "";
-    $sub_rmb = "";
+    $sub_mb = "";
     $sub_dubd = "";
     $sub_dbmdd = "";
 
@@ -23,13 +21,11 @@
     elseif(in_array($menuopt, array('kir', 'insert-kir', 'edit-kir'))){$sub_kir="active";}
     elseif(in_array($menuopt, array('bib'))){$sub_bib="active";}
     elseif(in_array($menuopt, array('rbib'))){$sub_rbib="active";}
-    elseif(in_array($menuopt, array('lmb'))){$sub_lmb="active";}
-    elseif(in_array($menuopt, array('dmb'))){$sub_dmb="active";}
-    elseif(in_array($menuopt, array('rmb'))){$sub_rmb="active";}
+    elseif(in_array($menuopt, array('mb'))){$sub_mb="active";}
     elseif(in_array($menuopt, array('dubd'))){$sub_dubd="active";}
     elseif(in_array($menuopt, array('dbmdd'))){$sub_dbmdd="active";}
 
-    if(in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_lmb, $sub_dmb, $sub_rmb, $sub_dubd, $sub_dbmdd))){$menu_invent = "active"; $style_invent="style='color: #f76232;'";}
+    if(in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $sub_dubd, $sub_dbmdd))){$menu_invent = "active"; $style_invent="style='color: #f76232;'";}
     
 ?>
 <div class="sidebar" data-color="orange">
@@ -62,24 +58,22 @@
               <li class="<?php echo $sub_kib;?>">
                   <a href="index.php?page=kib"><h5>Kartu Inventaris Barang</h5></a>
               </li>
+              
               <li class="<?php echo $sub_kir;?>">
                   <a href="index.php?page=kir"><h5>Kartu Inventaris Ruangan</h5></a>
               </li>
+
               <li class="<?php echo $sub_bib;?>">
                   <a href="index.php?page=bib"><h5>Buku Inventaris Barang</h5></a>
               </li>
               <li class="<?php echo $sub_rbib;?>">
                   <a href="index.php?page=rbib"><h5>Rekap Buku Inventaris Barang</h5></a>
               </li>
-              <li class="<?php echo $sub_lmb;?>">
-                  <a href="index.php?page=lmb"><h5>Laporan Mutasi Barang</h5></a>
+
+              <li class="<?php echo $sub_mb;?>">
+                  <a href="index.php?page=mb"><h5> Mutasi Barang</h5></a>
               </li>
-              <li class="<?php echo $sub_dmb;?>">
-                  <a href="index.php?page=dmb"><h5>Daftar Mutasi Barang</h5></a>
-              </li>
-              <li class="<?php echo $sub_rmb;?>">
-                  <a href="index.php?page=rmb"><h5>Rekapitulasi Mutasi Barang</h5></a>
-              </li>
+
               <li class="<?php echo $sub_dubd;?>">
                   <a href="index.php?page=dubd"><h5>Daftar Usulan Barang Yang Dihapuskan</h5></a>
               </li>
