@@ -27,10 +27,10 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="../assets/img/logo_jabar.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    SIPAT DISPERKIM 
+    ASIPAT DISPERKIM 
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -56,7 +56,8 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">SIPAT DISPERKIM</a>
+            <img src="../assets/img/logo_jabar.png" width="40px" height="40px"> 
+            <a class="navbar-brand" href="#pablo">&nbsp;ASIPAT DISPERKIM</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -109,7 +110,7 @@
         </div>
       </nav>
       <div class="container-fluid h-100">
-        <div class="row h-100 justify-content-center align-items-center">
+        <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/BangunanDinasCoverWeb.jpg');">
           <div class="col-md-6"></div>
           <div class="col-md-6">
               <div class="row h-100">
