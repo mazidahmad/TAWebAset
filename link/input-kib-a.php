@@ -59,9 +59,9 @@
       </nav>
       <!-- End Navbar -->
       <div class="panel-header panel-header-lg">
-        <img src="../assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%">
-      </div>
-      <div class="content">
+    <img src="assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%">
+</div>
+<div class="content">
         <div class="row">
           <div class="col-md-12">
             <div class="card">
@@ -72,109 +72,96 @@
                 <div class="row">
                     <div class="col-md-12">
                     
-                    <?php if(isset($_GET['kode'])){
-                        $nim		= $_GET['kode'];
-                        $query	= mysqli_query($connect,"SELECT * FROM kib_a WHERE KODE_BARANG = '$kode'");
-                        $data  	= mysqli_fetch_array($query);
-                        $nama = $data['NAMA_BARANG'];
-                        $noregis = $data['REGISTER'];
-                        $luas = $data['LUAS'];
-                        $tahun = $data['TAHUN_PENGADAAN'];
-                        $alamat = $data['ALAMAT'];
-                        $hak = $data['HAK'];
-                        $tanggal = $data['SERTIFIKAT_TANGGAL'];
-                        $noserti = $data['SERTIFIKAT_NOMOR'];
-                        $penggunaan = $data['PENGGUNAAN'];
-                        $asal = $data['ASAL_USUL'];
-                        $harga = $data['HARGA'];
-                        $ket = $data['KETERANGAN'];
-                        }
-                        else{
-                          $nama = "";
-                          $noregis = "";
-                          $luas = "";
-                          $tahun = "";
-                          $alamat = "";
-                          $hak = "";
-                          $tanggal = "";
-                          $noserti = "";
-                          $penggunaan = "";
-                          $asal = "-";
-                          $harga = "";
-                          $ket = "";
-                      } ?>
-                    <form method="post" action="input-action.php" enctype="multipart/form-data">
+                    <form method="post" action="crud.php?process=insert_kib_a" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput">Kodefikasi Barang :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $kode; ?>" name="kode">
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="kode">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Tanggal Sertifikat :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $tanggal; ?>" name="tanggal">
+                                <label for="formGroupExampleInput">Nomor Sertifikat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="noserti">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput2">Nomor Register :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $noregis; ?>" name="noregis">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="noregis">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput">Nomor Sertifikat :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $noserti; ?>" name="noserti">
+                                <label for="formGroupExampleInput2">Penggunaan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="pengguna">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput">Nama Barang :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $nama; ?>" name="nama">
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="nama">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Penggunaan :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $pengguna; ?>" name="pengguna">
+                                <label for="formGroupExampleInput">Asal Usul :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="asal">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput2">Luas (M2) :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $luas; ?>" name="luas">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="luas">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput">Asal Usul :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $asal; ?>" name="asal">
+                                <label for="formGroupExampleInput2">Harga :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="harga">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput">Tahun Pengadaan :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $tahun; ?>" name="tahun">
+                                <input type="text" class="form-control" id="formGroupExampleInput" name="tahun">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Harga :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $harga; ?>" name="harga">
+                                <label for="formGroupExampleInput2">Keterangan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="ket">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput2">Letak / Alamat :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $alamat; ?>" name="alamat">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="alamat">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Keterangan :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $ket; ?>" name="ket">
+                                <label for="formGroupExampleInput2">Lampiran Foto :</label>
+                                <div class="form-group">
+                                    <div class="custom-file"style="height:20px;">
+                                        <input type="file" class="custom-file-input" id="customFile1" name="foto">
+                                        <label class="custom-file-label" id="label1" for="customFile1">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Tanggal Sertifikat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" name="tanggal">
+                        </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Lampiran Dokumen :</label>
+                                <div class="custom-file" style="height:20px;">
+                                    <input type="file" class="custom-file-input" id="customFile2" name="filename">
+                                    <label class="custom-file-label" id="label2" for="customFile2">Choose file</label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="formGroupExampleInput">Hak :</label>
-                                <select id="inputState" class="form-control" name="hak" value="<?php echo $hak; ?>">
+                                <select id="inputState" class="form-control" name="hak" style="height:40px;">
                                     <option selected>Pilih:</option>
                                     <option>Guna Bangunan</option>
                                     <option>Pakai</option>
                                 </select>
-                            </div>
+                            </div>                        
                             <div class="form-group col-md-6 align-middle">
-                                    <button type="submit" value="simpan" class="btn btn-primary">Simpan</button>
+                                    <button type="submit" name="insert_kib_a" class="btn btn-primary">Simpan</button>
                                     <button value="kembali" class="btn btn-secondary"><a href="kib-a.php"></a></button>                                
                             </div>
                         </div>
@@ -186,6 +173,17 @@
           </div>
         </div>
       </div>
+      <script>
+        // Add the following code if you want the name of the file appear on select
+        $("$customFile1").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings("#label1").addClass("selected").html(fileName);
+        });
+        $("#customFile2").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings("#label2").addClass("selected").html(fileName);
+        });
+        </script>
       <footer class="footer">
         <div class="container-fluid">
           <nav>

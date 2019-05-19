@@ -75,7 +75,7 @@
               </li>
 
               <li class="<?php echo $sub_dubd;?>">
-                  <a href="index.php?page=dubd"><h5>Daftar Usulan Barang Yang Dihapuskan</h5></a>
+                  <a href="index.php?page=usulan-penghapusan"><h5>Daftar Usulan Barang Yang Dihapuskan</h5></a>
               </li>
               <li class="<?php echo $sub_dbmdd;?>">
                   <a href="index.php?page=dbmdd"><h5>Daftar Barang Milik Daerah Yang Digunausahakan</h5></a>

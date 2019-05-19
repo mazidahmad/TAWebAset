@@ -96,141 +96,102 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
+            <button type="button" class="btn btn-outline-primary ml-2"> <a href="../index.php?page=insert-bi">Input Data</a> </button>
               <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang</strong></h4>
-              </div>
-              <div class="card-body">                
-                <div class="row">
-                  <div class="col-sm-2">
-                    <p>PROVINSI         </p>
-                    <p>KABUPATEN / KOTA </p>  
-                    <p>BIDANG           </p>
-                    <p>ASISTEM / OPD    </p>
-                    <p>BIRO / UPTD / B  </p>
-                    <p>No. Kode Lokasi  </p>
+                <p class="card-title text-center"><strong>Buku Inventaris Barang</strong></p>
                   </div>
-                  <div class="col-sm-1">
-                    <p>:</p>
-                    <p>:</p>  
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <p>JAWA BARAT </p>
-                    <p>- </p>  
-                    <p>BIDANG KIMPRASWIL/KE-PU-AN		</p>
-                    <p>Dinas Perumahan dan Pemukiman</p>
-                    <p>Sekretariat Dinas</p>
-                    <p>11.10.00.05.02.00		</p>
-                  </div>
-                </div>              
-                <div class="table table-responsive">
-                  <table id="table_id" class="display">
-                    <thead class="text-primary">
+                  <div class="card-body" style="font-size:8pt;">                
+                    <div class="row">
+                      <table class="ml-4 mb-4" width="80%">
                       <tr>
-                        <th colspan="3">
-                          Nomor
-                        </th>
-                        <th colspan="3">
-                          Spesifikasi Barang
-                        </th>
-                        <th rowspan="2">
-                          Bahan
-                        </th>
-                        <th rowspan="2">
-                          Asal/Cara Perolehan Barang
-                        </th>
-                        <th rowspan="2">
-                          Tahun Perolehan
-                        </th>
-                        <th rowspan="2">
-                          Ukuran Barang/Kontruksi (P,SP,D)
-                        </th>
-                        <th rowspan="2" class="text-center">
-                          Keadaan Barang (B,KB,RB)
-                        </th>
-                        <th colspan="2">
-                          Jumlah
-                        </th>
-                        <th rowspan="2">
-                          Keterangan
-                        </th>
+                        <td width="13%">PROVINSI</td>
+                        <td width="2%"> : </td>
+                        <td>JAWA BARAT</td>
                       </tr>
                       <tr>
-                        <th>
-                          No.
-                        </th>
-                        <th>
-                          Kode Barang
-                        </th>
-                        <th>
-                          Register
-                        </th>
-                        <th>
-                          No.
-                        </th>
-                        <th>
-                          Nama Barang
-                        </th>
-                        <th>
-                          Merk / Tipe
-                        </th>
-                        <th>
-                          No. Sertifikat / No. Pabrik / No. Chasis / No. Mesin / No. Polisi
-                        </th>
-                        <th>
-                          Barang
-                        </th>
+                        <td>KABUPATEN / KOTA </td>
+                        <td> : </td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>BIDANG</td>
+                        <td> : </td>
+                        <td> BIDANG KIMPRASWIL/KE-PU-AN</td>
+                      </tr>
+                      <tr>
+                        <td>ASISTEM / OPD </td>
+                        <td> : </td>
+                        <td> Dinas Perumahan dan Pemukiman</td>
+                      </tr>
+                      <tr>
+                        <td>BIRO / UPTD / B </td>
+                        <td> : </td>
+                        <td> Sekretariat Dinas</td>
+                      </tr>
+                      <tr>
+                        <td>No. Kode Lokasi </td>
+                        <td> : </td>
+                        <td> 11.10.00.05.02.00</td>
+                      </tr>
+                      </table>
+                </div>          
+                <div class="table">
+                  <table id="table_bi" class="display">
+                    <thead class="text-primary">
+                      <tr>
+                        <th colspan="3" class="text-center">Nomor</th>
+                        <th colspan="3" class="text-center">Spesifikasi Barang</th>
+                        <th rowspan="2">Bahan</th>
+                        <th rowspan="2">Asal/Cara Perolehan Barang</th>
+                        <th rowspan="2">Tahun Perolehan</th>
+                        <th rowspan="2">Ukuran Barang/Kontruksi (P,SP,D)</th>
+                        <th rowspan="2" class="text-center">Keadaan Barang (B,KB,RB)</th>
+                        <th colspan="2" class="text-center">Jumlah</th>
+                        <th rowspan="2" class="text-center">Keterangan</th>
+                        <th rowspan="2" class="text-center"></th>
+                      </tr>
+                      <tr>
+                        <th>No.</th>
+                        <th>Kode Barang</th>
+                        <th>Register</th>
+                        <th>Nama Barang</th>
+                        <th>Merk / Tipe</th>
+                        <th>No. Sertifikat / No. Pabrik / No. Chasis / No. Mesin / No. Polisi</th>
+                        <th>Barang</th>
+                        <th>Harga</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          01.01.11.01.11
-                        </td>
-                        <td>
-                          0001
-                        </td>
-                        <td>
-                          Tanah Bangunan Rumah Lain-lain/Tanah Bangunan Perumahan/Gedung Tempat Tinggal
-                        </td>
-                        <td>
-                          -
-                        </td>
-                        <td>
-                          -
-                        </td>
-                        <td>
-                          -
-                        </td>
-                        <td>
-                          Pembelian/Inventaris
-                        </td>
-                        <td class="text-center">
-                          2012
-                        </td>
-                        <td>
-                            -
-                        </td>
-                        <td class="text-center">
-                          Baik
-                        </td>
-                        <td class="text-right">
-                          1 Bidang
-                        </td>
-                        <td class="text-right">
-                          826.761.850,00 
-                        </td>
-                        <td class="text-center">
-                          Pematangan lahan untuk Rusunawa Solokan Jeruk /14-12-2012 /2013
-                          <br>SKPD: 01. Sekretariat Dinas - 001. Sekretariat Dinas
-                        </td>
-                      </tr>
+                    <?php   
+                        include "connect.php";
+                        
+                        $result = mysqli_query($connect,"SELECT * from BI");
+
+                        $i = 1;    
+                        while($data = mysqli_fetch_array($result)){ ?>
+                                        <tr>
+                                        <td class="text-center"><?php echo $i;?></td>
+                                        <td class="text-center"><?php echo $data['NOMOR_KODE_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['NOMOR_REGISTER'];?></td>
+                                        <td class="text-center"><?php echo $data['NAMA_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['MERK_TIPE'];?></td>
+                                        <td class="text-center"><?php echo $data['NO_SERTIFIKAT'];?></td>
+                                        <td class="text-center"><?php echo $data['BAHAN'];?></td>
+                                        <td class="text-center"><?php echo $data['ASAL'];?></td>
+                                        <td class="text-center"><?php echo $data['TAHUN_PEROLEHAN'];?></td>
+                                        <td class="text-center"><?php echo $data['UKURAN_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['KEADAAN_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['JUMLAH_BARANG'];?></td>
+                                        <td class="text-center"><?php echo $data['JUMLAH_HARGA'];?></td>
+                                        <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
+                                        <td>
+                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="input-kib-a&kode=<?php echo $data['KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/input-kib-a.php">Delete</a> </button>
+                                        </td>                                        
+                                        </tr>  
+                                        
+                      <?php $i++;
+                      } ?>
                     </tbody>
                   </table>
                 </div>
@@ -295,9 +256,20 @@
     });
   </script>
   <script>
-    $(document).ready( function () {
-      $('#table_id').DataTable();
+    $(document).ready(function() {
+    var table = $('#table_bi').removeAttr('width').DataTable( {
+        scrollY:        "500px",
+        scrollX:        true,
+        scrollCollapse: true,
+        paging:         false,
+        columnDefs: [
+            { width: 200, targets: 5 },
+            { width: 200, targets: 13 },
+            { width: 200, targets: 14 }
+        ],
+        fixedColumns: true
     } );
+} );  
   </script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
   

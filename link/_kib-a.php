@@ -55,6 +55,8 @@
                         <th rowspan="3">Asal Usul</th>
                         <th rowspan="3">Harga</th>
                         <th rowspan="3">Keterangan</th>
+                        <th rowspan="3">Foto</th>
+                        <th rowspan="3">Lampiran File</th>
                         <th rowspan="3"></th>
                       </tr>
                       <tr>
@@ -91,6 +93,10 @@
                                         <td class="text-center"><?php echo $data['ASAL_USUL'];?></td>
                                         <td class="text-center"><?php echo $data['HARGA'];?></td>
                                         <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
+                                        <td class="text-center">
+                                          <img style="width:500px;" src="assets/lampiran/kib-a/<?php echo $data['FOTO'];?>" alt="">                                          
+                                        </td>
+                                        <td class="text-center"><a href="assets/lampiran/kib-a/<?php echo $data['FILE_NAME'];?>">Lihat Lampiran</a></td>
                                         <td>
                                           <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=edit-kib-a&kode=<?php echo $data['KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
                                           <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_kib_a&kode=<?php echo $data['KODE_BARANG'];?>">Delete</a> </button>
