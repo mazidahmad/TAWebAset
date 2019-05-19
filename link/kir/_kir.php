@@ -101,8 +101,6 @@
                     </thead>
                     <tbody>
                     <?php   
-                        include "link/connect.php";
-                        
                         $result = mysqli_query($connect,"SELECT * from kir");
 
                         $i = 1;    

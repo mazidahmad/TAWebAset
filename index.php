@@ -1,4 +1,5 @@
 <?php
+    include "link/connect.php";
     session_name('ta_webasset');
     session_start();
     if(!isset($_SESSION["username"])){
@@ -92,6 +93,7 @@
           case "delete-kir"     : include('link/crud.php?process=delete_kir'); break;
 
           case "mb"   : include('link/mb/_mb.php'); break;
+          case "insert-lmb"     : include('link/mb/_mb-lmb-input.php'); break;
 
           case "usulan-penghapusan"  : include('link/_usulan-penghapusan.php'); break;
           case "usulan-penghapusan-input"     : include('link/_usulan-penghapusan-input.php'); break;
@@ -149,7 +151,12 @@
       fixedColumns: true
       } );
     } );
+
+    $(".table-filtered").DataTable();
   </script>
 </body>
 
 </html>
+<?php
+                      mysqli_close($connect);
+                      ?>

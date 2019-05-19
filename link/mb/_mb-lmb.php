@@ -1,4 +1,4 @@
-<div class="card"><button type="button" class="btn btn-outline-primary ml-2"> <a href="#">Input Data</a> </button>
+<div class="card"><button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=insert-lmb">Input Data</a> </button>
               <div class="card-header">
                 <p class="card-title text-center"><strong>Laporan Mutasi Barang</strong></p>
               </div>
@@ -30,7 +30,7 @@
                   </div>
                 </div>              
                 <div class="table table-responsive">
-                  <table id="table_id" class="table-filtered display">
+                  <table id="table" class="table-filtered display">
                     <thead class="text-primary ">
                       <tr>
                         <th colspan="3" class="text-center">
@@ -123,6 +123,31 @@
                         </th>
                       </tr>
                     </thead>
+                    <tbody>
+                      </tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
                     <!-- <tbody>
                       <tr>
                         <td>

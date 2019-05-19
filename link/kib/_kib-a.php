@@ -72,7 +72,6 @@
                     </thead>
                     <tbody>
                       <?php   
-                        include "connect.php";
                         
                         $result = mysqli_query($connect,"SELECT * from kib_a");
 
@@ -104,7 +103,8 @@
                                         </tr>  
                                         
                       <?php $i++;
-                      } ?>                        
+                      } 
+                      ?>                        
                     </tbody>
                   </table>
                 </div>

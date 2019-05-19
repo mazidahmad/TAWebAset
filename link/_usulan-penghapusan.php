@@ -101,7 +101,7 @@
                     </thead>
                     <tbody>
                     <?php   
-                        include "connect.php";
+                      // include connect udah di index
                         
                         $result = mysqli_query($connect,"SELECT * from USULAN_PENGHAPUSAN");
 

@@ -163,7 +163,6 @@
                     </thead>
                     <tbody>
                     <?php   
-                        include "connect.php";
                         
                         $result = mysqli_query($connect,"SELECT * from BI");
 

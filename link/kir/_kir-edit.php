@@ -13,7 +13,6 @@
                     <div class="col-md-12">
                     
                     <?php 
-                        include "link/connect.php";
                         
                         if(isset($_GET['kode'])){
                         $kode		= $_GET['kode'];

@@ -73,7 +73,6 @@
                     <div class="col-md-12">
                     
                     <?php 
-                        include "connect.php";
                         
                         if(isset($_GET['kode'])){
                         $kode		= $_GET['kode'];
