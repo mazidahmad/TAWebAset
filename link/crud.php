@@ -427,6 +427,19 @@
 						}
 					}
 
+					function delete_lmb($connect){
+						if(isset($_GET['kode']) && isset($_GET['process'])){
+								$kode = $_GET['kode'];
+								$query = "DELETE FROM MUTASI_BARANG WHERE id_mutasi=$kode";
+								$delete = mysqli_query($connect, $query);
+								if($delete){
+										if($_GET['process'] == 'delete_lmb'){
+												header('location: ../index.php?page=mb');
+										}
+								}
+						}
+					}
+	
 					
 				function insert_dmb($connect){
 					if (isset($_POST['insert_dmb'])){
@@ -543,6 +556,19 @@
 								$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 							echo $pesan;
 						}
+					}
+				}
+
+				function delete_dmb($connect){
+					if(isset($_GET['kode']) && isset($_GET['process'])){
+							$kode = $_GET['kode'];
+							$query = "DELETE FROM MUTASI_BARANG WHERE id_mutasi=$kode";
+							$delete = mysqli_query($connect, $query);
+							if($delete){
+									if($_GET['process'] == 'delete_dmb'){
+											header('location: ../index.php?page=mb');
+									}
+							}
 					}
 				}
 
