@@ -90,6 +90,11 @@
           case "insert-kir"     : include('link/kir/_kir-input.php'); break;
           case "edit-kir"       : include('link/kir/_kir-edit.php'); break;
           case "delete-kir"     : include('link/crud.php?process=delete_kir'); break;
+
+          case "usulan-penghapusan"  : include('link/_usulan-penghapusan.php'); break;
+          case "usulan-penghapusan-input"     : include('link/_usulan-penghapusan-input.php'); break;
+          case "usulan-penghapusan-edit"       : include('link/_usulan-penghapusan-edit.php'); break;
+          case "usulan-penghapusan-delete"     : include('link/crud.php?process=delete_usulan'); break;
         }
       ?>
       <footer class="footer">
