@@ -86,9 +86,9 @@
           case "edit-kib-a"     : include('link/_kib-a-delete.php'); break;
           case "delete-kib-a"   : include('link/crud.php?process=delete_kib_a'); break;
           
-          case "kir"  : include('link/_kir.php'); break;
-          case "insert-kir"     : include('link/_kir-input.php'); break;
-          case "edit-kir"       : include('link/_kir-edit.php'); break;
+          case "kir"  : include('link/kir/_kir.php'); break;
+          case "insert-kir"     : include('link/kir/_kir-input.php'); break;
+          case "edit-kir"       : include('link/kir/_kir-edit.php'); break;
           case "delete-kir"     : include('link/crud.php?process=delete_kir'); break;
         }
       ?>

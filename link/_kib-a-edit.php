@@ -104,7 +104,7 @@
                             </div>
                             <div class="form-group col-md-6 align-middle">
                                     <button type="submit" name="update_kib_a" class="btn btn-primary">Simpan</button>
-                                    <button value="kembali" class="btn btn-secondary"><a href="kib-a.php"></a></button>                                
+                                    <a class="btn btn-secondary" href="index.php?page=kib">Batal</a>
                             </div>
                         </div>
                     </form>
