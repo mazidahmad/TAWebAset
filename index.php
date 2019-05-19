@@ -83,7 +83,7 @@
           
           case "kib"  : include('link/_kib.php'); break;
           case "insert-kib-a"   : include('link/_kib-a-input.php'); break;
-          case "edit-kib-a"     : include('link/_kib-a-delete.php'); break;
+          case "edit-kib-a"     : include('link/_kib-a-edit.php'); break;
           case "delete-kib-a"   : include('link/crud.php?process=delete_kib_a'); break;
           
           case "kir"  : include('link/kir/_kir.php'); break;

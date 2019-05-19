@@ -19,8 +19,8 @@
     // elseif(in_array($menuopt, array('kib', 'kir', 'bib', 'rbib', 'lmb', 'dmb', 'rmb', )))
 
     if(in_array($menuopt, array('home'))){$menu_dashb="active";}
-    elseif(in_array($menuopt, array('kib'))){$sub_kib="active";}
-    elseif(in_array($menuopt, array('kir'))){$sub_kir="active";}
+    elseif(in_array($menuopt, array('kib', 'insert-kib-a', 'edit-kib-a'))){$sub_kib="active";}
+    elseif(in_array($menuopt, array('kir', 'insert-kir', 'edit-kir'))){$sub_kir="active";}
     elseif(in_array($menuopt, array('bib'))){$sub_bib="active";}
     elseif(in_array($menuopt, array('rbib'))){$sub_rbib="active";}
     elseif(in_array($menuopt, array('lmb'))){$sub_lmb="active";}
