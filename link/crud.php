@@ -367,6 +367,65 @@
                             }
 						}
 					}
+					
+					function update_lmb($connect){
+						if (isset($_POST['update_lmb'])){
+
+							$id_mutasi				= $_POST['id_mutasi'];
+
+							$kode_barang            = $_POST['kode_barang'];
+							$register				= $_POST['register'];
+							$nama_barang			= $_POST['nama_barang'];
+							$merk	           		= $_POST['merk'];
+							$no_sertif         		= $_POST['no_sertif'];
+							$bahan	           		= $_POST['bahan'];
+							$asal_barang       		= $_POST['asal_barang'];
+							$tahun_perolehan	    = $_POST['tahun_perolehan'];
+							$ukuran_barang	        = $_POST['ukuran_barang'];
+							$satuan	           		= $_POST['satuan'];
+                            
+							$kondisi                = $_POST['kondisi'];
+							$jumlah_barang_awal		= $_POST['jumlah_barang_awal'];
+							$jumlah_harga_awal		= $_POST['jumlah_harga_awal'];
+							$jumlah_barang_berkurang= $_POST['jumlah_barang_berkurang'];
+							$jumlah_harga_berkurang	= $_POST['jumlah_harga_berkurang'];
+							$jumlah_barang_bertambah= $_POST['jumlah_barang_bertambah'];
+							$jumlah_harga_bertambah	= $_POST['jumlah_harga_bertambah'];
+							$jumlah_barang_akhir	= $_POST['jumlah_barang_akhir'];
+							$jumlah_harga_akhir		= $_POST['jumlah_harga_akhir'];
+							$ket	           		= $_POST['ket'];
+                            
+                            echo "<pre>"; var_dump($_POST); echo "</pre>";
+
+							if(!empty($kode_barang) && !empty($register) && !empty($nama_barang) && !empty($merk) && !empty($no_sertif)
+							&& !empty($bahan) && !empty($asal_barang) && !empty($tahun_perolehan) && !empty($ukuran_barang)){
+                                echo "in \n";
+                                
+                                $query = "UPDATE MUTASI_BARANG SET NOMOR_KODE_BARANG='$kode_barang', NOMOR_REGISTER= '$register', "
+									."NAMA_BARANG='$nama_barang', MERK_TIPE='$merk', NO_SERTIFIKAT='$no_sertif', BAHAN='$bahan', "
+									."ASAL='$asal_barang', TAHUN_PEROLEHAN='$tahun_perolehan', UKURAN_BARANG='$ukuran_barang', "
+									."SATUAN='$satuan', KONDISI='$kondisi', JUMLAH_BARANG=$jumlah_barang_awal, JUMLAH_HARGA=$jumlah_harga_awal, "
+									."JUMLAH_BARANG_BERKURANG=$jumlah_barang_berkurang, JUMLAH_HARGA_BERKURANG=$jumlah_harga_berkurang, "
+									."JUMLAH_BARANG_BERTAMBAH=$jumlah_barang_bertambah, JUMLAH_HARGA_BERTAMBAH=$jumlah_harga_bertambah, "
+									."JUMLAH_BARANG_AKHIR=$jumlah_barang_akhir, JUMLAH_HARGA_AKHIR=$jumlah_harga_akhir, KETERANGAN='$ket' "
+                                    ."WHERE ID_MUTASI=$id_mutasi AND JENIS_MUTASI='LMB'";
+                                
+                                echo $query;
+                                $sql = mysqli_query($connect, $query);
+                                
+                                if($sql && isset($_GET['process'])){
+                                        if($_GET['process'] == 'update_lmb'){
+                                            header("location:../index.php?page=mb");
+                                        }
+                                }
+                                else{ echo "unsaved \n";}
+                                
+                            } else {
+                                    $pesan = "Tidak dapat menyimpan, data belum lengkap!";
+                                echo $pesan;
+                            }
+						}
+					}
 
 					
 				function insert_dmb($connect){
@@ -416,6 +475,65 @@
 							
 							if($sql && isset($_GET['process'])){
 									if($_GET['process'] == 'insert_dmb'){
+										header("location:../index.php?page=mb");
+									}
+							}
+							else{ echo "unsaved \n";}
+							
+						} else {
+								$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+							echo $pesan;
+						}
+					}
+				}
+
+				function update_dmb($connect){
+					if (isset($_POST['update_dmb'])){
+
+						$id_mutasi				= $_POST['id_mutasi'];
+
+						$kode_barang            = $_POST['kode_barang'];
+						$register				= $_POST['register'];
+						$nama_barang			= $_POST['nama_barang'];
+						$merk	           		= $_POST['merk'];
+						$no_sertif         		= $_POST['no_sertif'];
+						$bahan	           		= $_POST['bahan'];
+						$asal_barang       		= $_POST['asal_barang'];
+						$tahun_perolehan	    = $_POST['tahun_perolehan'];
+						$ukuran_barang	        = $_POST['ukuran_barang'];
+						$satuan	           		= $_POST['satuan'];
+						
+						$kondisi                = $_POST['kondisi'];
+						$jumlah_barang_awal		= $_POST['jumlah_barang_awal'];
+						$jumlah_harga_awal		= $_POST['jumlah_harga_awal'];
+						$jumlah_barang_berkurang= $_POST['jumlah_barang_berkurang'];
+						$jumlah_harga_berkurang	= $_POST['jumlah_harga_berkurang'];
+						$jumlah_barang_bertambah= $_POST['jumlah_barang_bertambah'];
+						$jumlah_harga_bertambah	= $_POST['jumlah_harga_bertambah'];
+						$jumlah_barang_akhir	= $_POST['jumlah_barang_akhir'];
+						$jumlah_harga_akhir		= $_POST['jumlah_harga_akhir'];
+						$ket	           		= $_POST['ket'];
+						
+						echo "<pre>"; var_dump($_POST); echo "</pre>";
+
+						if(!empty($kode_barang) && !empty($register) && !empty($nama_barang) && !empty($merk) && !empty($no_sertif)
+						&& !empty($bahan) && !empty($asal_barang) && !empty($tahun_perolehan) && !empty($ukuran_barang)){
+							echo "in \n";
+							
+							$query = "UPDATE MUTASI_BARANG SET NOMOR_KODE_BARANG='$kode_barang', NOMOR_REGISTER= '$register', "
+								."NAMA_BARANG='$nama_barang', MERK_TIPE='$merk', NO_SERTIFIKAT='$no_sertif', BAHAN='$bahan', "
+								."ASAL='$asal_barang', TAHUN_PEROLEHAN='$tahun_perolehan', UKURAN_BARANG='$ukuran_barang', "
+								."SATUAN='$satuan', KONDISI='$kondisi', JUMLAH_BARANG=$jumlah_barang_awal, JUMLAH_HARGA=$jumlah_harga_awal, "
+								."JUMLAH_BARANG_BERKURANG=$jumlah_barang_berkurang, JUMLAH_HARGA_BERKURANG=$jumlah_harga_berkurang, "
+								."JUMLAH_BARANG_BERTAMBAH=$jumlah_barang_bertambah, JUMLAH_HARGA_BERTAMBAH=$jumlah_harga_bertambah, "
+								."JUMLAH_BARANG_AKHIR=$jumlah_barang_akhir, JUMLAH_HARGA_AKHIR=$jumlah_harga_akhir, KETERANGAN='$ket' "
+								."WHERE ID_MUTASI=$id_mutasi AND JENIS_MUTASI='DMB'";
+							
+							echo $query;
+							$sql = mysqli_query($connect, $query);
+							
+							if($sql && isset($_GET['process'])){
+									if($_GET['process'] == 'update_dmb'){
 										header("location:../index.php?page=mb");
 									}
 							}

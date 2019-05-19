@@ -21,7 +21,7 @@
     elseif(in_array($menuopt, array('kir', 'insert-kir', 'edit-kir'))){$sub_kir="active";}
     elseif(in_array($menuopt, array('bib'))){$sub_bib="active";}
     elseif(in_array($menuopt, array('rbib'))){$sub_rbib="active";}
-    elseif(in_array($menuopt, array('mb', 'insert-lmb', 'insert-dmb'))){$sub_mb="active";}
+    elseif(in_array($menuopt, array('mb', 'insert-lmb', 'edit-lmb', 'insert-dmb', 'edit-dmb'))){$sub_mb="active";}
     elseif(in_array($menuopt, array('dubd'))){$sub_dubd="active";}
     elseif(in_array($menuopt, array('dbmdd'))){$sub_dbmdd="active";}
 

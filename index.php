@@ -94,7 +94,9 @@
 
           case "mb"   : include('link/mb/_mb.php'); break;
           case "insert-lmb"     : include('link/mb/_mb-lmb-input.php'); break;
+          case "edit-lmb"       : include('link/mb/_mb-lmb-edit.php'); break;
           case "insert-dmb"     : include('link/mb/_mb-dmb-input.php'); break;
+          case "edit-dmb"       : include('link/mb/_mb_dmb_edit.php'); break;
 
           case "usulan-penghapusan"  : include('link/_usulan-penghapusan.php'); break;
           case "usulan-penghapusan-input"     : include('link/_usulan-penghapusan-input.php'); break;
