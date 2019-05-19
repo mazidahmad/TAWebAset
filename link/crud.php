@@ -155,6 +155,70 @@
           }          
         }
 
+        function insert_usulan($connect){
+          if (isset($_POST['insert_kir'])){
+            $NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
+            $NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
+            $NAMA_BARANG   = $_POST['NAMA_BARANG'];
+            $MERK_TIPE = $_POST['MERK_TIPE'];
+            $NO_SERTIFIKAT = $_POST['NO_SERTIFIKAT'];
+            $BAHAN  = $_POST['BAHAN'];
+            $CARA_PEROLEHAN  = $_POST['CARA_PEROLEHAN'];
+            $TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
+            $UKURAN_BARANG  = $_POST['UKURAN_BARANG'];
+            $KEADAAN_BARANG   = $_POST['KEADAAN_BARANG'];
+            $JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
+            $JUMLAH_HARGA  = $_POST['JUMLAH_HARGA'];
+            $KETERANGAN    = $_POST['KETERANGAN'];
+              
+            $query = "INSERT INTO USULAN_PENGHAPUSAN SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
+            if(mysqli_query($connect, $query){
+              header("location:../index.php?page=usulan-penghapusan.php");
+            }else{
+              header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-insert");
+            }
+            
+          }
+        }
+
+        function update_usulan($connect){
+          if(isset($_POST['update_kir'])){
+              $NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
+              $NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
+              $NAMA_BARANG   = $_POST['NAMA_BARANG'];
+              $MERK_TIPE = $_POST['MERK_TIPE'];
+              $NO_SERTIFIKAT = $_POST['NO_SERTIFIKAT'];
+              $BAHAN  = $_POST['BAHAN'];
+              $CARA_PEROLEHAN  = $_POST['CARA_PEROLEHAN'];
+              $TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
+              $UKURAN_BARANG  = $_POST['UKURAN_BARANG'];
+              $KEADAAN_BARANG   = $_POST['KEADAAN_BARANG'];
+              $JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
+              $JUMLAH_HARGA  = $_POST['JUMLAH_HARGA'];
+              $KETERANGAN    = $_POST['KETERANGAN'];
+              
+              $query = "UPDATE  USULAN_PENGHAPUSAN SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
+              if(mysqli_query($connect, $query){
+                header("location:../index.php?page=usulan-penghapusan.php");
+              }else{
+                header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-update");
+              }
+          }          
+        }
+
+        function delete_usulan($connect){
+          if(isset($_GET['kode']) && isset($_GET['process'])){
+              $kode = $_GET['kode'];
+              $query = "DELETE FROM kir WHERE no_kode='$kode'";
+              $delete = mysqli_query($connect, $query);              
+              if($delete){
+                  if($_GET['process'] == 'delete_kir'){
+                      header('location: ../index.php?page=kir');
+                  }
+              }
+          }    
+        }
+
         if (isset($_GET['process'])){
           switch($_GET['process']){
               case "insert_kib_a":                  
@@ -174,7 +238,16 @@
                   break;
               case "delete_kir":
                   delete_kir($connect);
-                  break;    
+                  break;
+              case "insert_usulan":                  
+                  insert_usulan($connect);
+                  break;
+              case "update_usulan":
+                  update_usulan($connect);
+                  break;
+              case "delete_usulan":
+                  delete_usulan($connect);
+                  break;
               default:
                   echo "<h3>Aksi <i>".$_GET['aksi']."</i> tidaka ada!</h3>";
                   tambah($koneksi);
