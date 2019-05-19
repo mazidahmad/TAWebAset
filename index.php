@@ -82,13 +82,13 @@
           case "home" : include('link/_dashboard.php'); break;
           
           case "kib"  : include('link/_kib.php'); break;
-          case "insert-kib-a"   : include('link/_input-kib-a.php'); break;
-          case "edit-kib-a"     : include('link/_edit-kib-a.php'); break;
+          case "insert-kib-a"   : include('link/_kib-a-input.php'); break;
+          case "edit-kib-a"     : include('link/_kib-a-delete.php'); break;
           case "delete-kib-a"   : include('link/crud.php?process=delete_kib_a'); break;
           
           case "kir"  : include('link/_kir.php'); break;
-          case "insert-kir"     : include('link/_input-kir.php'); break;
-          case "edit-kir"       : include('link/_edit-kir.php'); break;
+          case "insert-kir"     : include('link/_kir-input.php'); break;
+          case "edit-kir"       : include('link/_kir-edit.php'); break;
           case "delete-kir"     : include('link/crud.php?process=delete_kir'); break;
         }
       ?>

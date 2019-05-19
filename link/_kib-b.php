@@ -1,8 +1,8 @@
-<div class="card">
+<div class="card"><button type="button" class="btn btn-outline-primary ml-2"> <a href="#">Input Data</a> </button>
               <div class="card-header">
-                <h4 class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) B <br>Peralatan dan Mesin</strong></h4>
+                <p class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) B <br>Peralatan dan Mesin</strong></p>
               </div>
-              <div class="card-body">                
+              <div class="card-body" style="font-size:8pt;">                
                 <div class="row">
                   <div class="col-sm-2">
                     <p>PROVINSI         </p>
@@ -140,6 +140,10 @@
                         <td class="text-center">
                             -
                         </td>
+                        <td>
+                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="#" title="Edit" style="text-decoration:none;">Edit</a></button>
+                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="#">Delete</a> </button>
+                        </td>  
                       </tr>
                       <tr>
                       <td>
@@ -193,6 +197,10 @@
                         <td class="text-center">
                             -
                         </td>
+                        <td>
+                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="#" title="Edit" style="text-decoration:none;">Edit</a></button>
+                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="#">Delete</a> </button>
+                        </td>  
                       </tr>
                       
                       
