@@ -3,7 +3,7 @@
     session_start();
     
     if(isset($_SESSION["username"]) || isset($_SESSION["password"])){
-        header("location:../index.php");
+        header("location:");
     }else{
       if(isset($_POST['Login'])){
           $username = $_POST['username'];
@@ -13,7 +13,7 @@
               session_start();
               $_SESSION['username'] = $username;
               $_SESSION['status'] = "login";
-              header("location:kib-a.php");
+              header("location:../index.php");
           }else{
               echo '<h1>GAGAL LOGIN</h1>';
           }
