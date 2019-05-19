@@ -95,6 +95,7 @@
           case "usulan-penghapusan-input"     : include('link/_usulan-penghapusan-input.php'); break;
           case "usulan-penghapusan-edit"       : include('link/_usulan-penghapusan-edit.php'); break;
           case "usulan-penghapusan-delete"     : include('link/crud.php?process=delete_usulan'); break;
+          case "insert-bi"  : include('link/_input-bi.php'); break;
         }
       ?>
       <footer class="footer">
@@ -138,7 +139,13 @@
   <script src="assets/demo/demo.js"></script>
   <script>
     $(document).ready( function () {
-      $('#table_id').DataTable();
+      var table = $('#table_id').removeAttr('width').DataTable( {
+        scrollY:        "500px",
+        scrollX:        true,
+        scrollCollapse: true,
+        paging:         false,
+      fixedColumns: true
+      } );
     } );
   </script>
 </body>

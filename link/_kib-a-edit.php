@@ -39,8 +39,8 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $kode; ?>" name="kode">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Tanggal Sertifikat :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $tanggal; ?>" name="tanggal">
+                                <label for="formGroupExampleInput">Nomor Sertifikat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $noserti; ?>" name="noserti">
                             </div>
                         </div>
                         <div class="form-row">
@@ -49,8 +49,8 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $noregis; ?>" name="noregis">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput">Nomor Sertifikat :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $noserti; ?>" name="noserti">
+                                <label for="formGroupExampleInput2">Penggunaan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $pengguna; ?>" name="pengguna">
                             </div>
                         </div>
                         <div class="form-row">
@@ -59,8 +59,8 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $nama; ?>" name="nama">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Penggunaan :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $pengguna; ?>" name="pengguna">
+                                <label for="formGroupExampleInput">Asal Usul :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $asal; ?>" name="asal">
                             </div>
                         </div>
                         <div class="form-row">
@@ -69,8 +69,8 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $luas; ?>" name="luas">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput">Asal Usul :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $asal; ?>" name="asal">
+                                <label for="formGroupExampleInput2">Harga :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $harga; ?>" name="harga">
                             </div>
                         </div>
                         <div class="form-row">
@@ -79,8 +79,8 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $tahun; ?>" name="tahun">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Harga :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $harga; ?>" name="harga">
+                                <label for="formGroupExampleInput2">Keterangan :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $ket; ?>" name="ket">
                             </div>
                         </div>
                         <div class="form-row">
@@ -89,8 +89,8 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $alamat; ?>" name="alamat">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="formGroupExampleInput2">Keterangan :</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $ket; ?>" name="ket">
+                                <label for="formGroupExampleInput2">Lampiran Foto :</label>
+                                <input type="file" class="form-control" id="formGroupExampleInput2" value="<?php echo $foto; ?>" name="foto">
                             </div>
                         </div>
                         <div class="form-row">
@@ -101,6 +101,16 @@
                                     <option>Guna Bangunan</option>
                                     <option>Pakai</option>
                                 </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Lampiran Dokumen :</label>
+                                <input type="file" class="form-control" id="formGroupExampleInput2" value="<?php echo $file; ?>" name="filename">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput2">Tanggal Sertifikat :</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" value="<?php echo $tanggal; ?>" name="tanggal">
                             </div>
                             <div class="form-group col-md-6 align-middle">
                                     <button type="submit" name="update_kib_a" class="btn btn-primary">Simpan</button>
