@@ -169,66 +169,64 @@
 				}
 
 				function insert_usulan($connect){
-					if (isset($_POST['insert_kir'])){
-						$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
-						$NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
-						$NAMA_BARANG   = $_POST['NAMA_BARANG'];
-						$MERK_TIPE = $_POST['MERK_TIPE'];
-						$NO_SERTIFIKAT = $_POST['NO_SERTIFIKAT'];
-						$BAHAN  = $_POST['BAHAN'];
-						$CARA_PEROLEHAN  = $_POST['CARA_PEROLEHAN'];
-						$TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
-						$UKURAN_BARANG  = $_POST['UKURAN_BARANG'];
-						$KEADAAN_BARANG   = $_POST['KEADAAN_BARANG'];
-						$JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
-						$JUMLAH_HARGA  = $_POST['JUMLAH_HARGA'];
-						$KETERANGAN    = $_POST['KETERANGAN'];
+					$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
+					$NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
+					$NAMA_BARANG   = $_POST['NAMA_BARANG'];
+					$MERK_TIPE = $_POST['MERK_TIPE'];
+					$NO_SERTIFIKAT = $_POST['NO_SERTIFIKAT'];
+					$BAHAN  = $_POST['BAHAN'];
+					$CARA_PEROLEHAN  = $_POST['CARA_PEROLEHAN'];
+					$TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
+					$UKURAN_BARANG  = $_POST['UKURAN_BARANG'];
+					$KEADAAN_BARANG   = $_POST['KEADAAN_BARANG'];
+					$JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
+					$JUMLAH_HARGA  = $_POST['JUMLAH_HARGA'];
+					$KETERANGAN    = $_POST['KETERANGAN'];
 
-						$query = "INSERT INTO USULAN_PENGHAPUSAN SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
-						if(mysqli_query($connect, $query)){
-							header("location:../index.php?page=usulan-penghapusan.php");
-						}else{
-							header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-insert");
-						}
-
+					$query = "INSERT INTO USULAN_PENGHAPUSAN (NOMOR_KODE_BARANG,NOMOR_REGISTER,NAMA_BARANG,MERK_TIPE,
+						NO_SERTIFIKAT,BAHAN,CARA_PEROLEHAN,TAHUN_PEROLEHAN,UKURAN_BARANG,KEADAAN_BARANG,JUMLAH_BARANG,JUMLAH_HARGA,KETERANGAN)
+						VALUES('$NOMOR_KODE_BARANG','$NOMOR_REGISTER','$NAMA_BARANG','$MERK_TIPE','$NO_SERTIFIKAT',
+							'$BAHAN','$CARA_PEROLEHAN','$TAHUN_PEROLEHAN','$UKURAN_BARANG','$KEADAAN_BARANG','$JUMLAH_BARANG','$JUMLAH_HARGA','$KETERANGAN')";
+					if(mysqli_query($connect, $query)){
+						header("location:../index.php?page=usulan-penghapusan");
+					}else{
+						// header("location:../index.php?page=usulan-penghapusan&&status=gagal-insert");
+						echo "Error: " . $query . "<br>" . mysqli_error($connect);
 					}
 				}
 
 				function update_usulan($connect){
-					if(isset($_POST['update_kir'])){
-							$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
-							$NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
-							$NAMA_BARANG   = $_POST['NAMA_BARANG'];
-							$MERK_TIPE = $_POST['MERK_TIPE'];
-							$NO_SERTIFIKAT = $_POST['NO_SERTIFIKAT'];
-							$BAHAN  = $_POST['BAHAN'];
-							$CARA_PEROLEHAN  = $_POST['CARA_PEROLEHAN'];
-							$TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
-							$UKURAN_BARANG  = $_POST['UKURAN_BARANG'];
-							$KEADAAN_BARANG   = $_POST['KEADAAN_BARANG'];
-							$JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
-							$JUMLAH_HARGA  = $_POST['JUMLAH_HARGA'];
-							$KETERANGAN    = $_POST['KETERANGAN'];
+					$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
+					$NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
+					$NAMA_BARANG   = $_POST['NAMA_BARANG'];
+					$MERK_TIPE = $_POST['MERK_TIPE'];
+					$NO_SERTIFIKAT = $_POST['NO_SERTIFIKAT'];
+					$BAHAN  = $_POST['BAHAN'];
+					$CARA_PEROLEHAN  = $_POST['CARA_PEROLEHAN'];
+					$TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
+					$UKURAN_BARANG  = $_POST['UKURAN_BARANG'];
+					$KEADAAN_BARANG   = $_POST['KEADAAN_BARANG'];
+					$JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
+					$JUMLAH_HARGA  = $_POST['JUMLAH_HARGA'];
+					$KETERANGAN    = $_POST['KETERANGAN'];
 
-							$query = "UPDATE  USULAN_PENGHAPUSAN SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
-							if(mysqli_query($connect, $query)){
-								header("location:../index.php?page=usulan-penghapusan.php");
-							}else{
-								header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-update");
-							}
+					$query = "UPDATE  USULAN_PENGHAPUSAN SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
+					if(mysqli_query($connect, $query)){
+						header("location:../index.php?page=usulan-penghapusan.php");
+					}else{
+						// header("location:../index.php?page=usulan-penghapusan&&status=gagal-update");
+						echo "Error: " . $query . "<br>" . mysqli_error($connect);
 					}
 				}
 
 				function delete_usulan($connect){
-					if(isset($_GET['kode']) && isset($_GET['process'])){
-							$kode = $_GET['kode'];
-							$query = "DELETE FROM kir WHERE no_kode='$kode'";
-							$delete = mysqli_query($connect, $query);
-							if($delete){
-									if($_GET['process'] == 'delete_kir'){
-											header('location: ../index.php?page=kir');
-									}
-							}
+					$kode = $_GET['kode'];
+					$query = "DELETE FROM USULAN_PENGHAPUSAN WHERE ID_USULAN='$kode'";
+					$delete = mysqli_query($connect, $query);
+					if($delete){
+							
+					}else{
+						echo "Error: " . $query . "<br>" . mysqli_error($connect);
 					}
 				}
 
@@ -573,72 +571,51 @@
 				}
 				
 				function insert_bmd($connect){
-          if (isset($_POST['insert_kir'])){
-            $NO_KODE_LOKASI_BARANG   = $_POST['NO_KODE_LOKASI_BARANG'];
-            $NO_KODE_BARANG   = $_POST['NO_KODE_BARANG'];
-            $NO_REGISTER   = $_POST['NO_REGISTER'];
-            $NAMA_BARANG = $_POST['NAMA_BARANG'];
-            $DOKUMEN_BARANG = $_POST['DOKUMEN_BARANG'];
-            $ALAMAT_BARANG  = $_POST['ALAMAT_BARANG'];
-            $ASAL_USUL  = $_POST['ASAL_USUL'];
-            $TAHUN_PEMBELIAN = $_POST['TAHUN_PEMBELIAN'];
-            $KONSTRUKSI  = $_POST['KONSTRUKSI'];
-            $LUAS   = $_POST['LUAS'];
-            $NILAI_BARANG = $_POST['NILAI_BARANG'];
-            $SK_KDH  = $_POST['SK_KDH'];
-            $JANGKA_WAKTU    = $_POST['JANGKA_WAKTU'];
-            $ALAMA_PHK_KETIGAT    = $_POST['ALAMA_PHK_KETIGAT'];
-            $KETERANGAN    = $_POST['KETERANGAN'];
-              
-            $query = "INSERT INTO BMD_GUNAUSAHA SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
-            if(mysqli_query($connect, $query)){
-              header("location:../index.php?page=usulan-penghapusan.php");
-            }else{
-              header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-insert");
-            }
-            
-          }
-        }
+		            $NO_KODE_LOKASI_BARANG   = $_POST['NO_KODE_LOKASI_BARANG'];
+		            $NO_KODE_BARANG   = $_POST['NO_KODE_BARANG'];
+		            $NO_REGISTER   = $_POST['NO_REGISTER'];
+		            $NAMA_BARANG = $_POST['NAMA_BARANG'];
+		            $DOKUMEN_BARANG = $_POST['DOKUMEN_BARANG'];
+		            $ALAMAT_BARANG  = $_POST['ALAMAT_BARANG'];
+		            $ASAL_USUL  = $_POST['ASAL_USUL'];
+		            $TAHUN_PEMBELIAN = $_POST['TAHUN_PEMBELIAN'];
+		            $KONSTRUKSI  = $_POST['KONSTRUKSI'];
+		            $LUAS   = $_POST['LUAS'];
+		            $NILAI_BARANG = $_POST['NILAI_BARANG'];
+		            $SK_KDH  = $_POST['SK_KDH'];
+		            $JANGKA_WAKTU    = $_POST['JANGKA_WAKTU'];
+		            $ALAMA_PHK_KETIGAT    = $_POST['ALAMA_PHK_KETIGAT'];
+		            $KETERANGAN    = $_POST['KETERANGAN'];
+		              
+		            $query = "INSERT INTO BMD_GUNAUSAHA (NOMOR_KODE_BARANG,NOMOR_REGISTER,NAMA_BARANG,MERK_TIPE,NO_SERTIFIKAT,BAHAN,CARA_PEROLEHAN,TAHUN_PEROLEHAN,UKURAN_BARANG,KEADAAN_BARANG,JUMLAH_BARANG,JUMLAH_HARGA) VALUES('$NOMOR_KODE_BARANG','$NOMOR_REGISTER','$NAMA_BARANG','$MERK_TIPE','$NO_SERTIFIKAT','$BAHAN','$CARA_PEROLEHAN','$TAHUN_PEROLEHAN','$UKURAN_BARANG','$KEADAAN_BARANG','$JUMLAH_BARANG','$JUMLAH_HARGA')";
+		            if(mysqli_query($connect,$query)){
+		            	header("Location:index.php?page=bmd-gunausaha");
+		            }else{
+						echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		            }
+		        }
 
-        function update_bmd($connect){
-          if(isset($_POST['update_kir'])){
-              $NO_KODE_LOKASI_BARANG   = $_POST['NO_KODE_LOKASI_BARANG'];
-              $NO_KODE_BARANG   = $_POST['NO_KODE_BARANG'];
-              $NO_REGISTER   = $_POST['NO_REGISTER'];
-              $NAMA_BARANG = $_POST['NAMA_BARANG'];
-              $DOKUMEN_BARANG = $_POST['DOKUMEN_BARANG'];
-              $ALAMAT_BARANG  = $_POST['ALAMAT_BARANG'];
-              $ASAL_USUL  = $_POST['ASAL_USUL'];
-              $TAHUN_PEMBELIAN = $_POST['TAHUN_PEMBELIAN'];
-              $KONSTRUKSI  = $_POST['KONSTRUKSI'];
-              $LUAS   = $_POST['LUAS'];
-              $NILAI_BARANG = $_POST['NILAI_BARANG'];
-              $SK_KDH  = $_POST['SK_KDH'];
-              $JANGKA_WAKTU    = $_POST['JANGKA_WAKTU'];
-              $ALAMA_PHK_KETIGAT    = $_POST['ALAMA_PHK_KETIGAT'];
-              $KETERANGAN    = $_POST['KETERANGAN'];
-              
-              $query = "UPDATE  BMD_GUNAUSAHA SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
-              if(mysqli_query($connect, $query)){
-                header("location:../index.php?page=usulan-penghapusan.php");
-              }else{
-                header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-update");
-              }
-          }          
-        }
+		        function update_bmd($connect){
+		        	$NO_KODE_LOKASI_BARANG   = $_POST['NO_KODE_LOKASI_BARANG'];
+		            $NO_KODE_BARANG   = $_POST['NO_KODE_BARANG'];
+		            $NO_REGISTER   = $_POST['NO_REGISTER'];
+		            $NAMA_BARANG = $_POST['NAMA_BARANG'];
+		            $DOKUMEN_BARANG = $_POST['DOKUMEN_BARANG'];
+		            $ALAMAT_BARANG  = $_POST['ALAMAT_BARANG'];
+		            $ASAL_USUL  = $_POST['ASAL_USUL'];
+		            $TAHUN_PEMBELIAN = $_POST['TAHUN_PEMBELIAN'];
+		            $KONSTRUKSI  = $_POST['KONSTRUKSI'];
+		            $LUAS   = $_POST['LUAS'];
+		            $NILAI_BARANG = $_POST['NILAI_BARANG'];
+		            $SK_KDH  = $_POST['SK_KDH'];
+		            $JANGKA_WAKTU    = $_POST['JANGKA_WAKTU'];
+		            $ALAMA_PHK_KETIGAT    = $_POST['ALAMA_PHK_KETIGAT'];
+		            $KETERANGAN    = $_POST['KETERANGAN'];
+		        }
 
-        function delete_bmd($connect){
-          if(isset($_GET['kode']) && isset($_GET['process'])){
-              $kode = $_GET['kode'];
-              $query = "DELETE FROM BMD_GUNAUSAHA WHERE no_kode='$kode'";
-              $delete = mysqli_query($connect, $query);              
-              if($delete){
-                  if($_GET['process'] == 'delete_kir'){
-                      header('location: ../index.php?page=kir');
-                  }
-              }
-          }    
-        }
+		        function delete_bmd($connect){
+	              
+		        }
 
 				if (isset($_GET['process'])){
 					switch($_GET['process']){

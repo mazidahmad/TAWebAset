@@ -37,66 +37,27 @@
                         <td> : </td>
                         <td> Sekretariat Dinas</td>
                       </tr>
-                      <tr>
-                        <td>No. Kode Lokasi </td>
-                        <td> : </td>
-                        <td> 11.10.00.05.02.00</td>
-                      </tr>
                       </table>
                 </div>              
                 <div class="table table-responsive">
                   <table id="table_id" class="display">
                     <thead class="text-primary">
                       <tr>
-                        <th rowspan="2">
-                          No
-                        </th>
-                        <th rowspan="2">
-                          Nama Barang
-                        </th>
-                        <th rowspan="2">
-                          Merk/Model
-                        </th>
-                        <th rowspan="2">
-                          No. Seri Pabrik
-                        </th>
-                        <th rowspan="2">
-                          Ukuran
-                        </th>
-                        <th rowspan="2">
-                          Bahan
-                        </th>
-                        <th rowspan="2" class="text-center">
-                          Tahun Pembuatan/Pembelian
-                        </th>
-                        <th rowspan="2">
-                          Nomor Kode Barang
-                        </th>
-                        <th rowspan="2">
-                          Jumlah Barang/Register
-                        </th>
-                        <th rowspan="2">
-                          Harga Beli/Perolehan
-                        </th>
-                        <th colspan="3">
-                          Keadaan Barang
-                        </th>
-                        <th rowspan="2">
-                          Keterangan
-                        </th>
-                        <th rowspan="2">
-                        </th>
-                      </tr>
-                      <tr>
-                        <th>
-                          Baik
-                        </th>
-                        <th>
-                          Kurang Baik
-                        </th>
-                        <th>
-                          Rusak Berat
-                        </th>
+                        <th>No</th>
+                        <th>No. Kode Barang</th>
+                        <th>No. Register</th>
+                        <th>Nama Barang</th>
+                        <th>Merk / Tipe</th>
+                        <th>No. Sertifikat</th>
+                        <th>Bahan</th>
+                        <th>Cara Perolehan / Status Barang </th>
+                        <th>Tahun Perolehan</th>
+                        <th>Ukuran Barang/Konstruksi (P,SP,D)</th>
+                        <th>Keadaan Barang (B,KB,RB)</th>
+                        <th>Jumlah Barang</th>
+                        <th>Harga</th>
+                        <th>Keterangan/Tgl.Buku/Tahun Sensus</th>
+                        <th>Operasi</th>
                       </tr>
                     </thead>
                     <tbody>
