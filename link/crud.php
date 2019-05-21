@@ -591,7 +591,7 @@
             $KETERANGAN    = $_POST['KETERANGAN'];
               
             $query = "INSERT INTO BMD_GUNAUSAHA SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
-            if(mysqli_query($connect, $query){
+            if(mysqli_query($connect, $query)){
               header("location:../index.php?page=usulan-penghapusan.php");
             }else{
               header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-insert");
@@ -619,7 +619,7 @@
               $KETERANGAN    = $_POST['KETERANGAN'];
               
               $query = "UPDATE  BMD_GUNAUSAHA SET NOMOR_KODE_BARANG   = '$NOMOR_KODE_BARANG',NOMOR_REGISTER   = '$NOMOR_REGISTER',NAMA_BARANG   = '$NAMA_BARANG',MERK_TIPE = '$MERK_TIPE',NO_SERTIFIKAT = '$NO_SERTIFIKAT',BAHAN  = '$BAHAN',CARA_PEROLEHAN  = '$CARA_PEROLEHAN',TAHUN_PEROLEHAN = '$TAHUN_PEROLEHAN',UKURAN_BARANG  = '$UKURAN_BARANG',KEADAAN_BARANG   = '$KEADAAN_BARANG',JUMLAH_BARANG = '$JUMLAH_BARANG',JUMLAH_HARGA  = '$JUMLAH_HARGA',KETERANGAN    = '$KETERANGAN'";
-              if(mysqli_query($connect, $query){
+              if(mysqli_query($connect, $query)){
                 header("location:../index.php?page=usulan-penghapusan.php");
               }else{
                 header("location:../index.php?page=usulan-penghapusan.php&&status=gagal-update");

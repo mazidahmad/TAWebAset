@@ -14,7 +14,7 @@
                     <a id="mb-dmb-tab" class="nav-link" data-toggle="tab" href="#mb-dmb" role="tab" aria-controls="mb-dmb" aria-selected="false">Daftar Mutasi Barang</a>
                   </li>
                   <li class="nav-item">
-                    <a id="mb-rmb-tab" class="nav-link" data-toggle="tab" href="#mb-rmb" role="tab" aria-controls="mb-rmb" aria-selected="false">Rekap Mutasi Barang</a>
+                    <a id="mb-rmb-tab" class="nav-link" data-toggle="tab" href="#mb-rmb" role="tab" aria-controls="mb-rmb" aria-selected="false">Rekapitulasi Daftar Mutasi Barang</a>
                   </li>
                 </ul>
             </div>

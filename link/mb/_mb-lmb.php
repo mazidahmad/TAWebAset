@@ -1,6 +1,6 @@
 <div class="card"><button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=insert-lmb">Input Data</a> </button>
               <div class="card-header">
-                <p class="card-title text-center"><strong>Laporan Mutasi Barang</strong></p>
+                <p class="card-title text-center"><strong>Laporan Mutasi Barang<br>Semester 1</strong></p>
               </div>
               <div class="card-body" style="font-size:8pt;">                
                 <div class="row">
