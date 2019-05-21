@@ -4,10 +4,10 @@
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-          <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=usulan-penghapusan-input">Input Data</a> </button>
+          <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=bmd-gunausaha-input">Input Data</a> </button>
             <div class="card">
               <div class="card-header" >
-                <p class="card-title text-center"><strong>DAFTAR USULAN BARANG YANG AKAN DIHAPUS</strong></p>
+                <p class="card-title text-center"><strong>DAFTAR BARANG MILIK DAERAH YANG DIGUNAUSAHAKAN</strong></p>
               </div>
               <div class="card-body" style="font-size:8pt;">                
                 <div class="row">
@@ -37,66 +37,30 @@
                         <td> : </td>
                         <td> Sekretariat Dinas</td>
                       </tr>
-                      <tr>
-                        <td>No. Kode Lokasi </td>
-                        <td> : </td>
-                        <td> 11.10.00.05.02.00</td>
-                      </tr>
                       </table>
                 </div>              
                 <div class="table table-responsive">
                   <table id="table_id" class="display">
                     <thead class="text-primary">
                       <tr>
-                        <th rowspan="2">
-                          No
-                        </th>
-                        <th rowspan="2">
-                          Nama Barang
-                        </th>
-                        <th rowspan="2">
-                          Merk/Model
-                        </th>
-                        <th rowspan="2">
-                          No. Seri Pabrik
-                        </th>
-                        <th rowspan="2">
-                          Ukuran
-                        </th>
-                        <th rowspan="2">
-                          Bahan
-                        </th>
-                        <th rowspan="2" class="text-center">
-                          Tahun Pembuatan/Pembelian
-                        </th>
-                        <th rowspan="2">
-                          Nomor Kode Barang
-                        </th>
-                        <th rowspan="2">
-                          Jumlah Barang/Register
-                        </th>
-                        <th rowspan="2">
-                          Harga Beli/Perolehan
-                        </th>
-                        <th colspan="3">
-                          Keadaan Barang
-                        </th>
-                        <th rowspan="2">
-                          Keterangan
-                        </th>
-                        <th rowspan="2">
-                        </th>
-                      </tr>
-                      <tr>
-                        <th>
-                          Baik
-                        </th>
-                        <th>
-                          Kurang Baik
-                        </th>
-                        <th>
-                          Rusak Berat
-                        </th>
+                        <th>No</th>
+                        <th>No Kode Lokasi Barang</th>
+                        <th>No Kode Barang</th>
+                        <th>No Register</th>
+                        <th>Nama Barang</th>
+                        <th>Dokumen Barang</th>
+                        <th>Alamat Barang</th>
+                        <th>Asal usul Barang</th>
+                        <th>Tahun Pembelian/Pengadaan</th>
+                        <th>Konstruksi (P, SP, D)</th>
+                        <th>Keadaan Barang (B, RR, RB)</th>
+                        <th>Luas M<sup>2</sup></th>
+                        <th>Nilai Barang</th>
+                        <th>SK KDH</th>
+                        <th>Jangka Waktu Kerjasama</th>
+                        <th>Alamat Pihak Ketiga</th>
+                        <th>Keterangan</th>
+                        <th>Options</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -125,8 +89,8 @@
                                         <td class="text-center"><?php echo $data['ALAMA_PHK_KETIGAT'];?></td>
                                         <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
                                         <td>
-                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=usulan-penghapusan-edit&kode=<?php echo $data['ID_USULAN'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_usulan&kode=<?php echo $data['ID_USULAN'];?>">Delete</a> </button>
+                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bmd-gunausaha-edit&kode=<?php echo $data['ID_BMD'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bmd&kode=<?php echo $data['ID_BMD'];?>">Delete</a> </button>
                                         </td>                                        
                                         </tr>  
                                         
