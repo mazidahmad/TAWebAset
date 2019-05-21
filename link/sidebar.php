@@ -23,7 +23,7 @@
     elseif(in_array($menuopt, array('rbib'))){$sub_rbib="active";}
     elseif(in_array($menuopt, array('mb', 'insert-lmb', 'edit-lmb', 'insert-dmb', 'edit-dmb'))){$sub_mb="active";}
     elseif(in_array($menuopt, array('dubd'))){$sub_dubd="active";}
-    elseif(in_array($menuopt, array('dbmdd'))){$sub_dbmdd="active";}
+    elseif(in_array($menuopt, array('bmd-gunausaha'))){$sub_dbmdd="active";}
 
     if(in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $sub_dubd, $sub_dbmdd))){$menu_invent = "active"; $style_invent="style='color: #f76232;'";}
     
@@ -78,7 +78,7 @@
                   <a href="index.php?page=usulan-penghapusan"><h5>Daftar Usulan Barang Yang Dihapuskan</h5></a>
               </li>
               <li class="<?php echo $sub_dbmdd;?>">
-                  <a href="index.php?page=dbmdd"><h5>Daftar Barang Milik Daerah Yang Digunausahakan</h5></a>
+                  <a href="index.php?page=bmd-gunausaha"><h5>Daftar Barang Milik Daerah Yang Digunausahakan</h5></a>
               </li>
             </ul>
           </li>

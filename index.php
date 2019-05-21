@@ -102,6 +102,12 @@
           case "usulan-penghapusan-input"     : include('link/_usulan-penghapusan-input.php'); break;
           case "usulan-penghapusan-edit"       : include('link/_usulan-penghapusan-edit.php'); break;
           case "usulan-penghapusan-delete"     : include('link/crud.php?process=delete_usulan'); break;
+
+          case "bmd-gunausaha"  : include('link/_bmd-gunausaha.php'); break;
+          case "bmd-gunausaha-input"     : include('link/_bmd-gunausaha-input.php'); break;
+          case "bmd-gunausaha-edit"       : include('link/_bmd-gunausaha-edit.php'); break;
+          case "bmd-gunausaha-delete"     : include('link/crud.php?process=delete_bmd'); break;
+          
           case "insert-bi"  : include('link/_input-bi.php'); break;
         }
       ?>
