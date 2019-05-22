@@ -1,14 +1,14 @@
 <?php
-    include "link/connect.php";
-    session_name('ta_webasset');
-    session_start();
-    if(!isset($_SESSION["username"])){
-      header("Location:link/login.php");
-    }
+include "link/connect.php";
+session_name('ta_webasset');
+session_start();
+if (!isset($_SESSION["username"])) {
+  header("Location:link/login.php");
+}
 
-    if(!isset($_GET['page'])){
-      header('location:index.php?page=home');
-    }
+if (!isset($_GET['page'])) {
+  header('location:index.php?page=home');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,37 +79,83 @@
       </nav>
       <!-- End Navbar -->
       <?php
-        switch($_GET['page']){
-          case "home" : include('link/_dashboard.php'); break;
-          
-          case "kib"  : include('link/kib/_kib.php'); break;
-          case "insert-kib-a"   : include('link/kib/_kib-a-input.php'); break;
-          case "edit-kib-a"     : include('link/_kib-a-edit.php'); break;
-          case "delete-kib-a"   : include('link/crud.php?process=delete_kib_a'); break;
-          
-          case "kir"  : include('link/kir/_kir.php'); break;
-          case "insert-kir"     : include('link/kir/_kir-input.php'); break;
-          case "edit-kir"       : include('link/kir/_kir-edit.php'); break;
-          case "delete-kir"     : include('link/crud.php?process=delete_kir'); break;
+      switch ($_GET['page']) {
+        case "home":
+          include('link/_dashboard.php');
+          break;
 
-          case "mb"   : include('link/mb/_mb.php'); break;
-          case "insert-lmb"     : include('link/mb/_mb-lmb-input.php'); break;
-          case "edit-lmb"       : include('link/mb/_mb-lmb-edit.php'); break;
-          case "insert-dmb"     : include('link/mb/_mb-dmb-input.php'); break;
-          case "edit-dmb"       : include('link/mb/_mb_dmb_edit.php'); break;
+        case "kib":
+          include('link/kib/_kib.php');
+          break;
+        case "insert-kib-a":
+          include('link/kib/_kib-a-input.php');
+          break;
+        case "edit-kib-a":
+          include('link/_kib-a-edit.php');
+          break;
+        case "delete-kib-a":
+          include('link/crud.php?process=delete_kib_a');
+          break;
 
-          case "usulan-penghapusan"  : include('link/_usulan-penghapusan.php'); break;
-          case "usulan-penghapusan-input"     : include('link/_usulan-penghapusan-input.php'); break;
-          case "usulan-penghapusan-edit"       : include('link/_usulan-penghapusan-edit.php'); break;
-          case "usulan-penghapusan-delete"     : include('link/crud.php?process=delete_usulan'); break;
+        case "kir":
+          include('link/kir/_kir.php');
+          break;
+        case "insert-kir":
+          include('link/kir/_kir-input.php');
+          break;
+        case "edit-kir":
+          include('link/kir/_kir-edit.php');
+          break;
+        case "delete-kir":
+          include('link/crud.php?process=delete_kir');
+          break;
 
-          case "bmd-gunausaha"  : include('link/_bmd-gunausaha.php'); break;
-          case "bmd-gunausaha-input"     : include('link/_bmd-gunausaha-input.php'); break;
-          case "bmd-gunausaha-edit"       : include('link/_bmd-gunausaha-edit.php'); break;
-          case "bmd-gunausaha-delete"     : include('link/crud.php?process=delete_bmd'); break;
-          
-          case "insert-bi"  : include('link/_input-bi.php'); break;
-        }
+        case "mb":
+          include('link/mb/_mb.php');
+          break;
+        case "insert-lmb":
+          include('link/mb/_mb-lmb-input.php');
+          break;
+        case "edit-lmb":
+          include('link/mb/_mb-lmb-edit.php');
+          break;
+        case "insert-dmb":
+          include('link/mb/_mb-dmb-input.php');
+          break;
+        case "edit-dmb":
+          include('link/mb/_mb_dmb_edit.php');
+          break;
+
+        case "usulan-penghapusan":
+          include('link/_usulan-penghapusan.php');
+          break;
+        case "usulan-penghapusan-input":
+          include('link/_usulan-penghapusan-input.php');
+          break;
+        case "usulan-penghapusan-edit":
+          include('link/_usulan-penghapusan-edit.php');
+          break;
+        case "usulan-penghapusan-delete":
+          include('link/crud.php?process=delete_usulan');
+          break;
+
+        case "bmd-gunausaha":
+          include('link/_bmd-gunausaha.php');
+          break;
+        case "bmd-gunausaha-input":
+          include('link/_bmd-gunausaha-input.php');
+          break;
+        case "bmd-gunausaha-edit":
+          include('link/_bmd-gunausaha-edit.php');
+          break;
+        case "bmd-gunausaha-delete":
+          include('link/crud.php?process=delete_bmd');
+          break;
+
+        case "insert-bi":
+          include('link/_input-bi.php');
+          break;
+      }
       ?>
       <footer class="footer">
         <div class="container-fluid">
@@ -151,15 +197,15 @@
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
   <script>
-    $(document).ready( function () {
-      var table = $('#table_id').removeAttr('width').DataTable( {
-        scrollY:        "500px",
-        scrollX:        true,
+    $(document).ready(function() {
+      var table = $('#table_id').removeAttr('width').DataTable({
+        scrollY: "500px",
+        scrollX: true,
         scrollCollapse: true,
-        paging:         false,
-      fixedColumns: true
-      } );
-    } );
+        paging: false,
+        fixedColumns: true
+      });
+    });
 
     $(".table-filtered").DataTable();
   </script>
@@ -167,5 +213,5 @@
 
 </html>
 <?php
-                      mysqli_close($connect);
-                      ?>
+mysqli_close($connect);
+?>

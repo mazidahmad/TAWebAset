@@ -1,24 +1,24 @@
 <?php
-    session_name('ta_webasset');
-    session_start();
-    
-    if(isset($_SESSION["username"]) || isset($_SESSION["password"])){
-        header("location:");
-    }else{
-      if(isset($_POST['Login'])){
-          $username = $_POST['username'];
-          $password = md5($_POST['password']);
+session_name('ta_webasset');
+session_start();
 
-          if($username == "admin" && $password == md5("admin")){
-              session_start();
-              $_SESSION['username'] = $username;
-              $_SESSION['status'] = "login";
-              header("location:../index.php?page=home");
-          }else{
-              echo '<h1>GAGAL LOGIN</h1>';
-          }
-      }
+if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
+  header("location:");
+} else {
+  if (isset($_POST['Login'])) {
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+
+    if ($username == "admin" && $password == md5("admin")) {
+      session_start();
+      $_SESSION['username'] = $username;
+      $_SESSION['status'] = "login";
+      header("location:../index.php?page=home");
+    } else {
+      echo '<h1>GAGAL LOGIN</h1>';
     }
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
   <link rel="icon" type="image/png" href="../assets/img/logo_jabar.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    ASIPAT DISPERKIM 
+    ASIPAT DISPERKIM
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -45,26 +45,26 @@
 
 <body class="" style="background-color:#F96332;">
   <div class="wrapper" data-color="orange">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-primary  navbar-absolute">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <div class="navbar-toggle">
-              <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
-            </div>
-            <img src="../assets/img/logo_jabar.png" width="40px" height="40px"> 
-            <a class="navbar-brand" href="#pablo">&nbsp;ASIPAT DISPERKIM</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary  navbar-absolute">
+      <div class="container-fluid">
+        <div class="navbar-wrapper">
+          <div class="navbar-toggle">
+            <button type="button" class="navbar-toggler">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </button>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
-          <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
+          <img src="../assets/img/logo_jabar.png" width="40px" height="40px">
+          <a class="navbar-brand" href="#pablo">&nbsp;ASIPAT DISPERKIM</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar navbar-kebab"></span>
+          <span class="navbar-toggler-bar navbar-kebab"></span>
+          <span class="navbar-toggler-bar navbar-kebab"></span>
+        </button>
+        <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -107,41 +107,41 @@
               </li>
             </ul>
           </div> -->
-        </div>
-      </nav>
-      <div class="container-fluid h-100">
-        <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/BangunanDinasCoverWeb.jpg');">
-          <div class="col-md-6"></div>
-          <div class="col-md-6">
-              <div class="row h-100">
-                  <div class="col-md-3"></div>
-                  <div class="col-md-6">
-                      <div class="card shadow-lg d-flex align-items-center my-auto" style="border-radius:50px;">
-                          <div class="card-header">
-                              <p class="h3 text-center py-5">Login</p>
-                          </div>
-                          <div class="card-body">
-                            <form class="col-md-12" method="post" action="login.php">
-                              <div class="form-group">
-                                  <span>Username :</span><br>
-                                  <input class="form-control" type="username" onkeyup="isi_otomatis()" name="username">
-                              </div>
-                              <div class="form-group">
-                                  <span>Password :</span><br>
-                                  <input class="form-control" type="password" onkeyup="isi_otomatis()" name="password">
-                              </div>
-                              <div class="text-center py-4 mt-3">
-                                  <button class="btn btn-primary" style="border-radius:20px;" type="submit" name="Login">Login</button>
-                              </div>
-                            </form>                            
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3"></div>                  
+      </div>
+    </nav>
+    <div class="container-fluid h-100">
+      <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/BangunanDinasCoverWeb.jpg');">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="row h-100">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div class="card shadow-lg d-flex align-items-center my-auto" style="border-radius:50px;">
+                <div class="card-header">
+                  <p class="h3 text-center py-5">Login</p>
+                </div>
+                <div class="card-body">
+                  <form class="col-md-12" method="post" action="login.php">
+                    <div class="form-group">
+                      <span>Username :</span><br>
+                      <input class="form-control" type="username" onkeyup="isi_otomatis()" name="username">
+                    </div>
+                    <div class="form-group">
+                      <span>Password :</span><br>
+                      <input class="form-control" type="password" onkeyup="isi_otomatis()" name="password">
+                    </div>
+                    <div class="text-center py-4 mt-3">
+                      <button class="btn btn-primary" style="border-radius:20px;" type="submit" name="Login">Login</button>
+                    </div>
+                  </form>
+                </div>
               </div>
+            </div>
+            <div class="col-md-3"></div>
           </div>
         </div>
       </div>
+    </div>
   </div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>

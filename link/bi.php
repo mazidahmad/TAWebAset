@@ -9,7 +9,7 @@
   <title>
     Now UI Dashboard by Creative Tim
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />  
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -96,45 +96,45 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-            <button type="button" class="btn btn-outline-primary ml-2"> <a href="../index.php?page=insert-bi">Input Data</a> </button>
+              <button type="button" class="btn btn-outline-primary ml-2"> <a href="../index.php?page=insert-bi">Input Data</a> </button>
               <div class="card-header">
                 <p class="card-title text-center"><strong>Buku Inventaris Barang</strong></p>
-                  </div>
-                  <div class="card-body" style="font-size:8pt;">                
-                    <div class="row">
-                      <table class="ml-4 mb-4" width="80%">
-                      <tr>
-                        <td width="13%">PROVINSI</td>
-                        <td width="2%"> : </td>
-                        <td>JAWA BARAT</td>
-                      </tr>
-                      <tr>
-                        <td>KABUPATEN / KOTA </td>
-                        <td> : </td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>BIDANG</td>
-                        <td> : </td>
-                        <td> BIDANG KIMPRASWIL/KE-PU-AN</td>
-                      </tr>
-                      <tr>
-                        <td>ASISTEM / OPD </td>
-                        <td> : </td>
-                        <td> Dinas Perumahan dan Pemukiman</td>
-                      </tr>
-                      <tr>
-                        <td>BIRO / UPTD / B </td>
-                        <td> : </td>
-                        <td> Sekretariat Dinas</td>
-                      </tr>
-                      <tr>
-                        <td>No. Kode Lokasi </td>
-                        <td> : </td>
-                        <td> 11.10.00.05.02.00</td>
-                      </tr>
-                      </table>
-                </div>          
+              </div>
+              <div class="card-body" style="font-size:8pt;">
+                <div class="row">
+                  <table class="ml-4 mb-4" width="80%">
+                    <tr>
+                      <td width="13%">PROVINSI</td>
+                      <td width="2%"> : </td>
+                      <td>JAWA BARAT</td>
+                    </tr>
+                    <tr>
+                      <td>KABUPATEN / KOTA </td>
+                      <td> : </td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>BIDANG</td>
+                      <td> : </td>
+                      <td> BIDANG KIMPRASWIL/KE-PU-AN</td>
+                    </tr>
+                    <tr>
+                      <td>ASISTEM / OPD </td>
+                      <td> : </td>
+                      <td> Dinas Perumahan dan Pemukiman</td>
+                    </tr>
+                    <tr>
+                      <td>BIRO / UPTD / B </td>
+                      <td> : </td>
+                      <td> Sekretariat Dinas</td>
+                    </tr>
+                    <tr>
+                      <td>No. Kode Lokasi </td>
+                      <td> : </td>
+                      <td> 11.10.00.05.02.00</td>
+                    </tr>
+                  </table>
+                </div>
                 <div class="table">
                   <table id="table_bi" class="display">
                     <thead class="text-primary">
@@ -162,34 +162,34 @@
                       </tr>
                     </thead>
                     <tbody>
-                    <?php   
-                        
-                        $result = mysqli_query($connect,"SELECT * from BI");
+                      <?php
 
-                        $i = 1;    
-                        while($data = mysqli_fetch_array($result)){ ?>
-                                        <tr>
-                                        <td class="text-center"><?php echo $i;?></td>
-                                        <td class="text-center"><?php echo $data['NOMOR_KODE_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['NOMOR_REGISTER'];?></td>
-                                        <td class="text-center"><?php echo $data['NAMA_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['MERK_TIPE'];?></td>
-                                        <td class="text-center"><?php echo $data['NO_SERTIFIKAT'];?></td>
-                                        <td class="text-center"><?php echo $data['BAHAN'];?></td>
-                                        <td class="text-center"><?php echo $data['ASAL'];?></td>
-                                        <td class="text-center"><?php echo $data['TAHUN_PEROLEHAN'];?></td>
-                                        <td class="text-center"><?php echo $data['UKURAN_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['KEADAAN_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['JUMLAH_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['JUMLAH_HARGA'];?></td>
-                                        <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
-                                        <td>
-                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="input-kib-a&kode=<?php echo $data['KODE_BARANG'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/input-kib-a.php">Delete</a> </button>
-                                        </td>                                        
-                                        </tr>  
-                                        
-                      <?php $i++;
+                      $result = mysqli_query($connect, "SELECT * from BI");
+
+                      $i = 1;
+                      while ($data = mysqli_fetch_array($result)) { ?>
+                        <tr>
+                          <td class="text-center"><?php echo $i; ?></td>
+                          <td class="text-center"><?php echo $data['NOMOR_KODE_BARANG']; ?></td>
+                          <td class="text-center"><?php echo $data['NOMOR_REGISTER']; ?></td>
+                          <td class="text-center"><?php echo $data['NAMA_BARANG']; ?></td>
+                          <td class="text-center"><?php echo $data['MERK_TIPE']; ?></td>
+                          <td class="text-center"><?php echo $data['NO_SERTIFIKAT']; ?></td>
+                          <td class="text-center"><?php echo $data['BAHAN']; ?></td>
+                          <td class="text-center"><?php echo $data['ASAL']; ?></td>
+                          <td class="text-center"><?php echo $data['TAHUN_PEROLEHAN']; ?></td>
+                          <td class="text-center"><?php echo $data['UKURAN_BARANG']; ?></td>
+                          <td class="text-center"><?php echo $data['KEADAAN_BARANG']; ?></td>
+                          <td class="text-center"><?php echo $data['JUMLAH_BARANG']; ?></td>
+                          <td class="text-center"><?php echo $data['JUMLAH_HARGA']; ?></td>
+                          <td class="text-center"><?php echo $data['KETERANGAN']; ?></td>
+                          <td>
+                            <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="input-kib-a&kode=<?php echo $data['KODE_BARANG']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                            <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/input-kib-a.php">Delete</a> </button>
+                          </td>
+                        </tr>
+
+                        <?php $i++;
                       } ?>
                     </tbody>
                   </table>
@@ -256,22 +256,30 @@
   </script>
   <script>
     $(document).ready(function() {
-    var table = $('#table_bi').removeAttr('width').DataTable( {
-        scrollY:        "500px",
-        scrollX:        true,
+      var table = $('#table_bi').removeAttr('width').DataTable({
+        scrollY: "500px",
+        scrollX: true,
         scrollCollapse: true,
-        paging:         false,
-        columnDefs: [
-            { width: 200, targets: 5 },
-            { width: 200, targets: 13 },
-            { width: 200, targets: 14 }
+        paging: false,
+        columnDefs: [{
+            width: 200,
+            targets: 5
+          },
+          {
+            width: 200,
+            targets: 13
+          },
+          {
+            width: 200,
+            targets: 14
+          }
         ],
         fixedColumns: true
-    } );
-} );  
+      });
+    });
   </script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-  
+
 </body>
 
 </html>
