@@ -53,7 +53,6 @@
                         <th>Asal usul Barang</th>
                         <th>Tahun Pembelian/Pengadaan</th>
                         <th>Konstruksi (P, SP, D)</th>
-                        <th>Keadaan Barang (B, RR, RB)</th>
                         <th>Luas M<sup>2</sup></th>
                         <th>Nilai Barang</th>
                         <th>SK KDH</th>
@@ -89,8 +88,8 @@
                                         <td class="text-center"><?php echo $data['ALAMA_PHK_KETIGAT'];?></td>
                                         <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
                                         <td>
-                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bmd-gunausaha-edit&kode=<?php echo $data['ID_BMD'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bmd&kode=<?php echo $data['ID_BMD'];?>">Delete</a> </button>
+                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bmd-gunausaha-edit&id=<?php echo $data['ID_BMD'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bmd&id=<?php echo $data['ID_BMD'];?>">Delete</a> </button>
                                         </td>                                        
                                         </tr>  
                                         
