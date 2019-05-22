@@ -596,6 +596,7 @@
 		        }
 
 		        function update_bmd($connect){
+					$ID_BMD=$_GET['idbmd'];
 		        	$NO_KODE_LOKASI_BARANG   = $_POST['NO_KODE_LOKASI_BARANG'];
 		            $NO_KODE_BARANG   = $_POST['NO_KODE_BARANG'];
 		            $NO_REGISTER   = $_POST['NO_REGISTER'];
@@ -610,11 +611,25 @@
 		            $SK_KDH  = $_POST['SK_KDH'];
 		            $JANGKA_WAKTU    = $_POST['JANGKA_WAKTU'];
 		            $ALAMA_PHK_KETIGAT    = $_POST['ALAMA_PHK_KETIGAT'];
-		            $KETERANGAN    = $_POST['KETERANGAN'];
+					$KETERANGAN    = $_POST['KETERANGAN'];
+					
+					$query="UPDATE SET BMD_GUNAUSAHA NO_KODE_LOKASI_BARANG  ='$NO_KODE_LOKASI_BARANG',NO_KODE_BARANG  ='$NO_KODE_BARANG',NO_REGISTER  ='$NO_REGISTER',NAMA_BARANG='$NAMA_BARANG',DOKUMEN_BARANG='$DOKUMEN_BARANG',ALAMAT_BARANG ='$ALAMAT_BARANG',ASAL_USUL ='$ASAL_USUL',TAHUN_PEMBELIAN='$TAHUN_PEMBELIAN',KONSTRUKSI ='$KONSTRUKSI',LUAS  ='$LUAS',NILAI_BARANG='$NILAI_BARANG',SK_KDH ='$SK_KDH',JANGKA_WAKTU   ='$JANGKA_WAKTU',ALAMA_PHK_KETIGAT   ='$ALAMA_PHK_KETIGAT',KETERANGAN   ='$KETERANGAN' WHERE ID_BMD='$ID_BMD'";
+					if(mysqli_query($connect,$query)){
+		            	header("Location:index.php?page=bmd-gunausaha");
+		            }else{
+						echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		            }
 		        }
 
 		        function delete_bmd($connect){
-	              
+					$ID_BMD=$_GET['idbmd'];
+					$query="DELETE FROM BMD_GUNAUSAHA WHERE ID_BMD=$ID_BMD";
+					$ID_BMD=$_GET['idbmd'];
+					if(mysqli_query($connect,$query)){
+		            	header("Location:index.php?page=bmd-gunausaha");
+		            }else{
+						echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		            }
 		        }
 
 				if (isset($_GET['process'])){
