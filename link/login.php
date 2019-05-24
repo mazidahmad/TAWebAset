@@ -45,16 +45,18 @@ if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
 
 <body class="" style="background-color:#F96332;">
   <div class="wrapper" data-color="orange">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary  navbar-absolute">
-      <div class="container-fluid">
-        <div class="navbar-wrapper">
-          <div class="navbar-toggle">
-            <button type="button" class="navbar-toggler">
-              <span class="navbar-toggler-bar bar1"></span>
-              <span class="navbar-toggler-bar bar2"></span>
-              <span class="navbar-toggler-bar bar3"></span>
-            </button>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-primary  navbar-absolute">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+              <div style="padding: 5px; background-color:white; border-radius:10px;"><img src="../assets/img/Logo-Asipat-Disperkim.png" height="40dpi"></div>
           </div>
           <img src="../assets/img/logo_jabar.png" width="40px" height="40px">
           <a class="navbar-brand" href="#pablo">&nbsp;ASIPAT DISPERKIM</a>
@@ -107,34 +109,39 @@ if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
               </li>
             </ul>
           </div> -->
-      </div>
-    </nav>
-    <div class="container-fluid h-100">
-      <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/BangunanDinasCoverWeb.jpg');">
-        <div class="col-md-6"></div>
-        <div class="col-md-6">
-          <div class="row h-100">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-              <div class="card shadow-lg d-flex align-items-center my-auto" style="border-radius:50px;">
-                <div class="card-header">
-                  <p class="h3 text-center py-5">Login</p>
-                </div>
-                <div class="card-body">
-                  <form class="col-md-12" method="post" action="login.php">
-                    <div class="form-group">
-                      <span>Username :</span><br>
-                      <input class="form-control" type="username" onkeyup="isi_otomatis()" name="username">
-                    </div>
-                    <div class="form-group">
-                      <span>Password :</span><br>
-                      <input class="form-control" type="password" onkeyup="isi_otomatis()" name="password">
-                    </div>
-                    <div class="text-center py-4 mt-3">
-                      <button class="btn btn-primary" style="border-radius:20px;" type="submit" name="Login">Login</button>
-                    </div>
-                  </form>
-                </div>
+        </div>
+      </nav>
+      <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/bg-login.png'); background-size: contain; background-repeat: no-repeat;">
+          <div class="col-md-6 pl-5" >
+            <img class="ml-5" src="../assets/img/login-text.png" alt="">
+          </div>
+          <div class="col-md-6">
+              <div class="row h-100">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                      <div class="card shadow-lg d-flex align-items-center my-auto" style="border-radius:50px;">
+                          <div class="card-header">
+                              <p class="h3 text-center py-5">Login</p>
+                          </div>
+                          <div class="card-body">
+                            <form class="col-md-12" method="post" action="login.php">
+                              <div class="form-group">
+                                  <span>Username :</span><br>
+                                  <input class="form-control" type="username" onkeyup="isi_otomatis()" name="username">
+                              </div>
+                              <div class="form-group">
+                                  <span>Password :</span><br>
+                                  <input class="form-control" type="password" onkeyup="isi_otomatis()" name="password">
+                              </div>
+                              <div class="text-center py-4 mt-3">
+                                  <button class="btn btn-primary" style="border-radius:20px;" type="submit" name="Login">Login</button>
+                              </div>
+                            </form>                            
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3"></div>                  
               </div>
             </div>
             <div class="col-md-3"></div>
