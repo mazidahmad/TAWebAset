@@ -45,12 +45,7 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
   <div class="logo">
-    <a class="simple-text logo-mini">
-      SD
-    </a>
-    <a class="simple-text logo-normal">
-      SIPAT DISPERKIM
-    </a>
+    <div style="padding: 5px; background-color:white; border-radius:10px; margin-bottom:5px;"><img src="assets/img/Logo-Asipat-Disperkim.png" height="40dpi"></div>
   </div>
   <div class="sidebar-wrapper" id="sidebar-wrapper">
     <ul class="nav">
@@ -66,44 +61,44 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
           <i class="now-ui-icons ui-1_bell-53" <?php echo $style_invent; ?>></i>
           <h5 class="font-weight-bold mb-0">Inventarisasi Aset</h5>
         </a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li class="<?php echo $sub_kib; ?>">
+        <ul class="collapse list-unstyled text-center" id="pageSubmenu">
+          <li class="<?php echo $sub_kib; ?> mt-2 logo">
             <a href="index.php?page=kib">
-              <h5>Kartu Inventaris Barang</h5>
+            <span style="font-size:10pt;"><strong>Kartu Inventaris Barang</strong></span>
             </a>
           </li>
 
-          <li class="<?php echo $sub_kir; ?>">
+          <li class="<?php echo $sub_kir; ?> mb-2 logo">
             <a href="index.php?page=kir">
-              <h5>Kartu Inventaris Ruangan</h5>
+            <span style="font-size:10pt;"><strong>Kartu Inventaris Ruangan</strong></span>
             </a>
           </li>
 
-          <li class="<?php echo $sub_bib; ?>">
+          <li class="<?php echo $sub_bib; ?> logo">
             <a href="index.php?page=bib">
-              <h5>Buku Inventaris Barang</h5>
+            <span style="font-size:10pt;"><strong>Buku Inventaris Barang</strong></span>
             </a>
           </li>
-          <li class="<?php echo $sub_rbib; ?>">
+          <li class="<?php echo $sub_rbib; ?> logo">
             <a href="index.php?page=rbib">
-              <h5>Rekap Buku Inventaris Barang</h5>
+            <span style="font-size:10pt;"><strong>Rekap Buku Inventaris Barang</strong></span>
             </a>
           </li>
 
-          <li class="<?php echo $sub_mb; ?>">
+          <li class="<?php echo $sub_mb; ?> logo">
             <a href="index.php?page=mb">
-              <h5> Mutasi Barang</h5>
+            <span style="font-size:10pt;"><strong>Mutasi Barang</strong></span>
             </a>
           </li>
 
-          <li class="<?php echo $sub_dubd; ?>">
+          <li class="<?php echo $sub_dubd; ?> logo">
             <a href="index.php?page=usulan-penghapusan">
-              <h5>Daftar Usulan Barang Yang Dihapuskan</h5>
+            <span style="font-size:10pt;"><strong>Daftar Usulan Barang Yang Dihapuskan</strong></span>
             </a>
           </li>
-          <li class="<?php echo $sub_dbmdd; ?>">
+          <li class="<?php echo $sub_dbmdd; ?> mb-2 logo">
             <a href="index.php?page=bmd-gunausaha">
-              <h5>Daftar Barang Milik Daerah Yang Digunausahakan</h5>
+              <span style="font-size:10pt;"><strong>Daftar Barang Milik Daerah Yang Digunausahakan</strong></span>
             </a>
           </li>
         </ul>
@@ -113,20 +108,20 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
           <i class="now-ui-icons ui-1_bell-53"></i>
           <h5 class="font-weight-bold mb-0">Pemeliharaan Aset</h5>
         </a>
-        <ul class="collapse list-unstyled" id="pageSubmenu2">
-          <li>
+        <ul class="collapse list-unstyled text-center" id="pageSubmenu2">
+          <li class="mt-2 logo">
             <a href="#">
-              <h5>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</h5>
+              <span style="font-size:10pt;"><strong>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</strong></span>
             </a>
           </li>
-          <li>
+          <li class="ogo">
             <a href="#">
-              <h5>Jadwal Pemeliharaan</h5>
+            <span style="font-size:10pt;"><strong>Jadwal Pemeliharaan</strong></span>
             </a>
           </li>
-          <li>
+          <li class="logo">
             <a href="#">
-              <h5>Kartu Pemeliharaan Barang</h5>
+              <span style="font-size:10pt;"><strong>Kartu Pemeliharaan Barang</strong></span>
             </a>
           </li>
         </ul>

@@ -26,7 +26,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["password"])) {
     <link href="../assets/demo/demo.css" rel="stylesheet" />
   </head>
 
-  <body class="">
+  <body style="background-color:#F96332;>
     <div class="wrapper ">
       <?php include 'sidebar.php' ?>
       <div class="main-panel" id="main-panel">

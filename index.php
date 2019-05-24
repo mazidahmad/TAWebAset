@@ -19,7 +19,7 @@ if (!isset($_GET['page'])) {
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    SIPAT DISPERKIM
+   ASIPAT DISPERKIM
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -56,7 +56,6 @@ if (!isset($_GET['page'])) {
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -162,18 +161,8 @@ if (!isset($_GET['page'])) {
           <nav>
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
+                <a href="#">
+                  Dinas Perumahan dan Pemukiman Jawa Barat
                 </a>
               </li>
             </ul>
@@ -184,7 +173,7 @@ if (!isset($_GET['page'])) {
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
             </script>, Designed by
             <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            <a href="#" target="_blank">JTK Team</a>.
           </div>
         </div>
       </footer>
@@ -196,19 +185,6 @@ if (!isset($_GET['page'])) {
   <script src="assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/demo/demo.js"></script>
-  <script>
-    $(document).ready(function() {
-      var table = $('#table_id').removeAttr('width').DataTable({
-        scrollY: "500px",
-        scrollX: true,
-        scrollCollapse: true,
-        paging: false,
-        fixedColumns: true
-      });
-    });
-
-    $(".table-filtered").DataTable();
-  </script>
 </body>
 
 </html>

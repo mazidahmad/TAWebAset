@@ -1,24 +1,24 @@
 <?php
-session_name('ta_webasset');
-session_start();
+    session_name('ta_webasset');
+    session_start();
+    
+    if(isset($_SESSION["username"]) || isset($_SESSION["password"])){
+        header("location:");
+    }else{
+      if(isset($_POST['Login'])){
+          $username = $_POST['username'];
+          $password = md5($_POST['password']);
 
-if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
-  header("location:");
-} else {
-  if (isset($_POST['Login'])) {
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
-
-    if ($username == "admin" && $password == md5("admin")) {
-      session_start();
-      $_SESSION['username'] = $username;
-      $_SESSION['status'] = "login";
-      header("location:../index.php?page=home");
-    } else {
-      echo '<h1>GAGAL LOGIN</h1>';
+          if($username == "admin" && $password == md5("admin")){
+              session_start();
+              $_SESSION['username'] = $username;
+              $_SESSION['status'] = "login";
+              header("location:../index.php?page=home");
+          }else{
+              echo '<h1>GAGAL LOGIN</h1>';
+          }
+      }
     }
-  }
-}
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
   <link rel="icon" type="image/png" href="../assets/img/logo_jabar.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    ASIPAT DISPERKIM
+    ASIPAT DISPERKIM 
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -58,15 +58,12 @@ if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
             </div>
               <div style="padding: 5px; background-color:white; border-radius:10px;"><img src="../assets/img/Logo-Asipat-Disperkim.png" height="40dpi"></div>
           </div>
-          <img src="../assets/img/logo_jabar.png" width="40px" height="40px">
-          <a class="navbar-brand" href="#pablo">&nbsp;ASIPAT DISPERKIM</a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-bar navbar-kebab"></span>
-          <span class="navbar-toggler-bar navbar-kebab"></span>
-          <span class="navbar-toggler-bar navbar-kebab"></span>
-        </button>
-        <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -114,7 +111,7 @@ if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
       <div class="container-fluid h-100">
         <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/bg-login.png'); background-size: contain; background-repeat: no-repeat;">
           <div class="col-md-6 pl-5" >
-            <img class="ml-5" src="../assets/img/login-text.png" alt="">
+            <img class="ml-5 ml-3" src="../assets/img/login-text.png" alt="">
           </div>
           <div class="col-md-6">
               <div class="row h-100">
@@ -143,12 +140,9 @@ if (isset($_SESSION["username"]) || isset($_SESSION["password"])) {
                   </div>
                   <div class="col-md-3"></div>                  
               </div>
-            </div>
-            <div class="col-md-3"></div>
           </div>
         </div>
       </div>
-    </div>
   </div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
