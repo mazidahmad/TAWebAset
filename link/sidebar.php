@@ -64,36 +64,36 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
         <ul class="collapse list-unstyled text-center" id="pageSubmenu">
           <li class="<?php echo $sub_kib; ?> mt-2 logo">
             <a href="index.php?page=kib">
-            <span style="font-size:10pt;"><strong>Kartu Inventaris Barang</strong></span>
+              <span style="font-size:10pt;"><strong>Kartu Inventaris Barang</strong></span>
             </a>
           </li>
 
           <li class="<?php echo $sub_kir; ?> mb-2 logo">
             <a href="index.php?page=kir">
-            <span style="font-size:10pt;"><strong>Kartu Inventaris Ruangan</strong></span>
+              <span style="font-size:10pt;"><strong>Kartu Inventaris Ruangan</strong></span>
             </a>
           </li>
 
           <li class="<?php echo $sub_bib; ?> logo">
             <a href="index.php?page=bib">
-            <span style="font-size:10pt;"><strong>Buku Inventaris Barang</strong></span>
+              <span style="font-size:10pt;"><strong>Buku Inventaris Barang</strong></span>
             </a>
           </li>
           <li class="<?php echo $sub_rbib; ?> logo">
             <a href="index.php?page=rbib">
-            <span style="font-size:10pt;"><strong>Rekap Buku Inventaris Barang</strong></span>
+              <span style="font-size:10pt;"><strong>Rekap Buku Inventaris Barang</strong></span>
             </a>
           </li>
 
           <li class="<?php echo $sub_mb; ?> logo">
             <a href="index.php?page=mb">
-            <span style="font-size:10pt;"><strong>Mutasi Barang</strong></span>
+              <span style="font-size:10pt;"><strong>Mutasi Barang</strong></span>
             </a>
           </li>
 
           <li class="<?php echo $sub_dubd; ?> logo">
             <a href="index.php?page=usulan-penghapusan">
-            <span style="font-size:10pt;"><strong>Daftar Usulan Barang Yang Dihapuskan</strong></span>
+              <span style="font-size:10pt;"><strong>Daftar Usulan Barang Yang Dihapuskan</strong></span>
             </a>
           </li>
           <li class="<?php echo $sub_dbmdd; ?> mb-2 logo">
@@ -110,17 +110,17 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
         </a>
         <ul class="collapse list-unstyled text-center" id="pageSubmenu2">
           <li class="mt-2 logo">
-            <a href="#">
+            <a href="index.php?page=dkpbmd">
               <span style="font-size:10pt;"><strong>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</strong></span>
             </a>
           </li>
           <li class="ogo">
-            <a href="#">
-            <span style="font-size:10pt;"><strong>Jadwal Pemeliharaan</strong></span>
+            <a href="index.php?page=jadwal-pemeliharaan">
+              <span style="font-size:10pt;"><strong>Jadwal Pemeliharaan</strong></span>
             </a>
           </li>
           <li class="logo">
-            <a href="#">
+            <a href="index.php?page=kartu-pemeliharaan">
               <span style="font-size:10pt;"><strong>Kartu Pemeliharaan Barang</strong></span>
             </a>
           </li>

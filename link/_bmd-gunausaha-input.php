@@ -79,7 +79,7 @@
                                         <input type="text" class="form-control" id="formGroupExampleInput" name="JANGKA_WAKTU">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="formGroupExampleInput">ALAMA_PHK_KETIGAT :</label>
+                                        <label for="formGroupExampleInput">ALAMAT PIHAK KETIGA :</label>
                                         <input type="text" class="form-control" id="formGroupExampleInput" name="ALAMA_PHK_KETIGAT">
                                     </div>
                                 </div>

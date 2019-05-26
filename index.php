@@ -19,7 +19,7 @@ if (!isset($_GET['page'])) {
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-   ASIPAT DISPERKIM
+    ASIPAT DISPERKIM
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -150,6 +150,37 @@ if (!isset($_GET['page'])) {
         case "bmd-gunausaha-delete":
           include('link/crud.php?process=delete_bmd');
           break;
+
+        case "dkpbmd":
+          include('link/_dkpbmd.php');
+          break;
+        case "dkpbmd-input":
+          include('link/_dkpbmd-input.php');
+          break;
+        case "dkpbmd-edit":
+          include('link/_dkpbmd-edit.php');
+          break;
+
+        case "jadwal-pemeliharaan":
+          include('link/_jadwal-pemeliharaan.php');
+          break;
+        case "jadwal-pemeliharaan-input":
+          include('link/_jadwal-pemeliharaan-input.php');
+          break;
+        case "jadwal-pemeliharaan-edit":
+          include('link/_jadwal-pemeliharaan-edit.php');
+          break;
+
+        case "kartu-pemeliharaan":
+          include('link/_kartu-pemeliharaan.php');
+          break;
+        case "kartu-pemeliharaan-input":
+          include('link/_kartu-pemeliharaan-input.php');
+          break;
+        case "kartu-pemeliharaan-edit":
+          include('link/_kartu-pemeliharaan-edit.php');
+          break;
+
 
         case "insert-bi":
           include('link/_input-bi.php');

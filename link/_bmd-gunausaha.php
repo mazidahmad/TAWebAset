@@ -4,14 +4,14 @@
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-          <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=bmd-gunausaha-input">Input Data</a> </button>
-            <div class="card">
-              <div class="card-header" >
-                <p class="card-title text-center"><strong>DAFTAR BARANG MILIK DAERAH YANG DIGUNAUSAHAKAN</strong></p>
-              </div>
-              <div class="card-body" style="font-size:8pt;">                
-                <div class="row">
-                <table class="ml-4 mb-4" width="80%">
+            <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=bmd-gunausaha-input">Input Data</a> </button>
+              <div class="card">
+                <div class="card-header">
+                  <p class="card-title text-center"><strong>DAFTAR BARANG MILIK DAERAH YANG DIGUNAUSAHAKAN</strong></p>
+                </div>
+                <div class="card-body" style="font-size:8pt;">
+                  <div class="row">
+                    <table class="ml-4 mb-4" width="80%">
                       <tr>
                         <td width="13%">PROVINSI</td>
                         <td width="2%"> : </td>
@@ -37,69 +37,69 @@
                         <td> : </td>
                         <td> Sekretariat Dinas</td>
                       </tr>
-                      </table>
-                </div>              
-                <div class="table table-responsive">
-                  <table id="table_id" class="display">
-                    <thead class="text-primary">
-                      <tr>
-                        <th>No</th>
-                        <th>No Kode Lokasi Barang</th>
-                        <th>No Kode Barang</th>
-                        <th>No Register</th>
-                        <th>Nama Barang</th>
-                        <th>Dokumen Barang</th>
-                        <th>Alamat Barang</th>
-                        <th>Asal usul Barang</th>
-                        <th>Tahun Pembelian/Pengadaan</th>
-                        <th>Konstruksi (P, SP, D)</th>
-                        <th>Luas M<sup>2</sup></th>
-                        <th>Nilai Barang</th>
-                        <th>SK KDH</th>
-                        <th>Jangka Waktu Kerjasama</th>
-                        <th>Alamat Pihak Ketiga</th>
-                        <th>Keterangan</th>
-                        <th>Options</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    <?php   
+                    </table>
+                  </div>
+                  <div class="table table-responsive">
+                    <table id="table_id" class="display">
+                      <thead class="text-primary">
+                        <tr>
+                          <th>No</th>
+                          <th>No Kode Lokasi Barang</th>
+                          <th>No Kode Barang</th>
+                          <th>No Register</th>
+                          <th>Nama Barang</th>
+                          <th>Dokumen Barang</th>
+                          <th>Alamat Barang</th>
+                          <th>Asal usul Barang</th>
+                          <th>Tahun Pembelian/Pengadaan</th>
+                          <th>Konstruksi (P, SP, D)</th>
+                          <th>Luas M<sup>2</sup></th>
+                          <th>Nilai Barang</th>
+                          <th>SK KDH</th>
+                          <th>Jangka Waktu Kerjasama</th>
+                          <th>Alamat Pihak Ketiga</th>
+                          <th>Keterangan</th>
+                          <th>Options</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php
                         include "connect.php";
-                        
-                        $result = mysqli_query($connect,"SELECT * from BMD_GUNAUSAHA");
 
-                        $i = 1;    
-                        while($data = mysqli_fetch_array($result)){ ?>
-                                        <tr>
-                                        <td class="text-center"><?php echo $i;?></td>
-                                        <td class="text-center"><?php echo $data['NO_KODE_LOKASI_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['NO_KODE_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['NO_REGISTER'];?></td>
-                                        <td class="text-center"><?php echo $data['NAMA_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['DOKUMEN_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['ALAMAT_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['ASAL_USUL'];?></td>
-                                        <td class="text-center"><?php echo $data['TAHUN_PEMBELIAN'];?></td>
-                                        <td class="text-center"><?php echo $data['KONSTRUKSI'];?></td>
-                                        <td class="text-center"><?php echo $data['LUAS'];?></td>
-                                        <td class="text-center"><?php echo $data['NILAI_BARANG'];?></td>
-                                        <td class="text-center"><?php echo $data['SK_KDH'];?></td>
-                                        <td class="text-center"><?php echo $data['JANGKA_WAKTU'];?></td>
-                                        <td class="text-center"><?php echo $data['ALAMA_PHK_KETIGAT'];?></td>
-                                        <td class="text-center"><?php echo $data['KETERANGAN'];?></td>
-                                        <td>
-                                          <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bmd-gunausaha-edit&id=<?php echo $data['ID_BMD'];?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                                          <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bmd&id=<?php echo $data['ID_BMD'];?>">Delete</a> </button>
-                                        </td>                                        
-                                        </tr>  
-                                        
-                      <?php $i++;
-                      } ?>  
-                    </tbody>
-                  </table>
+                        $result = mysqli_query($connect, "SELECT * from BMD_GUNAUSAHA");
+
+                        $i = 1;
+                        while ($data = mysqli_fetch_array($result)) { ?>
+                          <tr>
+                            <td class="text-center"><?php echo $i; ?></td>
+                            <td class="text-center"><?php echo $data['NO_KODE_LOKASI_BARANG']; ?></td>
+                            <td class="text-center"><?php echo $data['NO_KODE_BARANG']; ?></td>
+                            <td class="text-center"><?php echo $data['NO_REGISTER']; ?></td>
+                            <td class="text-center"><?php echo $data['NAMA_BARANG']; ?></td>
+                            <td class="text-center"><?php echo $data['DOKUMEN_BARANG']; ?></td>
+                            <td class="text-center"><?php echo $data['ALAMAT_BARANG']; ?></td>
+                            <td class="text-center"><?php echo $data['ASAL_USUL']; ?></td>
+                            <td class="text-center"><?php echo $data['TAHUN_PEMBELIAN']; ?></td>
+                            <td class="text-center"><?php echo $data['KONSTRUKSI']; ?></td>
+                            <td class="text-center"><?php echo $data['LUAS']; ?></td>
+                            <td class="text-center"><?php echo $data['NILAI_BARANG']; ?></td>
+                            <td class="text-center"><?php echo $data['SK_KDH']; ?></td>
+                            <td class="text-center"><?php echo $data['JANGKA_WAKTU']; ?></td>
+                            <td class="text-center"><?php echo $data['ALAMA_PHK_KETIGAT']; ?></td>
+                            <td class="text-center"><?php echo $data['KETERANGAN']; ?></td>
+                            <td>
+                              <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bmd-gunausaha-edit&id=<?php echo $data['ID_BMD']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                              <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bmd&id=<?php echo $data['ID_BMD']; ?>">Delete</a> </button>
+                            </td>
+                          </tr>
+
+                          <?php $i++;
+                        } ?>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>

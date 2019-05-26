@@ -680,6 +680,159 @@ function delete_bmd($connect)
 	}
 }
 
+function insert_dkpbmd($connect)
+{
+	$ID_DKPBMD = $_POST['ID_DKPBMD'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$NO_REGISTER = $_POST['NO_REGISTER'];
+	$TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
+	$TAHUN_ANGGARAN = $_POST['TAHUN_ANGGARAN'];
+	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
+	$URAIAN_PEMELIHARAAN = $_POST['URAIAN_PEMELIHARAAN'];
+	$JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
+	$HARGA_SATUAN = $_POST['HARGA_SATUAN'];
+	$JUMLAH_HARGA = $_POST['JUMLAH_HARGA'];
+	$KODE_REKENING  = $_POST['KODE_REKENING'];
+	$KETERANGAN = $_POST['KETERANGAN'];
+
+	$query = "INSERT INTO DKPBMD VALUES('$ID_DKPBMD','$NAMA_BARANG','$NO_REGISTER','$TAHUN_PEROLEHAN','$TAHUN_ANGGARAN','$JENIS_PEMELIHARAAN','$URAIAN_PEMELIHARAAN','$JUMLAH_BARANG',$HARGA_SATUAN,$JUMLAH_HARGA,'$KODE_REKENING','$KETERANGAN')";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=dkpbmd");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function update_dkpbmd($connect)
+{
+	$ID_DKPBMD = $_POST['ID_DKPBMD'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$NO_REGISTER = $_POST['NO_REGISTER'];
+	$TAHUN_PEROLEHAN = $_POST['TAHUN_PEROLEHAN'];
+	$TAHUN_ANGGARAN = $_POST['TAHUN_ANGGARAN'];
+	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
+	$URAIAN_PEMELIHARAAN = $_POST['URAIAN_PEMELIHARAAN'];
+	$JUMLAH_BARANG = $_POST['JUMLAH_BARANG'];
+	$HARGA_SATUAN = $_POST['HARGA_SATUAN'];
+	$JUMLAH_HARGA = $_POST['JUMLAH_HARGA'];
+	$KODE_REKENING  = $_POST['KODE_REKENING'];
+	$KETERANGAN = $_POST['KETERANGAN'];
+
+	$query = "UPDATE DKPBMD SET ID_DKPBMD='$ID_DKPBMD',NAMA_BARANG='$NAMA_BARANG',NO_REGISTER='$NO_REGISTER',TAHUN_PEROLEHAN='$TAHUN_PEROLEHAN',TAHUN_ANGGARAN='$TAHUN_ANGGARAN',JENIS_PEMELIHARAAN='$JENIS_PEMELIHARAAN',URAIAN_PEMELIHARAAN='$URAIAN_PEMELIHARAAN',JUMLAH_BARANG='$JUMLAH_BARANG',HARGA_SATUAN=$HARGA_SATUAN,JUMLAH_HARGA=$JUMLAH_HARGA,KODE_REKENING='$KODE_REKENING',KETERANGAN='$KETERANGAN' WHERE ID_DKPBMD='$ID_DKPBMD'";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=dkpbmd");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function delete_dkpbmd($connect)
+{
+	$ID_DKPBMD = $_GET['ID_DKPBMD'];
+	$query = "DELETE FROM DKPBMD WHERE ID_DKPBMD='$ID_DKPBMD'";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=dkpbmd");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+
+function insert_jadwal_pemeliharaan($connect)
+{
+	$ID_JADWAL = $_POST['ID_JADWAL'];
+	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
+	$KEGIATAN = $_POST['KEGIATAN'];
+	$TANGAL_PEMELIHARAAN = $_POST['TANGAL_PEMELIHARAAN'];
+
+	$query = "INSERT INTO JADWAL_PEMELIHARAAN VALUES('$ID_JADWAL','$KODE_BARANG','$NAMA_BARANG','$JENIS_PEMELIHARAAN','$KEGIATAN','$TANGAL_PEMELIHARAAN') ";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=jadwal-pemeliharaan");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function update_jadwal_pemeliharaan($connect)
+{
+	$ID_JADWAL = $_POST['ID_JADWAL'];
+	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
+	$KEGIATAN = $_POST['KEGIATAN'];
+	$TANGAL_PEMELIHARAAN = $_POST['TANGAL_PEMELIHARAAN'];
+
+	$query = "UPDATE JADWAL_PEMELIHARAAN SET KODE_BARANG = '$KODE_BARANG',NAMA_BARANG = '$NAMA_BARANG', JENIS_PEMELIHARAAN = '$JENIS_PEMELIHARAAN',KEGIATAN = '$KEGIATAN',TANGAL_PEMELIHARAAN = '$TANGAL_PEMELIHARAAN' WHERE ID_JADWAL = '$ID_JADWAL' ";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=jadwal-pemeliharaan");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function delete_jadwal_pemeliharaan($connect)
+{
+	$ID_JADWAL = $_GET['ID_JADWAL'];
+
+	$query = "DELETE FROM JADWAL_PEMELIHARAAN WHERE ID_JADWAL='$ID_JADWAL'";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=jadwal-pemeliharaan");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+
+function insert_kartu_pemeliharaan($connect)
+{
+	$ID_KARTU = $_POST['ID_KARTU'];
+	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NO_REGISTER = $_POST['NO_REGISTER'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
+	$YANG_MEMELIHARA = $_POST['YANG_MEMELIHARA'];
+	$TANGGAL_PEMELIHARAAN = $_POST['TANGGAL_PEMELIHARAAN'];
+	$BIAYA_PEMELIHARAAN = $_POST['BIAYA_PEMELIHARAAN'];
+	$BUKTI_PEMELIHARAAN = $_POST['BUKTI_PEMELIHARAAN'];
+	$NOMOR_SPK = $_POST['NOMOR_SPK'];
+	$TANGGAL_SPK = $_POST['TANGGAL_SPK'];
+	$NOMOR_BAST = $_POST['NOMOR_BAST'];
+	$TANGGAL_BAST = $_POST['TANGGAL_BAST'];
+	$FOTO_ASET = basename($_FILES['FOTO_ASET']['name']);
+	$FILE_ASET = basename($_FILES['FILE_ASET']['name']);
+
+	$query = "INSERT INTO KARTU_PEMELIHARAAN VALUES('$ID_KARTU','$KODE_BARANG','$NO_REGISTER','$NAMA_BARANG','$JENIS_PEMELIHARAAN','$YANG_MEMELIHARA','$TANGGAL_PEMELIHARAAN','$BIAYA_PEMELIHARAAN','$BUKTI_PEMELIHARAAN','$NOMOR_SPK','$TANGGAL_SPK','$NOMOR_BAST','$TANGGAL_BAST','$FOTO_ASET','$FILE_ASET') ";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=kartu-pemeliharaan");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function update_kartu_pemeliharaan($connect)
+{
+	$ID_JADWAL = $_POST['ID_JADWAL'];
+	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
+	$KEGIATAN = $_POST['KEGIATAN'];
+	$TANGAL_PEMELIHARAAN = $_POST['TANGAL_PEMELIHARAAN'];
+
+	$query = "UPDATE KARTU_PEMELIHARAAN SET KODE_BARANG = '$KODE_BARANG',NAMA_BARANG = '$NAMA_BARANG', JENIS_PEMELIHARAAN = '$JENIS_PEMELIHARAAN',KEGIATAN = '$KEGIATAN',TANGAL_PEMELIHARAAN = '$TANGAL_PEMELIHARAAN' WHERE ID_JADWAL = '$ID_JADWAL' ";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=kartu-pemeliharaan");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function delete_kartu_pemeliharaan($connect)
+{
+	$ID_JADWAL = $_GET['ID_JADWAL'];
+
+	$query = "DELETE FROM KARTU_PEMELIHARAAN WHERE ID_JADWAL='$ID_JADWAL'";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=kartu-pemeliharaan");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+
+
 if (isset($_GET['process'])) {
 	switch ($_GET['process']) {
 		case "insert_kib_a":
@@ -740,6 +893,36 @@ if (isset($_GET['process'])) {
 			break;
 		case "delete_bmd":
 			delete_bmd($connect);
+			break;
+
+		case "insert_dkpbmd":
+			insert_dkpbmd($connect);
+			break;
+		case "update_dkpbmd":
+			update_dkpbmd($connect);
+			break;
+		case "delete_dkpbmd":
+			delete_dkpbmd($connect);
+			break;
+
+		case "insert_jadwal_pemeliharaan":
+			insert_jadwal_pemeliharaan($connect);
+			break;
+		case "update_jadwal_pemeliharaan":
+			update_jadwal_pemeliharaan($connect);
+			break;
+		case "delete_jadwal_pemeliharaan":
+			delete_jadwal_pemeliharaan($connect);
+			break;
+
+		case "insert_kartu_pemeliharaan":
+			insert_kartu_pemeliharaan($connect);
+			break;
+		case "update_kartu_pemeliharaan":
+			update_kartu_pemeliharaan($connect);
+			break;
+		case "delete_kartu_pemeliharaan":
+			delete_kartu_pemeliharaan($connect);
 			break;
 
 		default:
