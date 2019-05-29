@@ -52,7 +52,7 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
       <li class="<?php echo $menu_dashb; ?>">
         <a href="index.php" class="d-flex align-items-center">
           <i class="now-ui-icons design_app"></i>
-          <h5 class="font-weight-bold mb-0">Dashboard</h5>
+          <h5 class="font-weight-bold mb-0">Home</h5>
         </a>
       </li>
 
