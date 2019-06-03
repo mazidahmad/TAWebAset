@@ -1,18 +1,26 @@
 <?php
     session_name('ta_webasset');
     session_start();
-    
+    include 'connect.php';
+
     if(isset($_SESSION["username"]) || isset($_SESSION["password"])){
         header("location:");
     }else{
       if(isset($_POST['Login'])){
           $username = $_POST['username'];
-          $password = md5($_POST['password']);
+          $password = $_POST['password'];
 
-          if($username == "admin" && $password == md5("admin")){
-              session_start();
-              $_SESSION['username'] = $username;
-              $_SESSION['status'] = "login";
+          $login = mysqli_query($connect,"SELECT * FROM USER WHERE USERNAME='$username' AND PASSWORD='$password'");
+          $cek = mysqli_num_rows($login);
+
+          if($cek > 0){
+              while($data = mysqli_fetch_array($login)){
+                $_SESSION['username'] = $username;
+                $_SESSION['kd_bagian'] = $data['kd_bagian'];
+                $_SESSION['name'] = $data['NAMA'];
+                $_SESSION['bagian'] = $data['STATUS'];
+                $_SESSION['status'] = "login";
+              }
               header("location:../index.php?page=home");
           }else{
               echo '<h1>GAGAL LOGIN</h1>';

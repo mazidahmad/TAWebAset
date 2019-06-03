@@ -38,7 +38,6 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
   $menu_invent = "active";
   $style_invent = "style='color: #f76232;'";
 }
-
 ?>
 <div class="sidebar" data-color="orange">
   <!--
@@ -55,6 +54,7 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
           <h5 class="font-weight-bold mb-0">Home</h5>
         </a>
       </li>
+      <?php if ($_SESSION['kd_bagian'] != 1 && $_SESSION['kd_bagian'] != 4) { ?>
 
       <li class="<?php echo $menu_invent; ?>">
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle d-flex align-items-center" <?php echo $style_invent; ?>>
@@ -103,6 +103,9 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
           </li>
         </ul>
       </li>
+      <?php } ?>
+      <?php
+      if($_SESSION['kd_bagian'] != 2) { ?> 
       <li class="<?php echo $menu_pemeliharaan; ?>">
         <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle d-flex align-items-center">
           <i class="now-ui-icons ui-1_bell-53"></i>
@@ -114,7 +117,8 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
               <span style="font-size:10pt;"><strong>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</strong></span>
             </a>
           </li>
-          <li class="ogo">
+          <?php if($_SESSION['kd_bagian'] != 1 && $_SESSION['kd_bagian'] != 2) { ?>
+          <li class="logo">
             <a href="index.php?page=jadwal-pemeliharaan">
               <span style="font-size:10pt;"><strong>Jadwal Pemeliharaan</strong></span>
             </a>
@@ -124,8 +128,10 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
               <span style="font-size:10pt;"><strong>Kartu Pemeliharaan Barang</strong></span>
             </a>
           </li>
+          <?php } ?>
         </ul>
       </li>
+      <?php } ?>
     </ul>
   </div>
 </div>

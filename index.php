@@ -22,6 +22,8 @@ if (!isset($_GET['page'])) {
     ASIPAT DISPERKIM
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -30,6 +32,7 @@ if (!isset($_GET['page'])) {
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/buttons.dataTables.css">
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
 
@@ -39,6 +42,11 @@ if (!isset($_GET['page'])) {
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap.min.js"></script>
   <script type="text/javascript" charset="utf8" src="assets/js/plugins/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8" src="assets/js/plugins/dataTables.buttons.js"></script>
+  <script type="text/javascript" charset="utf8" src="assets/js/plugins/buttons.html5.js"></script>
+  <script type="text/javascript" charset="utf8" src="assets/js/plugins/buttons.print.js"></script>
+  <script type="text/javascript" charset="utf8" src="assets/js/plugins/pdfmake.js"></script>
+  <script type="text/javascript" charset="utf8" src="assets/js/plugins/vfs_fonts.js"></script>
 </head>
 
 <body class="">
@@ -64,13 +72,22 @@ if (!isset($_GET['page'])) {
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="link/logout-action.php">
-                  <i class="now-ui-icons media-1_button-power"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Logout</span>
-                  </p>
-                </a>
+              <li class="nav-item dropdown">
+                <div class="btn btn-outline-light text-right dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="float-left">
+                    <p>Hello,<span style="font-size:15pt;"> <?php echo $_SESSION["name"]; ?></span></p><br>
+                    <p>Bagian :<span style="font-size:12pt;">  <?php echo $_SESSION["bagian"] ?></span></p>
+                  </div>
+                  <div class="float-left ml-3"><i class="fas fa-user fa-4x"></i></div>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="link/logout-action.php">
+                    <i class="now-ui-icons media-1_button-power"></i>
+                    <p>
+                      <span class="d-md-block">Logout</span>
+                    </p>
+                  </a>
+                </div>                
               </li>
             </ul>
           </div>

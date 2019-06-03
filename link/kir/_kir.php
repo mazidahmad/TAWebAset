@@ -1,5 +1,5 @@
-      <div class="panel-header panel-header-lg">
-        <img src="../assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%">
+      <div class="panel-header panel-header-sm">
+        <!-- <img src="../assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%"> -->
       </div>
       <div class="content">
         <div class="row">

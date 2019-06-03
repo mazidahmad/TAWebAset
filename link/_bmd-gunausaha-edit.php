@@ -6,7 +6,7 @@ $result = mysqli_query($connect, $query);
 if ($row = mysqli_fetch_array($result)){
     
 ?>
-    <div class="panel-header panel-header-lg">
+    <div class="panel-header panel-header-sm">
         <img src="assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%">
     </div>
     <div class="content">
