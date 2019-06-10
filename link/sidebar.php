@@ -9,10 +9,19 @@ $sub_mb = "";
 $sub_dubd = "";
 $sub_dbmdd = "";
 
+$sub_dkpbmd = "";
+$sub_jp = "";
+$sub_kpb = "";
+
 $menu_dashb = "";
 $menu_invent = "";
+$menu_pem = "";
 
 $style_invent = "";
+$style_pem = "";
+
+$show_sub_invent = "";
+$show_sub_pem = "";
 
 // elseif(in_array($menuopt, array('kib', 'kir', 'bib', 'rbib', 'lmb', 'dmb', 'rmb', )))
 
@@ -34,10 +43,28 @@ if (in_array($menuopt, array('home'))) {
   $sub_dbmdd = "active";
 }
 
+if(in_array($menuopt, array('dkpbmd', 'dkpbmd-input', 'dkpbmd-delete'))) {
+  $sub_dkpbmd = "active";
+}
+else if(in_array($menuopt, array('jadwal-pemeliharaan'))) {
+  $sub_jp = "active";
+}
+else if(in_array($menuopt, array('kartu-pemeliharaan'))) {
+  $sub_kpb = "active";
+}
+
 if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $sub_dubd, $sub_dbmdd))) {
   $menu_invent = "active";
   $style_invent = "style='color: #f76232;'";
+  $show_sub_invent = "show";
 }
+
+if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
+  $menu_pem = "active";
+  $style_pem = "style='color: #f76232;'";
+  $show_sub_pem = "show";
+}
+
 ?>
 <div class="sidebar" data-color="orange">
   <!--
@@ -61,7 +88,7 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
           <i class="now-ui-icons ui-1_bell-53" <?php echo $style_invent; ?>></i>
           <h5 class="font-weight-bold mb-0">Inventarisasi Aset</h5>
         </a>
-        <ul class="collapse list-unstyled text-center" id="pageSubmenu">
+        <ul class="collapse list-unstyled text-center <?php echo $show_sub_invent; ?>" id="pageSubmenu">
           <li class="<?php echo $sub_kib; ?> mt-2 logo">
             <a href="index.php?page=kib">
               <span style="font-size:10pt;"><strong>Kartu Inventaris Barang</strong></span>
@@ -106,24 +133,24 @@ if (in_array("active", array($sub_kib, $sub_kir, $sub_bib, $sub_rbib, $sub_mb, $
       <?php } ?>
       <?php
       if($_SESSION['kd_bagian'] != 2) { ?> 
-      <li class="<?php echo $menu_pemeliharaan; ?>">
-        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle d-flex align-items-center">
-          <i class="now-ui-icons ui-1_bell-53"></i>
+      <li class="<?php echo $menu_pem; ?>">
+        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle d-flex align-items-center" <?php echo $style_pem; ?>>
+          <i class="now-ui-icons ui-1_bell-53" <?php echo $style_pem; ?>></i>
           <h5 class="font-weight-bold mb-0">Pemeliharaan Aset</h5>
         </a>
-        <ul class="collapse list-unstyled text-center" id="pageSubmenu2">
-          <li class="mt-2 logo">
+        <ul class="collapse list-unstyled text-center <?php echo $show_sub_pem; ?>" id="pageSubmenu2">
+          <li class="<?php echo $sub_dkpbmd; ?> mt-2 logo">
             <a href="index.php?page=dkpbmd">
               <span style="font-size:10pt;"><strong>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</strong></span>
             </a>
           </li>
           <?php if($_SESSION['kd_bagian'] != 1 && $_SESSION['kd_bagian'] != 2) { ?>
-          <li class="logo">
+          <li class="<?php echo $sub_jp; ?> logo">
             <a href="index.php?page=jadwal-pemeliharaan">
               <span style="font-size:10pt;"><strong>Jadwal Pemeliharaan</strong></span>
             </a>
           </li>
-          <li class="logo">
+          <li class="<?php echo $sub_kpb; ?> logo">
             <a href="index.php?page=kartu-pemeliharaan">
               <span style="font-size:10pt;"><strong>Kartu Pemeliharaan Barang</strong></span>
             </a>
