@@ -27,11 +27,11 @@ $show_sub_pem = "";
 
 if (in_array($menuopt, array('home'))) {
   $menu_dashb = "active";
-} elseif (in_array($menuopt, array('kib', 'insert-kib-a', 'edit-kib-a'))) {
+} elseif (in_array($menuopt, array('kib', 'insert-kib-a', 'edit-kib-a', 'insert-kib-b', 'edit-kib-b'))) {
   $sub_kib = "active";
 } elseif (in_array($menuopt, array('kir', 'insert-kir', 'edit-kir'))) {
   $sub_kir = "active";
-} elseif (in_array($menuopt, array('bib'))) {
+} elseif (in_array($menuopt, array('bi', 'bi-input', 'bi-edit'))) {
   $sub_bib = "active";
 } elseif (in_array($menuopt, array('rbib'))) {
   $sub_rbib = "active";
@@ -43,7 +43,7 @@ if (in_array($menuopt, array('home'))) {
   $sub_dbmdd = "active";
 }
 
-if(in_array($menuopt, array('dkpbmd', 'dkpbmd-input', 'dkpbmd-delete'))) {
+if(in_array($menuopt, array('dkpbmd', 'dkpbmd-edit', 'dkpbmd-input', 'dkpbmd-delete'))) {
   $sub_dkpbmd = "active";
 }
 else if(in_array($menuopt, array('jadwal-pemeliharaan'))) {
@@ -102,7 +102,7 @@ if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
           </li>
 
           <li class="<?php echo $sub_bib; ?> logo">
-            <a href="index.php?page=bib">
+            <a href="index.php?page=bi">
               <span style="font-size:10pt;"><strong>Buku Inventaris Barang</strong></span>
             </a>
           </li>

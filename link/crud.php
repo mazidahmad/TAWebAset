@@ -102,7 +102,9 @@ function insert_kir($connect)
 {
 	if (isset($_POST['insert_kir'])) {
 		$kode		= $_POST['kode'];
-		$nama   = $_POST['nama'];
+		$row = mysqli_fetch_assoc(mysqli_query($connect, "SELECT NAMA_BARANG FROM kib_b WHERE KODE_BARANG='$kode'"));
+
+		$nama   = $row['NAMA_BARANG'];
 		$merk   = $_POST['merk'];
 		$noseri = $_POST['noseri'];
 		$ukuran = $_POST['ukuran'];
@@ -832,6 +834,67 @@ function delete_kartu_pemeliharaan($connect)
 	}
 }
 
+function insert_kib_b($connect)
+{
+	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$NO_REGISTER = $_POST['NO_REGISTER'];
+	$MERK = $_POST['MERK'];
+	$UKURAN = $_POST['UKURAN'];
+	$BAHAN = $_POST['BAHAN'];
+	$TAHUN = $_POST['TAHUN'];
+	$PABRIK = $_POST['PABRIK'];
+	$RANGKA = $_POST['RANGKA'];
+	$MESIN = $_POST['MESIN'];
+	$POLISI = $_POST['POLISI'];
+	$BPKB = $_POST['BPKB'];
+	$ASAL_USUL = $_POST['ASAL_USUL'];
+	$HARGA = $_POST['HARGA'];
+	$KETERANGAN = $_POST['KETERANGAN'];
+
+	$query = "INSERT INTO kib_b VALUES('$KODE_BARANG','$NAMA_BARANG','$NO_REGISTER','$MERK','$UKURAN','$BAHAN','$TAHUN','$PABRIK','$RANGKA','$MESIN','$POLISI','$BPKB','$ASAL_USUL',$HARGA,'$KETERANGAN') ";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=kib");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function update_kib_b($connect)
+{
+	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$NO_REGISTER = $_POST['NO_REGISTER'];
+	$MERK = $_POST['MERK'];
+	$UKURAN = $_POST['UKURAN'];
+	$BAHAN = $_POST['BAHAN'];
+	$TAHUN = $_POST['TAHUN'];
+	$PABRIK = $_POST['PABRIK'];
+	$RANGKA = $_POST['RANGKA'];
+	$MESIN = $_POST['MESIN'];
+	$POLISI = $_POST['POLISI'];
+	$BPKB = $_POST['BPKB'];
+	$ASAL_USUL = $_POST['ASAL_USUL'];
+	$HARGA = $_POST['HARGA'];
+	$KETERANGAN = $_POST['KETERANGAN'];
+
+	$query = "UPDATE kib_b SET NO_REGISTER='$NO_REGISTER',NAMA_BARANG='$NAMA_BARANG',MERK='$MERK',UKURAN='$UKURAN',BAHAN='$BAHAN',TAHUN='$TAHUN',PABRIK='$PABRIK',RANGKA='$RANGKA',MESIN='$MESIN',POLISI='$POLISI',BPKB='$BPKB',ASAL_USUL='$ASAL_USUL',HARGA=$HARGA,KETERANGAN='$KETERANGAN' WHERE KODE_BARANG = '$KODE_BARANG' ";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=kib");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
+function delete_kib_b($connect)
+{
+	$KODE_BARANG = $_GET['KODE_BARANG'];
+
+	$query = "DELETE FROM kib_b WHERE KODE_BARANG='$KODE_BARANG'";
+	if (mysqli_query($connect, $query)) {
+		header("Location:../index.php?page=kib");
+	} else {
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+	}
+}
 
 if (isset($_GET['process'])) {
 	switch ($_GET['process']) {
@@ -843,6 +906,16 @@ if (isset($_GET['process'])) {
 			break;
 		case "delete_kib_a":
 			delete_kib_a($connect);
+			break;
+
+		case "insert_kib_b":
+			insert_kib_b($connect);
+			break;
+		case "update_kib_b":
+			update_kib_a($connect);
+			break;
+		case "delete_kib_b":
+			delete_kib_b($connect);
 			break;
 
 		case "insert_kir":

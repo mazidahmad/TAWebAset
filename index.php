@@ -76,7 +76,7 @@ if (!isset($_GET['page'])) {
                 <div class="btn btn-outline-light text-right dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="float-left">
                     <p>Hello,<span style="font-size:15pt;"> <?php echo $_SESSION["name"]; ?></span></p><br>
-                    <p>Bagian :<span style="font-size:12pt;">  <?php echo $_SESSION["bagian"] ?></span></p>
+                    <p>Bagian :<span style="font-size:12pt;"> <?php echo $_SESSION["bagian"] ?></span></p>
                   </div>
                   <div class="float-left ml-3"><i class="fas fa-user fa-4x"></i></div>
                 </div>
@@ -87,7 +87,7 @@ if (!isset($_GET['page'])) {
                       <span class="d-md-block">Logout</span>
                     </p>
                   </a>
-                </div>                
+                </div>
               </li>
             </ul>
           </div>
@@ -107,10 +107,32 @@ if (!isset($_GET['page'])) {
           include('link/kib/_kib-a-input.php');
           break;
         case "edit-kib-a":
-          include('link/_kib-a-edit.php');
+          include('link/kib/_kib-a-edit.php');
           break;
         case "delete-kib-a":
           include('link/crud.php?process=delete_kib_a');
+          break;
+        case "insert-kib-b":
+          include('link/kib/_kib-b-input.php');
+          break;
+        case "edit-kib-b":
+          include('link/kib/_kib-b-edit.php');
+          break;
+        case "delete-kib-b":
+          include('link/crud.php?process=delete_kib_b');
+          break;
+
+        case "bi":
+          include('link/_bi.php');
+          break;
+        case "bi-input":
+          include('link/_bi-input.php');
+          break;
+        case "bi-edit":
+          include('link/_bi-edit.php');
+          break;
+        case "bi-delete":
+          include('link/crud.php?process=delete_bi');
           break;
 
         case "kir":
@@ -197,11 +219,6 @@ if (!isset($_GET['page'])) {
         case "kartu-pemeliharaan-edit":
           include('link/_kartu-pemeliharaan-edit.php');
           break;
-
-
-        case "insert-bi":
-          include('link/_input-bi.php');
-          break;
       }
       ?>
       <footer class="footer">
@@ -235,7 +252,7 @@ if (!isset($_GET['page'])) {
   <script src="assets/demo/demo.js"></script>
 
   <script>
-    
+
   </script>
 </body>
 

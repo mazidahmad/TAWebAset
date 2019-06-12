@@ -184,8 +184,8 @@
                           <td class="text-center"><?php echo $data['JUMLAH_HARGA']; ?></td>
                           <td class="text-center"><?php echo $data['KETERANGAN']; ?></td>
                           <td>
-                            <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="input-kib-a&kode=<?php echo $data['KODE_BARANG']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                            <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/input-kib-a.php">Delete</a> </button>
+                            <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="input-bi&kode=<?php echo $data['NOMOR_KODE_BARANG']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                            <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/delete-bi.php">Delete</a> </button>
                           </td>
                         </tr>
 
