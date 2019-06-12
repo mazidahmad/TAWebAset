@@ -741,7 +741,8 @@ function insert_jadwal_pemeliharaan($connect)
 {
 	$ID_JADWAL = $_POST['ID_JADWAL'];
 	$KODE_BARANG = $_POST['KODE_BARANG'];
-	$NAMA_BARANG = $_POST['NAMA_BARANG'];
+	$row = mysqli_fetch_assoc(mysqli_query($connect, "SELECT NAMA_BARANG FROM kib_b WHERE KODE_BARANG='$KODE_BARANG'"));
+	$NAMA_BARANG = $row['NAMA_BARANG'];
 	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
 	$KEGIATAN = $_POST['KEGIATAN'];
 	$TANGAL_PEMELIHARAAN = $_POST['TANGAL_PEMELIHARAAN'];

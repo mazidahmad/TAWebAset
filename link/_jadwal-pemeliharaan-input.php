@@ -26,8 +26,22 @@
                                     }
                                     ?>
                                     <input type="hidden" name="ID_JADWAL" value="<?php echo "$num"; ?>">
-                                    <div class="form-group col-md-6"> <label for="formGroupExampleInput">KODE_BARANG :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="KODE_BARANG"> </div>
-                                    <div class="form-group col-md-6"> <label for="formGroupExampleInput">NAMA_BARANG :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="NAMA_BARANG"> </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">Nomor Kode Barang :</label>
+                                        <select name="KODE_BARANG" class="form-control" id="formGroupExampleInput2">
+                                            <?php
+                                            $query = "SELECT KODE_BARANG,NAMA_BARANG FROM kib_b";
+                                            $result = mysqli_query($connect, $query);
+                                            if (mysqli_num_rows($result) > 0) {
+                                                while ($row = mysqli_fetch_assoc($result)) {
+                                                    echo "<option value='$row[KODE_BARANG]'>$row[KODE_BARANG] - $row[NAMA_BARANG]</option>";
+                                                }
+                                            } else {
+                                                echo "<option value=''>Input Kib B terlebih dahulu</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
                                     <div class="form-group col-md-6"> <label for="formGroupExampleInput">JENIS_PEMELIHARAAN :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="JENIS_PEMELIHARAAN"> </div>
                                     <div class="form-group col-md-6"> <label for="formGroupExampleInput">KEGIATAN :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="KEGIATAN"> </div>
                                     <div class="form-group col-md-6"> <label for="formGroupExampleInput">TANGGAL_PEMELIHARAAN :</label> <input type="date" class="form-control" id="formGroupExampleInput" name="TANGAL_PEMELIHARAAN"> </div>

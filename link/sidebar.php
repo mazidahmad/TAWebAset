@@ -46,7 +46,7 @@ if (in_array($menuopt, array('home'))) {
 if(in_array($menuopt, array('dkpbmd', 'dkpbmd-edit', 'dkpbmd-input', 'dkpbmd-delete'))) {
   $sub_dkpbmd = "active";
 }
-else if(in_array($menuopt, array('jadwal-pemeliharaan'))) {
+else if(in_array($menuopt, array('jadwal-pemeliharaan','jadwal-pemeliharaan-input','jadwal-pemeliharaan-edit'))) {
   $sub_jp = "active";
 }
 else if(in_array($menuopt, array('kartu-pemeliharaan'))) {
