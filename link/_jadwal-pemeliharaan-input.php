@@ -27,7 +27,7 @@
                                     ?>
                                     <input type="hidden" name="ID_JADWAL" value="<?php echo "$num"; ?>">
                                     <div class="form-group col-md-6">
-                                        <label for="formGroupExampleInput2">Nomor Kode Barang :</label>
+                                        <label for="formGroupExampleInput2">Kode Barang - Nama Barang</label>
                                         <select name="KODE_BARANG" class="form-control" id="formGroupExampleInput2">
                                             <?php
                                             $query = "SELECT KODE_BARANG,NAMA_BARANG FROM kib_b";

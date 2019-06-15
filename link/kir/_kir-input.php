@@ -14,7 +14,7 @@
                                   <form method="post" action="link/crud.php?process=insert_kir" enctype="multipart/form-data">
                                       <div class="form-row">
                                           <div class="form-group col-md-6">
-                                              <label for="formGroupExampleInput2">Nomor Kode Barang :</label>
+                                              <label for="formGroupExampleInput2">Kode Barang - Nama Barang</label>
                                               <select name="kode" class="form-control" id="formGroupExampleInput2">
                                                   <?php
                                                     $query = "SELECT KODE_BARANG,NAMA_BARANG FROM kib_b";
