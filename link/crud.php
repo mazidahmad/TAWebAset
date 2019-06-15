@@ -1082,8 +1082,8 @@ function update_kib_b($connect)
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
 		echo ("<script LANGUAGE='JavaScript'>
-		window.alert('Gagal Update<br>ERROR'" . mysqli_error($connect) . ");
-		window.location.href='../index.php?page=kib';
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=kib#kib-b';
 		</script>");
 	}
 }
@@ -1097,9 +1097,9 @@ function delete_kib_b($connect)
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
 		echo ("<script LANGUAGE='JavaScript'>
-				window.alert('Gagal Delete<br>ERROR'" . mysqli_error($connect) . ");
-				window.location.href='../index.php?page=kib';
-				</script>");
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=kib#kib-b';
+		</script>");
 	}
 }
 
