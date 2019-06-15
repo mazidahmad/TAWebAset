@@ -123,7 +123,7 @@ if (!isset($_GET['page'])) {
           break;
 
         case "bi":
-          include('link/_bi.php');
+          include('link/_main-bi.php');
           break;
         case "bi-input":
           include('link/_bi-input.php');

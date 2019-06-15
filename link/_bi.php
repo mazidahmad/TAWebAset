@@ -1,6 +1,3 @@
-<div class="panel-header panel-header-sm">
-    <img src="../assets/img/header/bg-inventory.jpg" alt="bg-inventory" width="100%">
-</div>
 <div class="content">
     <div class="row">
         <div class="col-md-12">
@@ -99,3 +96,4 @@
             </div>
         </div>
     </div>
+</div>
