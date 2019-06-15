@@ -42,9 +42,17 @@ function insert_kib_a($connect)
 			} else {
 				echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
 				echo "<br><a href='form_simpan.php'>Kembali Ke Form</a>";
+				echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Gagal Input');
+				window.location.href='../index.php?page=kib';
+				</script>");
 			}
 		} else {
 			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Input');
+			window.location.href='../index.php?page=kib';
+			</script>");
 		}
 	}
 }
@@ -77,10 +85,20 @@ function update_kib_a($connect)
 				if ($_GET['process'] == 'update_kib_a') {
 					header('location: ../index.php?page=kib');
 				}
+			} else {
+
+				echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=kib';
+		</script>");
 			}
-		} else {
-			$pesan = "Data tidak lengkap!";
 		}
+	} else {
+		$pesan = "Data tidak lengkap!";
+		echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Update');
+			window.location.href='../index.php?page=kib';
+			</script>");
 	}
 }
 
@@ -94,6 +112,12 @@ function delete_kib_a($connect)
 			if ($_GET['process'] == 'delete_kib_a') {
 				header('location: ../index.php?page=kib');
 			}
+		} else {
+
+			echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=kib';
+		</script>");
 		}
 	}
 }
@@ -128,10 +152,20 @@ function insert_kir($connect)
 				if ($_GET['process'] == 'insert_kir') {
 					header("location:../index.php?page=kir");
 				}
+			} else {
+
+				echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=kir';
+		</script>");
 			}
-		} else {
-			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 		}
+	} else {
+		$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Input');
+			window.location.href='../index.php?page=kir';
+			</script>");
 	}
 }
 
@@ -163,10 +197,20 @@ function update_kir($connect)
 				if ($_GET['process'] == 'update_kir') {
 					header('location: ../index.php?page=kir');
 				}
+			} else {
+
+				echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=kir';
+		</script>");
 			}
-		} else {
-			$pesan = "Data tidak lengkap!";
 		}
+	} else {
+		$pesan = "Data tidak lengkap!";
+		echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Update');
+			window.location.href='../index.php?page=kir';
+			</script>");
 	}
 }
 
@@ -180,10 +224,15 @@ function delete_kir($connect)
 			if ($_GET['process'] == 'delete_kir') {
 				header('location: ../index.php?page=kir');
 			}
+		} else {
+
+			echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=kir';
+		</script>");
 		}
 	}
 }
-
 function insert_usulan($connect)
 {
 	$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
@@ -209,6 +258,10 @@ function insert_usulan($connect)
 	} else {
 		// header("location:../index.php?page=usulan-penghapusan&&status=gagal-insert");
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=usulan-penghapusan';
+		</script>");
 	}
 }
 
@@ -235,6 +288,10 @@ function update_usulan($connect)
 	} else {
 		// header("location:../index.php?page=usulan-penghapusan&&status=gagal-update");
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=usulan-penghapusan';
+		</script>");
 	}
 }
 
@@ -246,9 +303,12 @@ function delete_usulan($connect)
 		header("Location:../index.php?page=usulan-penghapusan");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=usulan-penghapusan';
+		</script>");
 	}
 }
-
 function insert_bi($connect)
 {
 	if (isset($_POST['insert_bi'])) {
@@ -276,11 +336,21 @@ function insert_bi($connect)
 			if ($sql && isset($_GET['process'])) {
 				if ($_GET['process'] == 'insert_kir') {
 					header("location:../index.php?page=bi");
+				} else {
+
+					echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=bi';
+		</script>");
 				}
 			}
-		} else {
-			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 		}
+	} else {
+		$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Input');
+			window.location.href='../index.php?page=bi';
+			</script>");
 	}
 }
 
@@ -312,10 +382,18 @@ function update_bi($connect)
 				if ($_GET['process'] == 'update_bi') {
 					header('location: ../index.php?page=bi');
 				}
+				echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Gagal Input');
+				window.location.href='../index.php?page=bi';
+				</script>");
 			}
-		} else {
-			$pesan = "Data tidak lengkap!";
 		}
+	} else {
+		$pesan = "Data tidak lengkap!";
+		echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Update');
+			window.location.href='../index.php?page=bi';
+			</script>");
 	}
 }
 
@@ -329,6 +407,12 @@ function delete_bi($connect)
 			if ($_GET['process'] == 'delete_bi') {
 				header('location: ../index.php?page=bi');
 			}
+		} else {
+
+			echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=bi';
+		</script>");
 		}
 	}
 }
@@ -389,10 +473,18 @@ function insert_lmb($connect)
 				}
 			} else {
 				echo "unsaved \n";
+				echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Gagal Input');
+				window.location.href='../index.php?page=mb';
+				</script>");
 			}
 		} else {
 			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 			echo $pesan;
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Input');
+			window.location.href='../index.php?page=mb';
+			</script>");
 		}
 	}
 }
@@ -453,10 +545,18 @@ function update_lmb($connect)
 				}
 			} else {
 				echo "unsaved \n";
+				echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Gagal Update');
+				window.location.href='../index.php?page=mb';
+				</script>");
 			}
 		} else {
 			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 			echo $pesan;
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Update');
+			window.location.href='../index.php?page=mb';
+			</script>");
 		}
 	}
 }
@@ -471,6 +571,12 @@ function delete_lmb($connect)
 			if ($_GET['process'] == 'delete_lmb') {
 				header('location: ../index.php?page=mb');
 			}
+		} else {
+
+			echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=mb';
+		</script>");
 		}
 	}
 }
@@ -529,6 +635,10 @@ function insert_dmb($connect)
 			if ($sql && isset($_GET['process'])) {
 				if ($_GET['process'] == 'insert_dmb') {
 					header("location:../index.php?page=mb");
+					echo ("<script LANGUAGE='JavaScript'>
+					window.alert('Gagal Input');
+					window.location.href='../index.php?page=mb';
+					</script>");
 				}
 			} else {
 				echo "unsaved \n";
@@ -536,6 +646,10 @@ function insert_dmb($connect)
 		} else {
 			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 			echo $pesan;
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Input Data Belum Lengkap');
+			window.location.href='../index.php?page=mb';
+			</script>");
 		}
 	}
 }
@@ -596,10 +710,18 @@ function update_dmb($connect)
 				}
 			} else {
 				echo "unsaved \n";
+				echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Gagal Update');
+				window.location.href='../index.php?page=mb';
+				</script>");
 			}
 		} else {
 			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
 			echo $pesan;
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Update: Data Belum Lengkap');
+			window.location.href='../index.php?page=mb';
+			</script>");
 		}
 	}
 }
@@ -614,6 +736,12 @@ function delete_dmb($connect)
 			if ($_GET['process'] == 'delete_dmb') {
 				header('location: ../index.php?page=mb');
 			}
+		} else {
+
+			echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=mb';
+		</script>");
 		}
 	}
 }
@@ -641,6 +769,10 @@ function insert_bmd($connect)
 		header("Location:../index.php?page=bmd-gunausaha");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=bmd-gunausaha';
+		</script>");
 	}
 }
 
@@ -668,6 +800,10 @@ function update_bmd($connect)
 		header("Location:../index.php?page=bmd-gunausaha");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=bmd-gunausaha';
+		</script>");
 	}
 }
 
@@ -679,6 +815,10 @@ function delete_bmd($connect)
 		header("Location:../index.php?page=bmd-gunausaha");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=bmd-gunausaha';
+		</script>");
 	}
 }
 
@@ -702,6 +842,10 @@ function insert_dkpbmd($connect)
 		header("Location:../index.php?page=dkpbmd");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=dkpbmd';
+		</script>");
 	}
 }
 function update_dkpbmd($connect)
@@ -724,6 +868,10 @@ function update_dkpbmd($connect)
 		header("Location:../index.php?page=dkpbmd");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=dkpbmd';
+		</script>");
 	}
 }
 function delete_dkpbmd($connect)
@@ -734,6 +882,10 @@ function delete_dkpbmd($connect)
 		header("Location:../index.php?page=dkpbmd");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=dkpbmd';
+		</script>");
 	}
 }
 
@@ -752,6 +904,10 @@ function insert_jadwal_pemeliharaan($connect)
 		header("Location:../index.php?page=jadwal-pemeliharaan");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=jadwal-pemeliharaan';
+		</script>");
 	}
 }
 function update_jadwal_pemeliharaan($connect)
@@ -768,6 +924,10 @@ function update_jadwal_pemeliharaan($connect)
 		header("Location:../index.php?page=jadwal-pemeliharaan");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=jadwal-pemeliharaan';
+		</script>");
 	}
 }
 function delete_jadwal_pemeliharaan($connect)
@@ -779,6 +939,10 @@ function delete_jadwal_pemeliharaan($connect)
 		header("Location:../index.php?page=jadwal-pemeliharaan");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=jadwal-pemeliharaan';
+		</script>");
 	}
 }
 
@@ -842,7 +1006,11 @@ function update_kartu_pemeliharaan($connect)
 	if (mysqli_query($connect, $query)) {
 		header("Location:../index.php?page=kartu-pemeliharaan");
 	} else {
-		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		// echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update');
+		window.location.href='../index.php?page=kartu-pemeliharaan';
+		</script>");
 	}
 }
 function delete_kartu_pemeliharaan($connect)
@@ -853,7 +1021,11 @@ function delete_kartu_pemeliharaan($connect)
 	if (mysqli_query($connect, $query)) {
 		header("Location:../index.php?page=kartu-pemeliharaan");
 	} else {
-		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		// echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Delete');
+		window.location.href='../index.php?page=kartu-pemeliharaan';
+		</script>");
 	}
 }
 
@@ -879,7 +1051,11 @@ function insert_kib_b($connect)
 	if (mysqli_query($connect, $query)) {
 		header("Location:../index.php?page=kib");
 	} else {
-		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		// echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Input');
+		window.location.href='../index.php?page=kib#kib-b';
+		</script>");
 	}
 }
 function update_kib_b($connect)
@@ -905,6 +1081,10 @@ function update_kib_b($connect)
 		header("Location:../index.php?page=kib");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+		window.alert('Gagal Update<br>ERROR'" . mysqli_error($connect) . ");
+		window.location.href='../index.php?page=kib';
+		</script>");
 	}
 }
 function delete_kib_b($connect)
@@ -916,6 +1096,10 @@ function delete_kib_b($connect)
 		header("Location:../index.php?page=kib");
 	} else {
 		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Gagal Delete<br>ERROR'" . mysqli_error($connect) . ");
+				window.location.href='../index.php?page=kib';
+				</script>");
 	}
 }
 
