@@ -45,10 +45,19 @@
                                     <tr>
                                         <th>No</th>
                                         <th>KODE_BARANG</th>
+                                        <th>NO_REGISTER</th>
                                         <th>NAMA_BARANG</th>
                                         <th>JENIS_PEMELIHARAAN</th>
-                                        <th>KEGIATAN</th>
-                                        <th>TANGAL_PEMELIHARAAN</th>
+                                        <th>YANG_MEMELIHARA</th>
+                                        <th>TANGGAL_PEMELIHARAAN</th>
+                                        <th>BIAYA_PEMELIHARAAN</th>
+                                        <th>BUKTI_PEMELIHARAAN</th>
+                                        <th>NOMOR_SPK</th>
+                                        <th>TANGGAL_SPK</th>
+                                        <th>NOMOR_BAST</th>
+                                        <th>TANGGAL_BAST</th>
+                                        <th>FOTO_ASET</th>
+                                        <th>FILE_ASET</th>
                                         <th>Options</th>
                                     </tr>
                                 </thead>
@@ -63,10 +72,23 @@
                                         <tr>
                                             <td class="text-center"><?php echo $i; ?></td>
                                             <td class="text-center"><?php echo $data['KODE_BARANG']; ?></td>
+                                            <td class="text-center"><?php echo $data['NO_REGISTER']; ?></td>
                                             <td class="text-center"><?php echo $data['NAMA_BARANG']; ?></td>
                                             <td class="text-center"><?php echo $data['JENIS_PEMELIHARAAN']; ?></td>
-                                            <td class="text-center"><?php echo $data['KEGIATAN']; ?></td>
-                                            <td class="text-center"><?php echo $data['TANGAL_PEMELIHARAAN']; ?></td>
+                                            <td class="text-center"><?php echo $data['YANG_MEMELIHARA']; ?></td>
+                                            <td class="text-center"><?php echo $data['TANGGAL_PEMELIHARAAN']; ?></td>
+                                            <td class="text-center"><?php echo $data['BIAYA_PEMELIHARAAN']; ?></td>
+                                            <td class="text-center"><?php echo $data['BUKTI_PEMELIHARAAN']; ?></td>
+                                            <td class="text-center"><?php echo $data['NOMOR_SPK']; ?></td>
+                                            <td class="text-center"><?php echo $data['TANGGAL_SPK']; ?></td>
+                                            <td class="text-center"><?php echo $data['NOMOR_BAST']; ?></td>
+                                            <td class="text-center"><?php echo $data['TANGGAL_BAST']; ?></td>
+                                            <td class="text-center">
+                                                <img style="width:500px;" src="assets/lampiran/kartu-pemeliharaan/<?php echo $data['FOTO_ASET']; ?>">
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="assets/lampiran/kartu-pemeliharaan/<?php echo $data['FILE_ASET']; ?>">Lihat Lampiran</a>
+                                            </td>
                                             <td>
                                                 <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=kartu-pemeliharaan-edit&ID_KARTU=<?php echo $data['ID_KARTU']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
                                                 <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_kartu_pemeliharaan&ID_KARTU=<?php echo $data['ID_KARTU']; ?>">Delete</a> </button>

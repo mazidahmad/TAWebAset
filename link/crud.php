@@ -797,26 +797,48 @@ function insert_kartu_pemeliharaan($connect)
 	$TANGGAL_SPK = $_POST['TANGGAL_SPK'];
 	$NOMOR_BAST = $_POST['NOMOR_BAST'];
 	$TANGGAL_BAST = $_POST['TANGGAL_BAST'];
-	$FOTO_ASET = basename($_FILES['FOTO_ASET']['name']);
-	$FILE_ASET = basename($_FILES['FILE_ASET']['name']);
+	$FOTO_ASET = $_FILES['FOTO_ASET']['tmp_name'];
+	$FILE_ASET = $_FILES['FILE_ASET']['tmp_name'];
 
-	$query = "INSERT INTO KARTU_PEMELIHARAAN VALUES('$ID_KARTU','$KODE_BARANG','$NO_REGISTER','$NAMA_BARANG','$JENIS_PEMELIHARAAN','$YANG_MEMELIHARA','$TANGGAL_PEMELIHARAAN','$BIAYA_PEMELIHARAAN','$BUKTI_PEMELIHARAAN','$NOMOR_SPK','$TANGGAL_SPK','$NOMOR_BAST','$TANGGAL_BAST','$FOTO_ASET','$FILE_ASET') ";
-	if (mysqli_query($connect, $query)) {
-		header("Location:../index.php?page=kartu-pemeliharaan");
+	//UPLOAD FILE
+	$path1 = "../assets/lampiran/kartu-pemeliharaan/" . $ID_KARTU . "-FOTO-" . date("dmy") . ".jpg";
+	$path2 = "../assets/lampiran/kartu-pemeliharaan/" . $ID_KARTU . "-FILE-" . date("dmy") . ".pdf";
+
+	$NFOTO = $ID_KARTU . "-FOTO-" . date("dmy") . ".jpg";
+	$NFILE = $ID_KARTU . "-FILE-" . date("dmy") . ".pdf";
+	//----
+
+	if (move_uploaded_file($FOTO_ASET, $path1) && move_uploaded_file($FILE_ASET, $path2)) {
+		$query = "INSERT INTO KARTU_PEMELIHARAAN VALUES('$ID_KARTU','$KODE_BARANG','$NO_REGISTER','$NAMA_BARANG','$JENIS_PEMELIHARAAN','$YANG_MEMELIHARA','$TANGGAL_PEMELIHARAAN','$BIAYA_PEMELIHARAAN','$BUKTI_PEMELIHARAAN','$NOMOR_SPK','$TANGGAL_SPK','$NOMOR_BAST','$TANGGAL_BAST','$NFOTO','$NFILE') ";
+		if (mysqli_query($connect, $query)) {
+			header("Location:../index.php?page=kartu-pemeliharaan");
+		} else {
+			echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		}
 	} else {
-		echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo ("<script LANGUAGE='JavaScript'>
+				window.alert('Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.');
+				window.location.href='../index.php?page=kartu-pemeliharaan-input';
+				</script>");
 	}
 }
 function update_kartu_pemeliharaan($connect)
 {
-	$ID_JADWAL = $_POST['ID_JADWAL'];
+	$ID_KARTU = $_POST['ID_KARTU'];
 	$KODE_BARANG = $_POST['KODE_BARANG'];
+	$NO_REGISTER = $_POST['NO_REGISTER'];
 	$NAMA_BARANG = $_POST['NAMA_BARANG'];
 	$JENIS_PEMELIHARAAN = $_POST['JENIS_PEMELIHARAAN'];
-	$KEGIATAN = $_POST['KEGIATAN'];
-	$TANGAL_PEMELIHARAAN = $_POST['TANGAL_PEMELIHARAAN'];
+	$YANG_MEMELIHARA = $_POST['YANG_MEMELIHARA'];
+	$TANGGAL_PEMELIHARAAN = $_POST['TANGGAL_PEMELIHARAAN'];
+	$BIAYA_PEMELIHARAAN = $_POST['BIAYA_PEMELIHARAAN'];
+	$BUKTI_PEMELIHARAAN = $_POST['BUKTI_PEMELIHARAAN'];
+	$NOMOR_SPK = $_POST['NOMOR_SPK'];
+	$TANGGAL_SPK = $_POST['TANGGAL_SPK'];
+	$NOMOR_BAST = $_POST['NOMOR_BAST'];
+	$TANGGAL_BAST = $_POST['TANGGAL_BAST'];
 
-	$query = "UPDATE KARTU_PEMELIHARAAN SET KODE_BARANG = '$KODE_BARANG',NAMA_BARANG = '$NAMA_BARANG', JENIS_PEMELIHARAAN = '$JENIS_PEMELIHARAAN',KEGIATAN = '$KEGIATAN',TANGAL_PEMELIHARAAN = '$TANGAL_PEMELIHARAAN' WHERE ID_JADWAL = '$ID_JADWAL' ";
+	$query = "UPDATE KARTU_PEMELIHARAAN SET KODE_BARANG='$KODE_BARANG',NO_REGISTER='$NO_REGISTER',NAMA_BARANG='$NAMA_BARANG',JENIS_PEMELIHARAAN='$JENIS_PEMELIHARAAN',YANG_MEMELIHARA='$YANG_MEMELIHARA',TANGGAL_PEMELIHARAAN='$TANGGAL_PEMELIHARAAN',BIAYA_PEMELIHARAAN='$BIAYA_PEMELIHARAAN',BUKTI_PEMELIHARAAN='$BUKTI_PEMELIHARAAN',NOMOR_SPK='$NOMOR_SPK',TANGGAL_SPK='$TANGGAL_SPK',NOMOR_BAST='$NOMOR_BAST',TANGGAL_BAST='$TANGGAL_BAST' WHERE ID_KARTU = '$ID_KARTU' ";
 	if (mysqli_query($connect, $query)) {
 		header("Location:../index.php?page=kartu-pemeliharaan");
 	} else {
@@ -825,9 +847,9 @@ function update_kartu_pemeliharaan($connect)
 }
 function delete_kartu_pemeliharaan($connect)
 {
-	$ID_JADWAL = $_GET['ID_JADWAL'];
+	$ID_KARTU = $_GET['ID_KARTU'];
 
-	$query = "DELETE FROM KARTU_PEMELIHARAAN WHERE ID_JADWAL='$ID_JADWAL'";
+	$query = "DELETE FROM KARTU_PEMELIHARAAN WHERE ID_KARTU='$ID_KARTU'";
 	if (mysqli_query($connect, $query)) {
 		header("Location:../index.php?page=kartu-pemeliharaan");
 	} else {
