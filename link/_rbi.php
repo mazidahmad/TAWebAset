@@ -61,7 +61,14 @@
                   </tr>
                 </thead>
                 <tbody>
-
+                  <tr>
+                    <td>1</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>Tanah</td>
+                    <td>16</td>
+                    <td>70099096372</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>

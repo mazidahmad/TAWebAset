@@ -106,11 +106,6 @@ if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
               <span style="font-size:10pt;"><strong>Buku Inventaris Barang</strong></span>
             </a>
           </li>
-          <li class="<?php echo $sub_rbib; ?> logo">
-            <a href="index.php?page=rbib">
-              <span style="font-size:10pt;"><strong>Rekap Buku Inventaris Barang</strong></span>
-            </a>
-          </li>
 
           <li class="<?php echo $sub_mb; ?> logo">
             <a href="index.php?page=mb">
