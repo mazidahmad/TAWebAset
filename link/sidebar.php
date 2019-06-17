@@ -115,7 +115,7 @@ if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
                 <span style="font-size:10pt;"><strong>Mutasi Barang</strong></span>
               </a>
             </li>
-
+            <?php if ($_SESSION['kd_bagian'] != 3) { ?>
             <li class="<?php echo $sub_usulan; ?> logo">
               <a href="index.php?page=usulan-penghapusan">
                 <span style="font-size:10pt;"><strong>Daftar Usulan Barang Yang Dihapuskan</strong></span>
@@ -126,6 +126,7 @@ if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
                 <span style="font-size:10pt;"><strong>Daftar Barang Milik Daerah Yang Digunausahakan</strong></span>
               </a>
             </li>
+            <?php } ?>
           </ul>
         </li>
       <?php } ?>
@@ -137,17 +138,21 @@ if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
             <h5 class="font-weight-bold mb-0">Pemeliharaan Aset</h5>
           </a>
           <ul class="collapse list-unstyled text-center <?php echo $show_sub_pem; ?>" id="pageSubmenu2">
+            <?php if ($_SESSION['kd_bagian'] != 4) { ?>
             <li class="<?php echo $sub_dkpbmd; ?> mt-2 logo">
               <a href="index.php?page=dkpbmd">
                 <span style="font-size:10pt;"><strong>Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</strong></span>
               </a>
             </li>
+            <?php } ?>
             <?php if ($_SESSION['kd_bagian'] != 1 && $_SESSION['kd_bagian'] != 2) { ?>
+              <?php if ($_SESSION['kd_bagian'] != 4) { ?>
               <li class="<?php echo $sub_jp; ?> logo">
                 <a href="index.php?page=jadwal-pemeliharaan">
                   <span style="font-size:10pt;"><strong>Jadwal Pemeliharaan</strong></span>
                 </a>
               </li>
+              <?php } ?>
               <li class="<?php echo $sub_kpb; ?> logo">
                 <a href="index.php?page=kartu-pemeliharaan">
                   <span style="font-size:10pt;"><strong>Kartu Pemeliharaan Barang</strong></span>

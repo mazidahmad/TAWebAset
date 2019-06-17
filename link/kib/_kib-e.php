@@ -81,7 +81,7 @@
                         <th rowspan="2" class="text-center">
                           Keterangan
                         </th>
-                        <th rowspan="3"></th>
+                        <th rowspan="2"></th>
                       </tr>
                       <tr class="text-center">
                         <th>
@@ -170,6 +170,27 @@
           <script>
             $(document).ready(function() {
               var table = $('#table_kib_e').removeAttr('width').DataTable({
+                dom: 'Bfrtip',
+                  buttons: [ 
+                    {
+                      extend: 'pdfHtml5',
+                      orientation: 'landscape',
+                      pageSize: 'LEGAL',
+                      title: 'Kartu Inventaris Barang A - Tanah',
+                      messageTop: 'PROVINSI\t\t\t\t\t\t\t:	JAWA BARAT \n KABUPATEN / KOTA \t	:	- \n BIDANG \t\t\t\t\t\t\t  :	BIDANG KIMPRASWIL/KE-PU-AN \n ASISTEM / OPD \t\t\t	:	Dinas Perumahan dan Pemukiman \n BIRO / UPTD / B \t\t\t	:	Sekretariat Dinas \n No. Kode Lokasi \t\t\t	:	11.10.00.05.02.00',
+                      exportOptions: {
+                          columns: [ 0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+                      }
+                      
+                    },
+                    {
+                        extend: 'print',
+                        title: 'Kartu Inventaris Barang A - Tanah',
+                        exportOptions: {
+                            columns: [ 0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+                        }
+                    }
+                  ],
                 scrollY: "500px",
                 scrollX: true,
                 scrollCollapse: true,
@@ -181,5 +202,6 @@
                 ],
                 fixedColumns: true
               });
+              table.buttons().container().appendTo( $('.col-sm-6:eq(0)', table.table().container() ) );
             });
           </script>

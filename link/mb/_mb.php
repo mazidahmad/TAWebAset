@@ -36,6 +36,3 @@
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".table-filtered").DataTable();
-      </script>
