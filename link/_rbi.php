@@ -1,7 +1,7 @@
 <div class="content">
   <div class="row">
     <div class="col-md-12">
-      <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=bi-input">Input Data</a> </button>
+      <!-- <div class="card"> <button type="button" class="btn btn-outline-primary ml-2"> <a href="index.php?page=bi-input">Input Data</a> </button> -->
         <div class="card">
           <div class="card-header">
             <p class="card-title text-center"><strong>REKAP BUKU INVENTARIS BARANG</strong></p>
