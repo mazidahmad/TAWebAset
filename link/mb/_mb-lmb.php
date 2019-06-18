@@ -2,7 +2,7 @@
   <div class="card-header">
     <div class="row">
       <div class="class col-md-4"></div>
-      <div class="class col-md-4"><p class="card-title text-center"><p class="card-title text-center"><strong>BUKU INVENTARIS BARANG</strong></p></div>
+      <div class="class col-md-4"><p class="card-title text-center"><p class="card-title text-center"><strong>LAPORAN MUTASI BARANG</strong></p></div>
       <div class="class col-md-4"><button type="button" class="btn btn-outline-primary ml-2 float-right"> <a href="index.php?page=insert-lmb">Input Data</a> </button></div>
     </div>
   </div>
