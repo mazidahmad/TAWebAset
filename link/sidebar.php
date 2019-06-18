@@ -40,7 +40,7 @@ if (in_array($menuopt, array('home'))) {
   $sub_mb = "active";
 } elseif (in_array($menuopt, array('dubd'))) {
   $sub_dubd = "active";
-} elseif (in_array($menuopt, array('bmd-gunausaha'))) {
+} elseif (in_array($menuopt, array('bmd-gunausaha','bmd-gunausaha-input'))) {
   $sub_dbmdd = "active";
 } else if (in_array($menuopt, array('kir', 'insert-kir', 'edit-kir'))) {
   $sub_kir = "active";

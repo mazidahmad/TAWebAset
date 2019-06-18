@@ -134,7 +134,7 @@
         </thead>
         <tbody>
           <?php
-          $result = mysqli_query($connect, "SELECT * from MUTASI_BARANG where JENIS_MUTASI = 'LMB'");
+          $result = mysqli_query($connect, "SELECT * from MUTASI_BARANG");
 
           $i = 1;
           while ($data = mysqli_fetch_array($result)) { ?>
