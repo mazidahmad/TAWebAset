@@ -18,7 +18,7 @@ function insert_kib_a($connect)
 		$alamat           = $_POST['alamat'];
 		$ket        = $_POST['ket'];
 		$fototmp = $_FILES['foto']['tmp_name'];
-		$filetmp = $_FILES['filename']['tmp_name'];
+		$filetmp = $_FILES['file']['tmp_name'];
 
 		$path1 = "../assets/lampiran/kib-a/" . $kode . "-FOTO-" . date("dmy") . ".jpg";
 		$path2 = "../assets/lampiran/kib-a/" . $kode . "-FILE-" . date("dmy") . ".pdf";
@@ -312,37 +312,35 @@ function delete_usulan($connect)
 function insert_bi($connect)
 {
 	if (isset($_POST['insert_bi'])) {
-		$kode		= $_POST['kode'];
-		$nama   = $_POST['nama'];
-		$merk   = $_POST['merk'];
-		$noserti = $_POST['noserti'];
-		$ukuran = $_POST['ukuran'];
-		$bahan  = $_POST['bahan'];
-		$asal  = $_POST['asal'];
-		$tahun  = $_POST['tahun'];
-		$harga  = $_POST['harga'];
-		$register   = $_POST['register'];
-		$keadaan = $_POST['keadaan'];
-		$barang  = $_POST['barang'];
-		$ket    = $_POST['ket'];
+		$ID_BI		= $_POST['ID_BI'];
+		$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
+		$NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
+		$NAMA_BARANG = $_POST['NAMA_BARANG'];
+		$MERK_TIPE = $_POST['MERK_TIPE'];
+		$NO_SERTIFIKAT  = $_POST['NO_SERTIFIKAT'];
+		$BAHAN  = $_POST['BAHAN'];
+		$ASAL  = $_POST['ASAL'];
+		$TAHUN_PEROLEHAN  = $_POST['TAHUN_PEROLEHAN'];
+		$UKURAN_BARANG   = $_POST['UKURAN_BARANG'];
+		$KEADAAN_BARANG = $_POST['KEADAAN_BARANG'];
+		$JUMLAH_BARANG  = $_POST['JUMLAH_BARANG'];
+		$JUMLAH_HARGA    = $_POST['JUMLAH_HARGA'];
+		$KETERANGAN    = $_POST['KETERANGAN'];
 
 		if (
-			!empty($kode) && !empty($nama) && !empty($merk) && !empty($noserti) && !empty($ukuran)
-			&& !empty($bahan) && !empty($tahun) && !empty($asal) && !empty($harga) && !empty($register)
-			&& !empty($barang) && !empty($keadaan) && !empty($ket)
+			!empty($ID_BI) && !empty($NOMOR_KODE_BARANG) && !empty($NOMOR_REGISTER) && !empty($NAMA_BARANG) && !empty($MERK_TIPE)
+			&& !empty($NO_SERTIFIKAT) && !empty($BAHAN) && !empty($ASAL) && !empty($TAHUN_PEROLEHAN) && !empty($UKURAN_BARANG)
+			&& !empty($KEADAAN_BARANG) && !empty($JUMLAH_BARANG) && !empty($JUMLAH_HARGA) && !empty($KETERANGAN)
 		) {
-			$query = "INSERT INTO kir SET no_kode_barang='$kode',nama_barang='$nama',merk_tipe='$merk',no_sertifikat='$noserti', ukuran_barang='$ukuran',bahan='$bahan', tahun_perolehan='$tahun', asal='$asal', jumlah_harga='$harga',no_register='$register', keadaan_barang='$keadaan', jumlah_barang='$jumlah', keterangan='$ket'";
+			$query = "INSERT INTO BI VALUES('$ID_BI','$NOMOR_KODE_BARANG','$NOMOR_REGISTER','$NAMA_BARANG','$MERK_TIPE','$NO_SERTIFIKAT','$BAHAN','$ASAL','$TAHUN_PEROLEHAN','$UKURAN_BARANG','$KEADAAN_BARANG','$JUMLAH_BARANG','$JUMLAH_HARGA','$KETERANGAN')";
 			$sql = mysqli_query($connect, $query);
 			if ($sql && isset($_GET['process'])) {
-				if ($_GET['process'] == 'insert_kir') {
-					header("location:../index.php?page=bi");
-				} else {
-
-					echo ("<script LANGUAGE='JavaScript'>
-		window.alert('Gagal Input');
-		window.location.href='../index.php?page=bi';
-		</script>");
-				}
+				header("location:../index.php?page=bi");
+			} else {
+				echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Gagal Input');
+			window.location.href='../index.php?page=bi';
+			</script>");
 			}
 		}
 	} else {
@@ -357,36 +355,35 @@ function insert_bi($connect)
 function update_bi($connect)
 {
 	if (isset($_POST['update_bi'])) {
-		$kode		= $_POST['kode'];
-		$nama   = $_POST['nama'];
-		$merk   = $_POST['merk'];
-		$noserti = $_POST['noserti'];
-		$ukuran = $_POST['ukuran'];
-		$bahan  = $_POST['bahan'];
-		$asal  = $_POST['asal'];
-		$tahun  = $_POST['tahun'];
-		$harga  = $_POST['harga'];
-		$register   = $_POST['register'];
-		$keadaan = $_POST['keadaan'];
-		$barang  = $_POST['barang'];
-		$ket    = $_POST['ket'];
+		$ID_BI		= $_POST['ID_BI'];
+		$NOMOR_KODE_BARANG   = $_POST['NOMOR_KODE_BARANG'];
+		$NOMOR_REGISTER   = $_POST['NOMOR_REGISTER'];
+		$NAMA_BARANG = $_POST['NAMA_BARANG'];
+		$MERK_TIPE = $_POST['MERK_TIPE'];
+		$NO_SERTIFIKAT  = $_POST['NO_SERTIFIKAT'];
+		$BAHAN  = $_POST['BAHAN'];
+		$ASAL  = $_POST['ASAL'];
+		$TAHUN_PEROLEHAN  = $_POST['TAHUN_PEROLEHAN'];
+		$UKURAN_BARANG   = $_POST['UKURAN_BARANG'];
+		$KEADAAN_BARANG = $_POST['KEADAAN_BARANG'];
+		$JUMLAH_BARANG  = $_POST['JUMLAH_BARANG'];
+		$JUMLAH_HARGA    = $_POST['JUMLAH_HARGA'];
+		$KETERANGAN    = $_POST['KETERANGAN'];
 
 		if (
-			!empty($kode) && !empty($nama) && !empty($merk) && !empty($noserti) && !empty($ukuran)
-			&& !empty($bahan) && !empty($tahun) && !empty($asal) && !empty($harga) && !empty($register)
-			&& !empty($barang) && !empty($keadaan) && !empty($ket)
+			!empty($ID_BI) && !empty($NOMOR_KODE_BARANG) && !empty($NOMOR_REGISTER) && !empty($NAMA_BARANG) && !empty($MERK_TIPE)
+			&& !empty($NO_SERTIFIKAT) && !empty($BAHAN) && !empty($ASAL) && !empty($TAHUN_PEROLEHAN) && !empty($UKURAN_BARANG)
+			&& !empty($KEADAAN_BARANG) && !empty($JUMLAH_BARANG) && !empty($JUMLAH_HARGA) && !empty($KETERANGAN)
 		) {
-			$query = "INSERT INTO kir SET no_kode_barang='$kode',nama_barang='$nama',merk_tipe='$merk',no_sertifikat='$noserti', ukuran_barang='$ukuran',bahan='$bahan', tahun_perolehan='$tahun', asal='$asal', jumlah_harga='$harga',no_register='$register', keadaan_barang='$keadaan', jumlah_barang='$jumlah', keterangan='$ket' WHERE no_kode_barang='$kode'";
+			$query = "UPDATE BI SET NOMOR_KODE_BARANG='$NOMOR_KODE_BARANG',NOMOR_REGISTER='$NOMOR_REGISTER',NAMA_BARANG='$NAMA_BARANG',MERK_TIPE='$MERK_TIPE',NO_SERTIFIKAT='$NO_SERTIFIKAT',BAHAN='$BAHAN',ASAL='$ASAL',TAHUN_PEROLEHAN='$TAHUN_PEROLEHAN',UKURAN_BARANG='$UKURAN_BARANG',KEADAAN_BARANG='$KEADAAN_BARANG',JUMLAH_BARANG='$JUMLAH_BARANG',JUMLAH_HARGA='$JUMLAH_HARGA',KETERANGAN='$KETERANGAN' WHERE ID_BI='$ID_BI'";
 			$update = mysqli_query($connect, $query);
 			if ($update && isset($_GET['process'])) {
-				if ($_GET['process'] == 'update_bi') {
-					header('location: ../index.php?page=bi');
-				}
-				echo ("<script LANGUAGE='JavaScript'>
+				header('location: ../index.php?page=bi');
+			}
+			echo ("<script LANGUAGE='JavaScript'>
 				window.alert('Gagal Input');
 				window.location.href='../index.php?page=bi';
 				</script>");
-			}
 		}
 	} else {
 		$pesan = "Data tidak lengkap!";
@@ -399,9 +396,9 @@ function update_bi($connect)
 
 function delete_bi($connect)
 {
-	if (isset($_GET['kode']) && isset($_GET['process'])) {
-		$kode = $_GET['kode'];
-		$query = "DELETE FROM bi WHERE no_kode_barang='$kode'";
+	if (isset($_GET['id']) && isset($_GET['process'])) {
+		$kode = $_GET['id'];
+		$query = "DELETE FROM BI WHERE ID_BI='$kode'";
 		$delete = mysqli_query($connect, $query);
 		if ($delete) {
 			if ($_GET['process'] == 'delete_bi') {
@@ -1051,7 +1048,7 @@ function insert_kib_b($connect)
 	if (mysqli_query($connect, $query)) {
 		header("Location:../index.php?page=kib");
 	} else {
-		// echo "Error: " . $query . "<br>" . mysqli_error($connect);
+		echo "Error: " . $query . "<br>" . mysqli_error($connect);
 		echo ("<script LANGUAGE='JavaScript'>
 		window.alert('Gagal Input');
 		window.location.href='../index.php?page=kib#kib-b';
@@ -1143,6 +1140,16 @@ if (isset($_GET['process'])) {
 			break;
 		case "delete_usulan":
 			delete_usulan($connect);
+			break;
+
+		case "insert_bi":
+			insert_bi($connect);
+			break;
+		case "update_bi":
+			update_bi($connect);
+			break;
+		case "delete_bi":
+			delete_bi($connect);
 			break;
 
 		case "insert_lmb":
