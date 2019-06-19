@@ -87,8 +87,8 @@
                                         <td class="text-center"><?php echo $data['JUMLAH_HARGA']; ?></td>
                                         <td class="text-center"><?php echo $data['KETERANGAN']; ?></td>
                                         <td>
-                                            <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bi-edit&id=<?php echo $data['NOMOR_KODE_BARANG']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
-                                            <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bi&id=<?php echo $data['NOMOR_KODE_BARANG']; ?>">Delete</a> </button>
+                                            <button type="button" class="btn-xs btn-outline-primary ml-2 mb-2"><a href="index.php?page=bi-edit&id=<?php echo $data['ID_BI']; ?>" title="Edit" style="text-decoration:none;">Edit</a></button>
+                                            <button type="button" class="btn-xs btn-outline-danger ml-2"> <a href="link/crud.php?process=delete_bi&id=<?php echo $data['ID_BI']; ?>">Delete</a> </button>
                                         </td>
                                     </tr>
 

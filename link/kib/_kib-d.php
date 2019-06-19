@@ -3,7 +3,7 @@
                     <div class="row">
                       <div class="class col-md-4"></div>
                       <div class="class col-md-4"><p class="card-title text-center"><strong>Kartu Inventaris Barang (KIB) D <br>Jalan, Irigasi, dan Jaringan</strong></p></div>
-                      <div class="class col-md-4"><button type="button" class="btn btn-outline-primary ml-2 float-right"> <a href="index.php?page=insert-kib-a">Input Data</a> </button></div>
+                      <div class="class col-md-4"><button type="button" class="btn btn-outline-primary ml-2 float-right"> <a href="#">Input Data</a> </button></div>
                     </div>
                 </div>
               <div class="card-body" style="font-size:8pt;">                

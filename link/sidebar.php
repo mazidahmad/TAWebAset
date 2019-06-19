@@ -52,7 +52,7 @@ if (in_array($menuopt, array('dkpbmd', 'dkpbmd-edit', 'dkpbmd-input', 'dkpbmd-de
   $sub_dkpbmd = "active";
 } else if (in_array($menuopt, array('jadwal-pemeliharaan', 'jadwal-pemeliharaan-input', 'jadwal-pemeliharaan-edit'))) {
   $sub_jp = "active";
-} else if (in_array($menuopt, array('kartu-pemeliharaan'))) {
+} else if (in_array($menuopt, array('kartu-pemeliharaan','kartu-pemeliharaan-input','kartu-pemeliharaan-edit'))) {
   $sub_kpb = "active";
 }
 
