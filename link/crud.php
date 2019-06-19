@@ -1116,7 +1116,7 @@ if (isset($_GET['process'])) {
 			insert_kib_b($connect);
 			break;
 		case "update_kib_b":
-			update_kib_a($connect);
+			update_kib_b($connect);
 			break;
 		case "delete_kib_b":
 			delete_kib_b($connect);
