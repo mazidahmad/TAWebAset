@@ -35,6 +35,7 @@ if (!isset($_GET['page'])) {
   <link rel="stylesheet" type="text/css" href="assets/css/buttons.dataTables.css">
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
 
   <!-- Important JS File -->
   <!--   Core JS Files   -->
@@ -243,6 +244,18 @@ if (!isset($_GET['page'])) {
         </div>
       </footer>
     </div>
+    <!-- The Modal -->
+    <div id="modalImageZoom" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
   </div>
   <!--  Notifications Plugin    -->
   <script src="assets/js/plugins/bootstrap-notify.js"></script>
@@ -252,7 +265,29 @@ if (!isset($_GET['page'])) {
   <script src="assets/demo/demo.js"></script>
 
   <script>
+    function zoomImage(clicked_id){
+      // console.log("in");
+      // Get the modal
+      var modal = document.getElementById("modalImageZoom");
 
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById(clicked_id);
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      // img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      // }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      } 
+    }
   </script>
 </body>
 

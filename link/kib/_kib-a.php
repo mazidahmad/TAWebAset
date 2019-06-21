@@ -98,7 +98,7 @@
                                         <td><?php echo $data['HARGA'];?></td>
                                         <td><?php echo $data['KETERANGAN'];?></td>
                                         <td>
-                                          <img style="width:500px;" src="assets/lampiran/kib-a/<?php echo $data['FOTO'];?>" alt="">                                          
+                                          <img id="imgzoom-<?php echo $i; ?>" style="width:500px;" class="imgZoom" src="assets/lampiran/kib-a/<?php echo $data['FOTO'];?>" alt="" onClick="zoomImage(this.id)">                                          
                                         </td>
                                         <td class="text-center"><a href="assets/lampiran/kib-a/<?php echo $data['FILE_NAME'];?>">Lihat Lampiran</a></td>
                                         <td>

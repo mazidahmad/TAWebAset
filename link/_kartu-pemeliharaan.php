@@ -88,7 +88,7 @@
                                             <td class="text-center"><?php echo $data['NOMOR_BAST']; ?></td>
                                             <td class="text-center"><?php echo $data['TANGGAL_BAST']; ?></td>
                                             <td class="text-center">
-                                                <img style="width:500px;" src="assets/lampiran/kartu-pemeliharaan/<?php echo $data['FOTO_ASET']; ?>">
+                                                <img id="imgzoom-<?php echo $i; ?>" style="width:500px;" class="imgZoom"  src="assets/lampiran/kartu-pemeliharaan/<?php echo $data['FOTO_ASET']; ?>" onClick="zoomImage(this.id)">
                                             </td>
                                             <td class="text-center">
                                                 <a href="assets/lampiran/kartu-pemeliharaan/<?php echo $data['FILE_ASET']; ?>">Lihat Lampiran</a>
