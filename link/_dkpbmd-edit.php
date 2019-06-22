@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <p class="card-title text-center"><strong>Input Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</p>
+                    <p class="card-title text-center"><strong>Update Daftar Kebutuhan Pemeliharaan Barang Milik Daerah</p>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -22,7 +22,7 @@
                                         header("Location:index.php?page=dkpbmd");
                                     }
                                     ?>
-                                    <input type="hidden" name="ID_DKPBMD" <?php echo "value='$row[NAMA_BARANG]'"; ?>>
+                                    <input type="hidden" name="ID_DKPBMD" <?php echo "value='$row[ID_DKPBMD]'"; ?>>
                                     <div class="form-group col-md-6"> <label for="formGroupExampleInput">NAMA_BARANG :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="NAMA_BARANG" <?php echo "value='$row[NAMA_BARANG]'"; ?>> </div>
                                     <div class="form-group col-md-6"> <label for="formGroupExampleInput">NO_REGISTER :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="NO_REGISTER" <?php echo "value='$row[NO_REGISTER]'"; ?>> </div>
                                     <div class="form-group col-md-6"> <label for="formGroupExampleInput">TAHUN_PEROLEHAN :</label> <input type="text" class="form-control" id="formGroupExampleInput" name="TAHUN_PEROLEHAN" <?php echo "value='$row[TAHUN_PEROLEHAN]'"; ?>> </div>
@@ -38,7 +38,7 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6 align-middle">
-                                        <button type="submit" name="insert_bmd" class="btn btn-primary">Simpan</button>
+                                        <button type="submit" name="insert_bmd" class="btn btn-primary">Update</button>
                                         <button value="kembali" class="btn btn-secondary"><a href="bmd-gunausaha.php">Back</a></button>
                                     </div>
                                 </div>
