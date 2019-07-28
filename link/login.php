@@ -64,7 +64,13 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-              <div style="padding: 5px; background-color:white; border-radius:10px;"><img src="../assets/img/Logo-Asipat-Disperkim.png" height="40dpi"></div>
+              <!-- <div style="padding: 5px; background-color:white; border-radius:10px;"><img src="../assets/img/Logo-Asipat-Disperkim.png" height="40dpi"></div> -->
+              <div style="padding: 5px; ">
+                <h3 style="font-weight: bold; color: white; margin-bottom:0px;">SELAMAT DATANG DI</h3>
+              </div>
+              <div style="padding: 5px; background-color:white; border-radius:10px;">
+                <img src="../assets/img/Logo-Asipat-Disperkim.png" height="40dpi">
+              </div>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -119,7 +125,8 @@
       <div class="container-fluid h-100">
         <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/bg-login.png'); background-size: contain; background-repeat: no-repeat;">
           <div class="col-md-6 pl-5" >
-            <img class="ml-5 ml-3" src="../assets/img/login-text.png" alt="">
+            <!-- <img class="ml-5 ml-3" src="../assets/img/login-text.png" alt=""> -->
+            <img class="ml-5 ml-3" src="../assets/img/dashboard-content.png" alt="">
           </div>
           <div class="col-md-6">
               <div class="row h-100">
