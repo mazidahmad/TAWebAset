@@ -21,7 +21,7 @@
                 $_SESSION['bagian'] = $data['STATUS'];
                 $_SESSION['status'] = "login";
               }
-              header("location:../index.php?page=home");
+              header("location:../index.php?page=kib");
           }else{
               echo '<h1>GAGAL LOGIN</h1>';
           }
@@ -122,13 +122,13 @@
           </div> -->
         </div>
       </nav>
-      <div class="container-fluid h-100">
+      <div class="container-fluid h-100" >
         <div class="row h-100 justify-content-center align-items-center" style="background-image: url('../assets/img/bg-login.png'); background-size: contain; background-repeat: no-repeat;">
-          <div class="col-md-6 pl-5" >
+          <div class="col-md-7 pl-5">
             <!-- <img class="ml-5 ml-3" src="../assets/img/login-text.png" alt=""> -->
-            <img class="ml-5 ml-3" src="../assets/img/dashboard-content.png" alt="">
+            <img class="ml-5 ml-3" src="../assets/img/dashboard-content.png" alt="" style="height: 400dpi;">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-5">
               <div class="row h-100">
                   <div class="col-md-3"></div>
                   <div class="col-md-6">

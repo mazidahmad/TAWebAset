@@ -78,12 +78,12 @@ if (in_array("active", array($sub_dkpbmd, $sub_jp, $sub_kpb))) {
   </div>
   <div class="sidebar-wrapper" id="sidebar-wrapper">
     <ul class="nav">
-      <li class="<?php echo $menu_dashb; ?>">
+      <!-- <li class="<?php echo $menu_dashb; ?>">
         <a href="index.php" class="d-flex align-items-center">
           <i class="now-ui-icons design_app"></i>
           <h5 class="font-weight-bold mb-0">Home</h5>
         </a>
-      </li>
+      </li> -->
       <?php if ($_SESSION['kd_bagian'] != 1 && $_SESSION['kd_bagian'] != 4) { ?>
 
         <li class="<?php echo $menu_invent; ?>">
